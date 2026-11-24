@@ -2,9 +2,11 @@ name: 다이버전스 스캐너
 
 on:
   schedule:
-    # 평일 09:05 ~ 15:05 (한국 시간) 매시간 + 장 마감 후 15:45
-    - cron: "5 0-6 * * 1-5"
-    - cron: "45 6 * * 1-5"
+    # 시간은 UTC 기준 (한국 시간 = UTC + 9)
+    - cron: "40 23 * * 0-4"   # 08:40 장 전 후보 추리기 (알림 없음)
+    - cron: "2 0-6 * * 1-5"   # 09:02 ~ 15:02 매시간: 매수 신호 + TOP20 요약
+    - cron: "32 0-6 * * 1-5"  # 09:32 ~ 15:32 매시간: 매수 신호만
+    - cron: "45 6 * * 1-5"    # 15:45 장 마감 후: 매수 신호 + TOP20 요약
   workflow_dispatch:   # Actions 탭에서 "Run workflow"로 바로 실행
 
 permissions:
@@ -37,6 +39,7 @@ jobs:
           WATCH_SCORE: ${{ vars.WATCH_SCORE || '70' }}
           UNIVERSE: ${{ vars.UNIVERSE || 'ALL' }}
           SUMMARY: ${{ vars.SUMMARY || '1' }}
+          SCHEDULE: ${{ github.event.schedule }}
         run: python scan.py
 
       - name: 결과 저장
