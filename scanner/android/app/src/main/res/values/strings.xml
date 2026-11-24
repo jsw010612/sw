@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="app_name">다이버전스 레이더</string>
-    <string name="widget_name">레이더 TOP5</string>
-    <string name="widget_desc">준비 점수 상위 5종목</string>
-</resources>

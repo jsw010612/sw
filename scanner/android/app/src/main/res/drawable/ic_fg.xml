@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<vector xmlns:android="http://schemas.android.com/apk/res/android"
-    android:width="108dp" android:height="108dp" android:viewportWidth="108" android:viewportHeight="108">
-    <!-- 3파 → 4파 → 5파 → 반등 -->
-    <path android:pathData="M30,40 L44,64 L54,52 L66,70 L80,42"
-        android:strokeColor="#36D399" android:strokeWidth="6" android:strokeLineCap="round" android:strokeLineJoin="round" android:fillColor="#00000000"/>
-    <path android:pathData="M44,64m-5,0a5,5 0,1 1,10 0a5,5 0,1 1,-10 0" android:fillColor="#E8EDF3"/>
-    <path android:pathData="M66,70m-6,0a6,6 0,1 1,12 0a6,6 0,1 1,-12 0" android:fillColor="#FFCF5A"/>
-</vector>
