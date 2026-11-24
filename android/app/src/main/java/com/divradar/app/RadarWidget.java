@@ -23,16 +23,17 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-/** 홈 화면 위젯: 준비 점수 상위 5종목 (매시간 자동 갱신 + 새로고침 버튼) */
+/** 홈 화면 위젯: 준비 점수 상위 10종목 (매시간 자동 갱신 + 새로고침 버튼) */
 public class RadarWidget extends AppWidgetProvider {
 
     static final String PREFS = "radar";
     static final String ACT_REFRESH = "com.divradar.app.REFRESH";
 
-    private static final int[] ROW = {R.id.row1, R.id.row2, R.id.row3, R.id.row4, R.id.row5};
-    private static final int[] NAME = {R.id.name1, R.id.name2, R.id.name3, R.id.name4, R.id.name5};
-    private static final int[] TAG = {R.id.tag1, R.id.tag2, R.id.tag3, R.id.tag4, R.id.tag5};
-    private static final int[] SCORE = {R.id.score1, R.id.score2, R.id.score3, R.id.score4, R.id.score5};
+    private static final int[] ROW = {R.id.row1, R.id.row2, R.id.row3, R.id.row4, R.id.row5, R.id.row6, R.id.row7, R.id.row8, R.id.row9, R.id.row10};
+    private static final int[] NAME = {R.id.name1, R.id.name2, R.id.name3, R.id.name4, R.id.name5, R.id.name6, R.id.name7, R.id.name8, R.id.name9, R.id.name10};
+    private static final int[] TAG = {R.id.tag1, R.id.tag2, R.id.tag3, R.id.tag4, R.id.tag5, R.id.tag6, R.id.tag7, R.id.tag8, R.id.tag9, R.id.tag10};
+    private static final int[] SCORE = {R.id.score1, R.id.score2, R.id.score3, R.id.score4, R.id.score5, R.id.score6, R.id.score7, R.id.score8, R.id.score9, R.id.score10};
+    private static final int[] FIN = {R.id.fin1, R.id.fin2, R.id.fin3, R.id.fin4, R.id.fin5, R.id.fin6, R.id.fin7, R.id.fin8, R.id.fin9, R.id.fin10};
 
     @Override
     public void onUpdate(Context ctx, AppWidgetManager mgr, int[] ids) {
@@ -155,7 +156,7 @@ public class RadarWidget extends AppWidgetProvider {
             rv.setViewVisibility(R.id.empty, View.GONE);
         }
 
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < ROW.length; i++) {
             if (i >= items.size()) {
                 rv.setViewVisibility(ROW[i], View.GONE);
                 continue;
@@ -164,7 +165,18 @@ public class RadarWidget extends AppWidgetProvider {
             rv.setViewVisibility(ROW[i], View.VISIBLE);
             rv.setTextViewText(NAME[i], it.optString("name"));
             int sig = it.optInt("signal", 0);
-            rv.setTextViewText(TAG[i], sig > 0 ? "신호 " + sig : "");
+            rv.setTextViewText(TAG[i], sig > 0 ? "신호" + sig : "");
+            JSONObject fin = it.optJSONObject("fin");
+            String g = fin == null ? "" : fin.optString("grade", "");
+            if ("위험".equals(g)) {
+                rv.setTextViewText(FIN[i], "⚠위험");
+                rv.setTextColor(FIN[i], 0xFFFF5C62);
+            } else if (g.length() == 1) {
+                rv.setTextViewText(FIN[i], "재무" + g);
+                rv.setTextColor(FIN[i], "A".equals(g) ? 0xFF36D399 : "B".equals(g) ? 0xFF7AA9FF : "C".equals(g) ? 0xFFF5C451 : 0xFFFF9A5A);
+            } else {
+                rv.setTextViewText(FIN[i], "");
+            }
             int ready = it.optInt("ready", 0);
             rv.setTextViewText(SCORE[i], String.valueOf(ready));
             rv.setTextColor(SCORE[i], ready >= 60 ? 0xFF36D399 : ready >= 40 ? 0xFFF5C451 : 0xFF8A96A6);

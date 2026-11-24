@@ -32,10 +32,7 @@ WATCH_SCORE = int(os.getenv("WATCH_SCORE", "70"))   # 이 점수 이상은 결�
 PREFILTER_RSI = float(os.getenv("PREFILTER_RSI", "40"))  # 일봉 RSI가 이 값 이하인 종목만 매시간 검사
 UNIVERSE = os.getenv("UNIVERSE", "ALL")             # ALL = 전 종목, 숫자(예: 300) = 시총 상위 N개
 NTFY_TOPIC = os.getenv("NTFY_TOPIC", "")
-SUMMARY = os.getenv("SUMMARY", "1") == "1"         # 준비 순위 요약 알림 켜기
-# :32 실행은 매수 신호만 확인하고 요약 알림은 보내지 않음 (정각 실행·마감·수동 실행만 요약)
-_SCHED = os.getenv("SCHEDULE", "").strip()
-SUMMARY_NOW = not _SCHED.startswith("32 ")
+SUMMARY = os.getenv("SUMMARY", "1") == "1"         # 매시간 준비 순위 요약 알림
 SUMMARY_N = int(os.getenv("SUMMARY_N", "20"))       # 요약 알림에 넣을 종목 수
 FIN_TOP = int(os.getenv("FIN_TOP", "150"))           # 재무 점수를 붙일 상위 종목 수
 WORKERS = 8
@@ -418,7 +415,7 @@ def write_results(now, evs, n):
 
 
 def push_summary(now, items):
-    if not SUMMARY or not SUMMARY_NOW or not items:
+    if not SUMMARY or not items:
         return
     top = sorted(items, key=lambda x: -(x["ready"] or 0))[:SUMMARY_N]
     lines = []
@@ -438,11 +435,6 @@ def main():
     now = datetime.now(KST)
     today = now.strftime("%Y-%m-%d")
     probe_sources()
-    if now.hour < 9:
-        # 장 전 실행: 전 종목 후보만 미리 추려 둠 (09:05 실행이 빨리 끝나도록, 알림 없음)
-        cands = load_candidates(today)
-        log(f"장 전 준비 완료: 후보 {len(cands)}개")
-        return
     cands = load_candidates(today)
     if not cands:
         log("후보 없음")
