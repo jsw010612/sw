@@ -21,6 +21,7 @@ import numpy as np
 import pandas as pd
 import requests
 
+import fundamentals as fund
 from analysis import (BULL_CANDLE, FRAMES, Params, evaluate, forming_state, grade,
                       readiness, rsi, to_4h, to_month, to_week)
 
@@ -31,7 +32,12 @@ WATCH_SCORE = int(os.getenv("WATCH_SCORE", "70"))   # 이 점수 이상은 결�
 PREFILTER_RSI = float(os.getenv("PREFILTER_RSI", "40"))  # 일봉 RSI가 이 값 이하인 종목만 매시간 검사
 UNIVERSE = os.getenv("UNIVERSE", "ALL")             # ALL = 전 종목, 숫자(예: 300) = 시총 상위 N개
 NTFY_TOPIC = os.getenv("NTFY_TOPIC", "")
-SUMMARY = os.getenv("SUMMARY", "1") == "1"         # 매시간 준비 순위 TOP5 요약 알림
+SUMMARY = os.getenv("SUMMARY", "1") == "1"         # 준비 순위 요약 알림 켜기
+# :32 실행은 매수 신호만 확인하고 요약 알림은 보내지 않음 (정각 실행·마감·수동 실행만 요약)
+_SCHED = os.getenv("SCHEDULE", "").strip()
+SUMMARY_NOW = not _SCHED.startswith("32 ")
+SUMMARY_N = int(os.getenv("SUMMARY_N", "20"))       # 요약 알림에 넣을 종목 수
+FIN_TOP = int(os.getenv("FIN_TOP", "150"))           # 재무 점수를 붙일 상위 종목 수
 WORKERS = 8
 
 P = Params()  # 분석 세부 설정은 analysis.py 의 Params 에서 바꿀 수 있음
@@ -355,6 +361,7 @@ def to_item(ev: dict) -> dict:
         "signal": ev["score"] if ev["stage"] >= MIN_STAGE else 0,
         "stage": ev["stage"], "top": ev["top"], "rsi": ev["rsi"],
         "sframe": ev.get("sframe", 2), "forming": ev.get("forming", {}),
+        "fin": ev.get("fin"),
     }
     if ev.get("frame") and ev["frame"].get("act"):
         f = dict(ev["frame"])
@@ -367,6 +374,40 @@ def to_item(ev: dict) -> dict:
     return _clean(it)
 
 
+def attach_fundamentals(now, evs):
+    """결과 상위 종목에 재무 건강 점수 붙이기 (하루 한 번만 새로 받음)"""
+    f = STATE / "fundamentals.json"
+    cache = json.load(open(f)) if f.exists() else {}
+    today = now.strftime("%Y-%m-%d")
+    evs_sorted = sorted(evs, key=lambda e: (-(e["score"] or 0), -(e.get("ready") or 0)))[:FIN_TOP]
+    need = [e for e in evs_sorted if cache.get(e["stock"]["code"], {}).get("date") != today]
+
+    def job(e):
+        s = e["stock"]
+        try:
+            raw = fund.fetch(s["code"])
+            return s["code"], {"date": today, "src": raw.get("src"), "fin": fund.score(raw, s["market"])}
+        except Exception as ex:
+            log("재무 오류", s["name"], ex)
+            return s["code"], None
+
+    if need:
+        with ThreadPoolExecutor(WORKERS) as ex:
+            for code, v in ex.map(job, need):
+                if v:
+                    cache[code] = v
+        ok = sum(1 for e in need if (cache.get(e["stock"]["code"]) or {}).get("src"))
+        log(f"재무 데이터 {ok}/{len(need)}개 받음")
+    for e in evs_sorted:
+        c = cache.get(e["stock"]["code"])
+        if c:
+            e["fin"] = c["fin"]
+    # 7일 지난 캐시 정리
+    cut = (now - timedelta(days=7)).strftime("%Y-%m-%d")
+    cache = {k: v for k, v in cache.items() if v.get("date", "") >= cut}
+    json.dump(cache, open(f, "w"), ensure_ascii=False)
+
+
 def write_results(now, evs, n):
     items = [to_item(e) for e in evs]
     items.sort(key=lambda x: (-(x["signal"] or 0), -(x["ready"] or 0)))
@@ -377,23 +418,31 @@ def write_results(now, evs, n):
 
 
 def push_summary(now, items):
-    if not SUMMARY or not items:
+    if not SUMMARY or not SUMMARY_NOW or not items:
         return
-    top = sorted(items, key=lambda x: -(x["ready"] or 0))[:5]
+    top = sorted(items, key=lambda x: -(x["ready"] or 0))[:SUMMARY_N]
     lines = []
     for i, it in enumerate(top, 1):
-        d = FRAMES[2] if it["sframe"] == 2 else FRAMES[it["sframe"]]
+        d = FRAMES[it["sframe"]]
         r = it["rsi"][it["sframe"]]
         sig = f" 🔔{it['signal']}" if it["signal"] else ""
-        lines.append(f"{i}. {it['name']} {it['ready']}점{sig} · {d} RSI {r:.0f}" if r is not None
-                     else f"{i}. {it['name']} {it['ready']}점{sig}")
-    push(f"준비 순위 TOP5 · {now.strftime('%H:%M')}", "\n".join(lines), priority=3, tags=["bar_chart"])
+        fin = it.get("fin") or {}
+        g = fin.get("grade")
+        fg = " ⚠위험" if g == "위험" else f" 재무{g}" if g and g != "정보없음" else ""
+        rs = f" · {d} RSI {r:.0f}" if r is not None else ""
+        lines.append(f"{i}. {it['name']} {it['ready']}점{sig}{fg}{rs}")
+    push(f"준비 순위 TOP{len(top)} · {now.strftime('%H:%M')}", "\n".join(lines), priority=3, tags=["bar_chart"])
 
 
 def main():
     now = datetime.now(KST)
     today = now.strftime("%Y-%m-%d")
     probe_sources()
+    if now.hour < 9:
+        # 장 전 실행: 전 종목 후보만 미리 추려 둠 (09:05 실행이 빨리 끝나도록, 알림 없음)
+        cands = load_candidates(today)
+        log(f"장 전 준비 완료: 후보 {len(cands)}개")
+        return
     cands = load_candidates(today)
     if not cands:
         log("후보 없음")
@@ -438,6 +487,7 @@ def main():
     sent = {k: v for k, v in sent.items() if v >= cut}
     json.dump(sent, open(sent_f, "w"), ensure_ascii=False, indent=1)
     write_report(now, hits, len(evs))
+    attach_fundamentals(now, evs)
     items = write_results(now, evs, len(evs))
     push_summary(now, items)
 
