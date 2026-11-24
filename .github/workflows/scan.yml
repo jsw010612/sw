@@ -48,4 +48,6 @@ jobs:
           git config user.email "scanner-bot@users.noreply.github.com"
           git add state
           git commit -m "스캔 결과 $(TZ=Asia/Seoul date '+%m/%d %H:%M')" || echo "변경 없음"
+          # 실행 중에 앱에서 관심·보유를 바꿨으면 먼저 받아서 합침
+          git pull --rebase origin main || true
           git push
