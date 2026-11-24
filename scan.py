@@ -51,55 +51,163 @@ def log(*a):
 
 
 # ================= 종목 목록 =================
-def fetch_universe() -> list:
-    """네이버 시가총액 페이지에서 코스피(0)·코스닥(1) 종목을 시총순으로 가져옴"""
+def _http(url, **kw):
+    """요청 + 실패 이유 기록"""
+    try:
+        r = requests.get(url, headers={**UA, **kw.pop("headers", {})}, timeout=20, **kw)
+        return r
+    except Exception as e:
+        log("접속 실패", url.split("?")[0], type(e).__name__)
+        return None
+
+
+def _universe_naver_api() -> list:
+    """① 네이버 모바일 증권 API (JSON, 시총순)"""
     out = []
-    seen = set()
-    for sosok, market in ((0, "KS"), (1, "KQ")):
-        for page in range(1, 80):
-            url = f"https://finance.naver.com/sise/sise_market_sum.naver?sosok={sosok}&page={page}"
-            html = requests.get(url, headers=UA, timeout=15).content.decode("euc-kr", "ignore")
-            new = 0
-            for row in html.split("<tr")[1:]:
-                m = re.search(r'code=(\d{6})" class="tltle">([^<]+)</a>', row)
-                if not m:
-                    continue
-                code, name = m.group(1), m.group(2).strip()
-                if code in seen:
-                    continue
-                seen.add(code)
-                new += 1
-                # 숫자만 있는 칸: 현재가, 액면가, 시가총액(억), 상장주식수 ...
-                nums = re.findall(r'<td class="number">([\d,]+)</td>', row)
-                cap = int(nums[2].replace(",", "")) if len(nums) > 2 else 0
-                if any(w in name for w in ETF_WORDS):
-                    continue
-                out.append({"code": code, "name": name, "market": market, "cap": cap})
-            if new == 0:
+    for mk, market in (("KOSPI", "KS"), ("KOSDAQ", "KQ")):
+        for page in range(1, 40):
+            r = _http(f"https://m.stock.naver.com/api/stocks/marketValue/{mk}?page={page}&pageSize=100")
+            if r is None or r.status_code != 200:
+                log(f"  네이버API {mk} p{page}: {getattr(r, 'status_code', '-')}")
                 break
-            time.sleep(0.2)
-    out.sort(key=lambda x: -x["cap"])
-    log(f"종목 목록 {len(out)}개")
+            try:
+                stocks = r.json().get("stocks", [])
+            except Exception:
+                log(f"  네이버API {mk}: JSON 아님 ({len(r.text)}자)")
+                break
+            if not stocks:
+                break
+            for st in stocks:
+                code = str(st.get("itemCode", ""))
+                if not re.fullmatch(r"\d{6}", code):
+                    continue
+                if str(st.get("stockEndType", "stock")).lower() not in ("stock", ""):
+                    continue
+                cap = int(re.sub(r"[^\d]", "", str(st.get("marketValue", "0"))) or 0)
+                out.append({"code": code, "name": st.get("stockName", code), "market": market, "cap": cap})
+            time.sleep(0.15)
     return out
 
 
-# ================= 시세 =================
-def naver_daily(code: str, count: int = 1500) -> pd.DataFrame:
-    url = f"https://fchart.stock.naver.com/sise.nhn?symbol={code}&timeframe=day&count={count}&requestType=0"
-    for _ in range(3):
+def _universe_naver_html() -> list:
+    """② 네이버 금융 시가총액 페이지"""
+    out, seen = [], set()
+    for sosok, market in ((0, "KS"), (1, "KQ")):
+        for page in range(1, 80):
+            r = _http(f"https://finance.naver.com/sise/sise_market_sum.naver?sosok={sosok}&page={page}")
+            if r is None or r.status_code != 200:
+                log(f"  네이버HTML {market} p{page}: {getattr(r, 'status_code', '-')}")
+                break
+            html = r.content.decode("euc-kr", "ignore")
+            new = 0
+            for row in html.split("<tr")[1:]:
+                m = re.search(r'code=(\d{6})"[^>]*class="tltle"[^>]*>([^<]+)</a>', row)
+                if not m or m.group(1) in seen:
+                    continue
+                seen.add(m.group(1))
+                new += 1
+                nums = re.findall(r'<td class="number">([\d,]+)</td>', row)
+                cap = int(nums[2].replace(",", "")) if len(nums) > 2 else 0
+                out.append({"code": m.group(1), "name": m.group(2).strip(), "market": market, "cap": cap})
+            if new == 0:
+                if page == 1:
+                    log(f"  네이버HTML {market}: 표를 못 찾음 ({len(html)}자)")
+                break
+            time.sleep(0.2)
+    return out
+
+
+def _universe_kind() -> list:
+    """③ 한국거래소 KIND 상장법인 목록 (시총 정보 없음)"""
+    out = []
+    for mt, market in (("stockMkt", "KS"), ("kosdaqMkt", "KQ")):
+        r = _http(f"https://kind.krx.co.kr/corpgeneral/corpList.do?method=download&searchType=13&marketType={mt}")
+        if r is None or r.status_code != 200:
+            log(f"  KIND {market}: {getattr(r, 'status_code', '-')}")
+            continue
+        html = r.content.decode("euc-kr", "ignore")
+        for tr in re.findall(r"<tr.*?</tr>", html, re.S):
+            tds = [re.sub(r"<[^>]+>", "", t).strip() for t in re.findall(r"<td[^>]*>(.*?)</td>", tr, re.S)]
+            code = next((t for t in tds if re.fullmatch(r"\d{6}", t)), None)
+            if code and tds:
+                out.append({"code": code, "name": tds[0], "market": market, "cap": 0})
+    return out
+
+
+def fetch_universe() -> list:
+    """코스피·코스닥 종목 목록 (여러 경로 중 되는 것 사용)"""
+    out = []
+    for name, fn in (("네이버API", _universe_naver_api), ("네이버HTML", _universe_naver_html), ("KIND", _universe_kind)):
         try:
-            txt = requests.get(url, headers=UA, timeout=15).content.decode("euc-kr", "ignore")
-            items = re.findall(r'data="([^"]+)"', txt)
+            out = fn()
+        except Exception as e:
+            log(f"  {name} 오류: {e}")
+            out = []
+        log(f"종목 목록 [{name}] {len(out)}개")
+        if len(out) > 500:
+            break
+    seen, uniq = set(), []
+    for s in out:
+        if s["code"] in seen or any(w in s["name"] for w in ETF_WORDS):
+            continue
+        seen.add(s["code"])
+        uniq.append(s)
+    uniq.sort(key=lambda x: -x["cap"])
+    log(f"종목 목록 최종 {len(uniq)}개")
+    return uniq
+
+
+# ================= 시세 =================
+_NAVER_DAILY_OK = [True]
+
+
+def naver_daily(code: str, count: int = 1500, market: str = "KS") -> pd.DataFrame:
+    """일봉: 네이버 차트 → 안 되면 야후"""
+    if _NAVER_DAILY_OK[0]:
+        url = f"https://fchart.stock.naver.com/sise.nhn?symbol={code}&timeframe=day&count={count}&requestType=0"
+        for _ in range(2):
+            r = _http(url)
+            if r is None or r.status_code != 200:
+                time.sleep(0.5)
+                continue
+            txt = r.content.decode("euc-kr", "ignore")
             rows = []
-            for it in items:
-                d, o, h, l, c, v = it.split("|")
-                rows.append((pd.Timestamp(d), float(o), float(h), float(l), float(c), float(v)))
-            df = pd.DataFrame(rows, columns=["date", "open", "high", "low", "close", "volume"]).set_index("date")
-            df = df[df["close"] > 0]
-            return df
-        except Exception:
-            time.sleep(1)
-    return pd.DataFrame()
+            for it in re.findall(r'data="([^"]+)"', txt):
+                try:
+                    d, o, h, l, c, v = it.split("|")
+                    rows.append((pd.Timestamp(d), float(o), float(h), float(l), float(c), float(v)))
+                except Exception:
+                    pass
+            if rows:
+                df = pd.DataFrame(rows, columns=["date", "open", "high", "low", "close", "volume"]).set_index("date")
+                return df[df["close"] > 0]
+            break
+    return yahoo_daily(code, market, count)
+
+
+def yahoo_daily(code: str, market: str, count: int = 1500) -> pd.DataFrame:
+    import yfinance as yf
+    period = "10y" if count > 1000 else "2y"
+    try:
+        d = yf.download(f"{code}.{market}", period=period, interval="1d", auto_adjust=False,
+                        progress=False, threads=False)
+        if isinstance(d.columns, pd.MultiIndex):
+            d.columns = d.columns.get_level_values(0)
+        d = d.rename(columns=str.lower)[["open", "high", "low", "close", "volume"]].dropna()
+        d.index = pd.to_datetime(d.index).tz_localize(None)
+        return d[d["close"] > 0].tail(count)
+    except Exception:
+        return pd.DataFrame()
+
+
+def probe_sources():
+    """시작할 때 시세 경로가 살아 있는지 확인"""
+    r = _http("https://fchart.stock.naver.com/sise.nhn?symbol=005930&timeframe=day&count=30&requestType=0")
+    ok = r is not None and r.status_code == 200 and 'data="' in r.content.decode("euc-kr", "ignore")
+    _NAVER_DAILY_OK[0] = ok
+    log(f"네이버 일봉: {'정상' if ok else '안 됨 → 야후 일봉 사용'}")
+    y = yahoo_daily("005930", "KS", 30)
+    log(f"야후 일봉: {'정상' if len(y) else '안 됨'} ({len(y)}개)")
 
 
 def yahoo_hourly(tickers: list) -> dict:
@@ -139,7 +247,7 @@ def build_candidates(today: str) -> list:
         return uni
 
     def chk(s):
-        df = naver_daily(s["code"], 200)
+        df = naver_daily(s["code"], 200, s["market"])
         if len(df) < 30:
             return None
         r = rsi(df["close"].to_numpy(float), P.rsi_len)[-1]
@@ -148,6 +256,8 @@ def build_candidates(today: str) -> list:
     with ThreadPoolExecutor(WORKERS) as ex:
         cands = [c for c in ex.map(chk, uni) if c]
     log(f"후보 {len(cands)}개 (일봉 RSI {PREFILTER_RSI} 이하)")
+    if not uni:
+        return []
     json.dump({"date": today, "items": cands}, open(STATE / "candidates.json", "w"), ensure_ascii=False, indent=1)
     return cands
 
@@ -156,7 +266,7 @@ def load_candidates(today: str) -> list:
     f = STATE / "candidates.json"
     if f.exists():
         j = json.load(open(f))
-        if j.get("date") == today:
+        if j.get("date") == today and j.get("items"):
             return j["items"]
     return build_candidates(today)
 
@@ -170,7 +280,7 @@ def fmt_t(t) -> str:
 
 
 def analyze_stock(s: dict, h1: pd.DataFrame) -> dict:
-    d1 = naver_daily(s["code"], 1500)
+    d1 = naver_daily(s["code"], 1500, s["market"])
     if len(d1) < 60 or h1 is None:
         return None
     frames = [h1, to_4h(h1), d1, to_week(d1), to_month(d1)]
@@ -283,6 +393,7 @@ def push_summary(now, items):
 def main():
     now = datetime.now(KST)
     today = now.strftime("%Y-%m-%d")
+    probe_sources()
     cands = load_candidates(today)
     if not cands:
         log("후보 없음")
