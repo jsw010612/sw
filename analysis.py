@@ -224,8 +224,70 @@ def evaluate(frames: list, direction: int, P: Params) -> dict:
     return out
 
 
+# ===== 1일 기준 평가 (주봉 RSI가 낮으면 주봉 다이버전스 대기) =====
+W_WAIT = 40.0  # 주봉 RSI가 이 값 미만이면 주봉 다이버전스가 나올 때까지 대기
+
+
+def turning_up(df, P: Params, look: int = 6) -> bool:
+    """최근 몇 봉 안에 RSI가 과매도 부근까지 내려갔다가 올라오는 중인지"""
+    if df is None or len(df) < P.rsi_len + look:
+        return False
+    r = rsi(df["close"].to_numpy(float), P.rsi_len)
+    seg = r[-look:]
+    if np.all(np.isnan(seg)):
+        return False
+    mn = np.nanmin(seg)
+    return bool(mn <= P.near_lvl and r[-1] >= mn + 3)
+
+
+def score_daily(f: dict, wpts: int, tpts: int) -> int:
+    if not f.get("act"):
+        return 0
+    return (20 + (10 if f.get("v3") else 0) + (10 if f.get("vd") else 0) + (15 if f.get("deep") else 0)
+            + (10 if f.get("zone") else 0) + (10 if f.get("ok4") else 0) + wpts + tpts)
+
+
+def evaluate_daily(frames: list, P: Params) -> dict:
+    """frames: [1시간, 4시간, 1일, 1주, 1달]
+    점수 100: 다이버전스 20 + 3파거래량 10 + 거래량다이버전스 10 + 5파깊이 15 + 피보 10 + 4파되돌림 10
+              + 주봉 상태 15 + 단기 타이밍 10 (1시간·4시간 RSI가 과매도 부근에서 올라오는 중이면 각 5)"""
+    rs = []
+    for f in frames:
+        if f is None or len(f) < P.rsi_len + 2:
+            rs.append(np.nan)
+        else:
+            rs.append(float(rsi(f["close"].to_numpy(float), P.rsi_len)[-1]))
+    d = analyze_frame(frames[2], 1, P)
+    w = analyze_frame(frames[3], 1, P)
+    wr = rs[3]
+    tpts = (5 if turning_up(frames[0], P) else 0) + (5 if turning_up(frames[1], P) else 0)
+    out = {"rsi": rs, "wrsi": wr, "timing": tpts, "type": None, "base": 2, "score": 0, "frame": None}
+    w_low = (not np.isnan(wr)) and wr < W_WAIT
+    out["wwait"] = bool(w_low)
+    if w_low and w.get("act"):
+        out.update(type="매수", base=3, frame=w, score=score_daily(w, 15, tpts))
+    elif d.get("act"):
+        if w_low:
+            out.update(type="대기", base=2, frame=d, score=score_daily(d, 0, tpts))
+        else:
+            wpts = 15 if (np.isnan(wr) or wr < 50) else 10
+            out.update(type="매수", base=2, frame=d, score=score_daily(d, wpts, tpts))
+    return out
+
+
+def evaluate_exit(frames: list, P: Params) -> dict:
+    """보유 종목용: 1일·1주 과매수 다이버전스(익절 신호)"""
+    for idx in (3, 2):
+        f = analyze_frame(frames[idx], -1, P)
+        if f.get("act"):
+            f["frame_idx"] = idx
+            f["score"] = score_daily(f, 0, 0)
+            return f
+    return {}
+
+
 # ===== 준비 점수 (신호가 완성되지 않아도 "곧 나올 만한 순서") =====
-RSI_W = [1, 2, 3, 4, 5]
+RSI_W = [1, 1, 4, 3, 1]  # 1시간, 4시간, 1일, 1주, 1달 (1일·1주 위주)
 
 
 def _pivot_lows(lo, P):

@@ -165,7 +165,9 @@ public class RadarWidget extends AppWidgetProvider {
             rv.setViewVisibility(ROW[i], View.VISIBLE);
             rv.setTextViewText(NAME[i], it.optString("name"));
             int sig = it.optInt("signal", 0);
-            rv.setTextViewText(TAG[i], sig > 0 ? "신호" + sig : "");
+            String type = it.optString("type", "");
+            rv.setTextViewText(TAG[i], sig <= 0 ? "" : ("대기".equals(type) ? "대기" : "신호") + sig);
+            rv.setTextColor(TAG[i], "대기".equals(type) ? 0xFF9AA8FF : 0xFFFFCF5A);
             JSONObject fin = it.optJSONObject("fin");
             String g = fin == null ? "" : fin.optString("grade", "");
             if ("위험".equals(g)) {
