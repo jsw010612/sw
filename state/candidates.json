@@ -1,4 +1,8419 @@
 {
  "date": "2026-11-24",
- "items": []
+ "items": [
+  {
+   "code": "207940",
+   "name": "삼성바이오로직스",
+   "market": "KS",
+   "cap": 598079,
+   "d_rsi": 34.9
+  },
+  {
+   "code": "012450",
+   "name": "한화에어로스페이스",
+   "market": "KS",
+   "cap": 323818,
+   "d_rsi": 37.5
+  },
+  {
+   "code": "034020",
+   "name": "두산에너빌리티",
+   "market": "KS",
+   "cap": 273840,
+   "d_rsi": 34.8
+  },
+  {
+   "code": "329180",
+   "name": "HD현대중공업",
+   "market": "KS",
+   "cap": 262928,
+   "d_rsi": 33.3
+  },
+  {
+   "code": "035420",
+   "name": "NAVER",
+   "market": "KS",
+   "cap": 237622,
+   "d_rsi": 36.2
+  },
+  {
+   "code": "000810",
+   "name": "삼성화재",
+   "market": "KS",
+   "cap": 228149,
+   "d_rsi": 36.0
+  },
+  {
+   "code": "015760",
+   "name": "한국전력",
+   "market": "KS",
+   "cap": 163059,
+   "d_rsi": 35.3
+  },
+  {
+   "code": "009540",
+   "name": "HD한국조선해양",
+   "market": "KS",
+   "cap": 158886,
+   "d_rsi": 36.4
+  },
+  {
+   "code": "010130",
+   "name": "고려아연",
+   "market": "KS",
+   "cap": 157800,
+   "d_rsi": 31.4
+  },
+  {
+   "code": "096770",
+   "name": "SK이노베이션",
+   "market": "KS",
+   "cap": 155698,
+   "d_rsi": 27.8
+  },
+  {
+   "code": "017670",
+   "name": "SK텔레콤",
+   "market": "KS",
+   "cap": 144124,
+   "d_rsi": 33.0
+  },
+  {
+   "code": "018260",
+   "name": "삼성에스디에스",
+   "market": "KS",
+   "cap": 142762,
+   "d_rsi": 36.9
+  },
+  {
+   "code": "010140",
+   "name": "삼성중공업",
+   "market": "KS",
+   "cap": 131912,
+   "d_rsi": 37.3
+  },
+  {
+   "code": "042660",
+   "name": "한화오션",
+   "market": "KS",
+   "cap": 131758,
+   "d_rsi": 33.0
+  },
+  {
+   "code": "030200",
+   "name": "KT",
+   "market": "KS",
+   "cap": 113410,
+   "d_rsi": 34.8
+  },
+  {
+   "code": "196170",
+   "name": "알테오젠",
+   "market": "KQ",
+   "cap": 111402,
+   "d_rsi": 29.4
+  },
+  {
+   "code": "010950",
+   "name": "S-Oil",
+   "market": "KS",
+   "cap": 106391,
+   "d_rsi": 26.9
+  },
+  {
+   "code": "006800",
+   "name": "미래에셋증권",
+   "market": "KS",
+   "cap": 104423,
+   "d_rsi": 32.3
+  },
+  {
+   "code": "272210",
+   "name": "한화시스템",
+   "market": "KS",
+   "cap": 90492,
+   "d_rsi": 36.7
+  },
+  {
+   "code": "267250",
+   "name": "HD현대",
+   "market": "KS",
+   "cap": 89499,
+   "d_rsi": 30.3
+  },
+  {
+   "code": "000150",
+   "name": "두산",
+   "market": "KS",
+   "cap": 87845,
+   "d_rsi": 39.8
+  },
+  {
+   "code": "000720",
+   "name": "현대건설",
+   "market": "KS",
+   "cap": 77726,
+   "d_rsi": 34.7
+  },
+  {
+   "code": "011070",
+   "name": "LG이노텍",
+   "market": "KS",
+   "cap": 67326,
+   "d_rsi": 39.8
+  },
+  {
+   "code": "064350",
+   "name": "현대로템",
+   "market": "KS",
+   "cap": 65595,
+   "d_rsi": 27.8
+  },
+  {
+   "code": "078930",
+   "name": "GS",
+   "market": "KS",
+   "cap": 64562,
+   "d_rsi": 27.6
+  },
+  {
+   "code": "016360",
+   "name": "삼성증권",
+   "market": "KS",
+   "cap": 63046,
+   "d_rsi": 39.0
+  },
+  {
+   "code": "006260",
+   "name": "LS",
+   "market": "KS",
+   "cap": 53789,
+   "d_rsi": 37.9
+  },
+  {
+   "code": "029780",
+   "name": "삼성카드",
+   "market": "KS",
+   "cap": 46923,
+   "d_rsi": 37.5
+  },
+  {
+   "code": "009830",
+   "name": "한화솔루션",
+   "market": "KS",
+   "cap": 45203,
+   "d_rsi": 36.4
+  },
+  {
+   "code": "047040",
+   "name": "대우건설",
+   "market": "KS",
+   "cap": 43061,
+   "d_rsi": 39.9
+  },
+  {
+   "code": "353200",
+   "name": "대덕전자",
+   "market": "KS",
+   "cap": 38792,
+   "d_rsi": 38.8
+  },
+  {
+   "code": "267270",
+   "name": "HD건설기계",
+   "market": "KS",
+   "cap": 37808,
+   "d_rsi": 39.4
+  },
+  {
+   "code": "028300",
+   "name": "HLB",
+   "market": "KQ",
+   "cap": 36985,
+   "d_rsi": 31.7
+  },
+  {
+   "code": "036570",
+   "name": "NC",
+   "market": "KS",
+   "cap": 36926,
+   "d_rsi": 34.8
+  },
+  {
+   "code": "000880",
+   "name": "한화",
+   "market": "KS",
+   "cap": 36690,
+   "d_rsi": 30.5
+  },
+  {
+   "code": "000250",
+   "name": "삼천당제약",
+   "market": "KQ",
+   "cap": 33896,
+   "d_rsi": 34.8
+  },
+  {
+   "code": "062040",
+   "name": "산일전기",
+   "market": "KS",
+   "cap": 32451,
+   "d_rsi": 34.4
+  },
+  {
+   "code": "000990",
+   "name": "DB하이텍",
+   "market": "KS",
+   "cap": 30975,
+   "d_rsi": 37.9
+  },
+  {
+   "code": "088350",
+   "name": "한화생명",
+   "market": "KS",
+   "cap": 30529,
+   "d_rsi": 31.4
+  },
+  {
+   "code": "002380",
+   "name": "KCC",
+   "market": "KS",
+   "cap": 30075,
+   "d_rsi": 37.8
+  },
+  {
+   "code": "001450",
+   "name": "현대해상",
+   "market": "KS",
+   "cap": 28217,
+   "d_rsi": 28.8
+  },
+  {
+   "code": "031210",
+   "name": "서울보증보험",
+   "market": "KS",
+   "cap": 26323,
+   "d_rsi": 23.1
+  },
+  {
+   "code": "028670",
+   "name": "팬오션",
+   "market": "KS",
+   "cap": 25499,
+   "d_rsi": 34.9
+  },
+  {
+   "code": "251270",
+   "name": "넷마블",
+   "market": "KS",
+   "cap": 25363,
+   "d_rsi": 32.7
+  },
+  {
+   "code": "052690",
+   "name": "한전기술",
+   "market": "KS",
+   "cap": 24155,
+   "d_rsi": 30.2
+  },
+  {
+   "code": "011780",
+   "name": "금호석유화학",
+   "market": "KS",
+   "cap": 22901,
+   "d_rsi": 34.5
+  },
+  {
+   "code": "017800",
+   "name": "현대엘리베이터",
+   "market": "KS",
+   "cap": 22549,
+   "d_rsi": 36.9
+  },
+  {
+   "code": "383220",
+   "name": "F&F",
+   "market": "KS",
+   "cap": 22371,
+   "d_rsi": 36.4
+  },
+  {
+   "code": "006360",
+   "name": "GS건설",
+   "market": "KS",
+   "cap": 22037,
+   "d_rsi": 36.3
+  },
+  {
+   "code": "023530",
+   "name": "롯데쇼핑",
+   "market": "KS",
+   "cap": 22037,
+   "d_rsi": 37.8
+  },
+  {
+   "code": "004370",
+   "name": "농심",
+   "market": "KS",
+   "cap": 20863,
+   "d_rsi": 30.9
+  },
+  {
+   "code": "003690",
+   "name": "코리안리",
+   "market": "KS",
+   "cap": 20747,
+   "d_rsi": 19.8
+  },
+  {
+   "code": "018670",
+   "name": "SK가스",
+   "market": "KS",
+   "cap": 19743,
+   "d_rsi": 33.6
+  },
+  {
+   "code": "141080",
+   "name": "리가켐바이오",
+   "market": "KQ",
+   "cap": 19480,
+   "d_rsi": 36.9
+  },
+  {
+   "code": "298380",
+   "name": "에이비엘바이오",
+   "market": "KQ",
+   "cap": 19316,
+   "d_rsi": 36.8
+  },
+  {
+   "code": "011170",
+   "name": "롯데케미칼",
+   "market": "KS",
+   "cap": 19014,
+   "d_rsi": 39.4
+  },
+  {
+   "code": "087010",
+   "name": "펩트론",
+   "market": "KQ",
+   "cap": 19004,
+   "d_rsi": 34.8
+  },
+  {
+   "code": "009970",
+   "name": "영원무역홀딩스",
+   "market": "KS",
+   "cap": 18790,
+   "d_rsi": 34.3
+  },
+  {
+   "code": "082740",
+   "name": "한화엔진",
+   "market": "KS",
+   "cap": 18692,
+   "d_rsi": 32.8
+  },
+  {
+   "code": "131290",
+   "name": "티에스이",
+   "market": "KQ",
+   "cap": 18462,
+   "d_rsi": 39.0
+  },
+  {
+   "code": "000240",
+   "name": "한국앤컴퍼니",
+   "market": "KS",
+   "cap": 17905,
+   "d_rsi": 32.0
+  },
+  {
+   "code": "005850",
+   "name": "에스엘",
+   "market": "KS",
+   "cap": 17743,
+   "d_rsi": 35.1
+  },
+  {
+   "code": "375500",
+   "name": "DL이앤씨",
+   "market": "KS",
+   "cap": 17722,
+   "d_rsi": 31.7
+  },
+  {
+   "code": "263750",
+   "name": "펄어비스",
+   "market": "KQ",
+   "cap": 17188,
+   "d_rsi": 34.2
+  },
+  {
+   "code": "007070",
+   "name": "GS리테일",
+   "market": "KS",
+   "cap": 17181,
+   "d_rsi": 33.5
+  },
+  {
+   "code": "489790",
+   "name": "한화비전",
+   "market": "KS",
+   "cap": 17141,
+   "d_rsi": 38.6
+  },
+  {
+   "code": "139480",
+   "name": "이마트",
+   "market": "KS",
+   "cap": 16941,
+   "d_rsi": 35.3
+  },
+  {
+   "code": "112610",
+   "name": "씨에스윈드",
+   "market": "KS",
+   "cap": 16869,
+   "d_rsi": 38.9
+  },
+  {
+   "code": "081660",
+   "name": "미스토홀딩스",
+   "market": "KS",
+   "cap": 16326,
+   "d_rsi": 25.8
+  },
+  {
+   "code": "336260",
+   "name": "두산퓨얼셀",
+   "market": "KS",
+   "cap": 16013,
+   "d_rsi": 38.2
+  },
+  {
+   "code": "067310",
+   "name": "하나마이크론",
+   "market": "KQ",
+   "cap": 15359,
+   "d_rsi": 36.6
+  },
+  {
+   "code": "462870",
+   "name": "시프트업",
+   "market": "KS",
+   "cap": 15214,
+   "d_rsi": 38.5
+  },
+  {
+   "code": "347850",
+   "name": "디앤디파마텍",
+   "market": "KQ",
+   "cap": 15156,
+   "d_rsi": 36.7
+  },
+  {
+   "code": "051600",
+   "name": "한전KPS",
+   "market": "KS",
+   "cap": 15120,
+   "d_rsi": 26.7
+  },
+  {
+   "code": "073240",
+   "name": "금호타이어",
+   "market": "KS",
+   "cap": 14708,
+   "d_rsi": 38.7
+  },
+  {
+   "code": "440110",
+   "name": "파두",
+   "market": "KQ",
+   "cap": 14409,
+   "d_rsi": 29.6
+  },
+  {
+   "code": "006280",
+   "name": "녹십자",
+   "market": "KS",
+   "cap": 14293,
+   "d_rsi": 34.8
+  },
+  {
+   "code": "214150",
+   "name": "클래시스",
+   "market": "KQ",
+   "cap": 14091,
+   "d_rsi": 31.8
+  },
+  {
+   "code": "214370",
+   "name": "케어젠",
+   "market": "KQ",
+   "cap": 13966,
+   "d_rsi": 35.7
+  },
+  {
+   "code": "006040",
+   "name": "동원산업",
+   "market": "KS",
+   "cap": 13684,
+   "d_rsi": 30.8
+  },
+  {
+   "code": "103140",
+   "name": "풍산",
+   "market": "KS",
+   "cap": 12849,
+   "d_rsi": 27.1
+  },
+  {
+   "code": "039200",
+   "name": "오스코텍",
+   "market": "KQ",
+   "cap": 12338,
+   "d_rsi": 39.3
+  },
+  {
+   "code": "001120",
+   "name": "LX인터내셔널",
+   "market": "KS",
+   "cap": 12287,
+   "d_rsi": 26.7
+  },
+  {
+   "code": "060370",
+   "name": "LS마린솔루션",
+   "market": "KQ",
+   "cap": 11963,
+   "d_rsi": 34.8
+  },
+  {
+   "code": "096530",
+   "name": "씨젠",
+   "market": "KQ",
+   "cap": 11473,
+   "d_rsi": 28.1
+  },
+  {
+   "code": "007310",
+   "name": "오뚜기",
+   "market": "KS",
+   "cap": 11382,
+   "d_rsi": 28.5
+  },
+  {
+   "code": "003380",
+   "name": "하림지주",
+   "market": "KQ",
+   "cap": 11324,
+   "d_rsi": 38.2
+  },
+  {
+   "code": "229640",
+   "name": "LS에코에너지",
+   "market": "KS",
+   "cap": 11285,
+   "d_rsi": 37.6
+  },
+  {
+   "code": "300720",
+   "name": "한일시멘트",
+   "market": "KS",
+   "cap": 11135,
+   "d_rsi": 35.1
+  },
+  {
+   "code": "071970",
+   "name": "HD현대마린엔진",
+   "market": "KS",
+   "cap": 10906,
+   "d_rsi": 38.0
+  },
+  {
+   "code": "298020",
+   "name": "효성티앤씨",
+   "market": "KS",
+   "cap": 10884,
+   "d_rsi": 37.8
+  },
+  {
+   "code": "012630",
+   "name": "HDC",
+   "market": "KS",
+   "cap": 10809,
+   "d_rsi": 39.5
+  },
+  {
+   "code": "000815",
+   "name": "삼성화재우",
+   "market": "KS",
+   "cap": 10780,
+   "d_rsi": 38.8
+  },
+  {
+   "code": "069620",
+   "name": "대웅제약",
+   "market": "KS",
+   "cap": 10729,
+   "d_rsi": 25.9
+  },
+  {
+   "code": "083650",
+   "name": "비에이치아이",
+   "market": "KQ",
+   "cap": 10614,
+   "d_rsi": 36.9
+  },
+  {
+   "code": "120110",
+   "name": "코오롱인더",
+   "market": "KS",
+   "cap": 10331,
+   "d_rsi": 34.6
+  },
+  {
+   "code": "330590",
+   "name": "롯데리츠",
+   "market": "KS",
+   "cap": 10215,
+   "d_rsi": 38.4
+  },
+  {
+   "code": "475150",
+   "name": "SK이터닉스",
+   "market": "KS",
+   "cap": 9948,
+   "d_rsi": 31.0
+  },
+  {
+   "code": "001740",
+   "name": "SK네트웍스",
+   "market": "KS",
+   "cap": 9939,
+   "d_rsi": 36.4
+  },
+  {
+   "code": "097230",
+   "name": "HJ중공업",
+   "market": "KS",
+   "cap": 9472,
+   "d_rsi": 37.3
+  },
+  {
+   "code": "003530",
+   "name": "한화투자증권",
+   "market": "KS",
+   "cap": 9167,
+   "d_rsi": 38.3
+  },
+  {
+   "code": "192400",
+   "name": "쿠쿠홀딩스",
+   "market": "KS",
+   "cap": 9139,
+   "d_rsi": 31.9
+  },
+  {
+   "code": "003540",
+   "name": "대신증권",
+   "market": "KS",
+   "cap": 9089,
+   "d_rsi": 29.2
+  },
+  {
+   "code": "183300",
+   "name": "코미코",
+   "market": "KQ",
+   "cap": 8809,
+   "d_rsi": 38.5
+  },
+  {
+   "code": "361610",
+   "name": "SK아이이테크놀로지",
+   "market": "KS",
+   "cap": 8719,
+   "d_rsi": 27.0
+  },
+  {
+   "code": "030610",
+   "name": "교보증권",
+   "market": "KS",
+   "cap": 8638,
+   "d_rsi": 36.1
+  },
+  {
+   "code": "009155",
+   "name": "삼성전기우",
+   "market": "KS",
+   "cap": 8634,
+   "d_rsi": 39.3
+  },
+  {
+   "code": "185750",
+   "name": "종근당",
+   "market": "KS",
+   "cap": 8088,
+   "d_rsi": 31.8
+  },
+  {
+   "code": "322000",
+   "name": "HD현대에너지솔루션",
+   "market": "KS",
+   "cap": 8042,
+   "d_rsi": 36.6
+  },
+  {
+   "code": "001820",
+   "name": "삼화콘덴서",
+   "market": "KS",
+   "cap": 8025,
+   "d_rsi": 39.6
+  },
+  {
+   "code": "004000",
+   "name": "롯데정밀화학",
+   "market": "KS",
+   "cap": 8024,
+   "d_rsi": 27.0
+  },
+  {
+   "code": "000210",
+   "name": "DL",
+   "market": "KS",
+   "cap": 7921,
+   "d_rsi": 35.1
+  },
+  {
+   "code": "000155",
+   "name": "두산우",
+   "market": "KS",
+   "cap": 7860,
+   "d_rsi": 37.5
+  },
+  {
+   "code": "071320",
+   "name": "지역난방공사",
+   "market": "KS",
+   "cap": 7341,
+   "d_rsi": 28.9
+  },
+  {
+   "code": "445680",
+   "name": "큐리옥스바이오시스템즈",
+   "market": "KQ",
+   "cap": 7157,
+   "d_rsi": 39.9
+  },
+  {
+   "code": "009240",
+   "name": "한샘",
+   "market": "KS",
+   "cap": 7037,
+   "d_rsi": 19.0
+  },
+  {
+   "code": "214320",
+   "name": "이노션",
+   "market": "KS",
+   "cap": 6636,
+   "d_rsi": 28.9
+  },
+  {
+   "code": "017960",
+   "name": "한국카본",
+   "market": "KS",
+   "cap": 6460,
+   "d_rsi": 30.9
+  },
+  {
+   "code": "085660",
+   "name": "차바이오텍",
+   "market": "KQ",
+   "cap": 6434,
+   "d_rsi": 39.1
+  },
+  {
+   "code": "071055",
+   "name": "한국금융지주우",
+   "market": "KS",
+   "cap": 6069,
+   "d_rsi": 33.3
+  },
+  {
+   "code": "004490",
+   "name": "세방전지",
+   "market": "KS",
+   "cap": 5981,
+   "d_rsi": 23.1
+  },
+  {
+   "code": "006730",
+   "name": "서부T&D",
+   "market": "KQ",
+   "cap": 5907,
+   "d_rsi": 34.4
+  },
+  {
+   "code": "127120",
+   "name": "제이에스링크",
+   "market": "KQ",
+   "cap": 5778,
+   "d_rsi": 36.5
+  },
+  {
+   "code": "001680",
+   "name": "대상",
+   "market": "KS",
+   "cap": 5564,
+   "d_rsi": 37.3
+  },
+  {
+   "code": "458870",
+   "name": "씨어스",
+   "market": "KQ",
+   "cap": 5503,
+   "d_rsi": 37.8
+  },
+  {
+   "code": "006110",
+   "name": "삼아알미늄",
+   "market": "KS",
+   "cap": 5437,
+   "d_rsi": 36.1
+  },
+  {
+   "code": "077970",
+   "name": "STX엔진",
+   "market": "KS",
+   "cap": 5336,
+   "d_rsi": 36.8
+  },
+  {
+   "code": "383800",
+   "name": "LX홀딩스",
+   "market": "KS",
+   "cap": 5302,
+   "d_rsi": 33.3
+  },
+  {
+   "code": "002960",
+   "name": "한국쉘석유",
+   "market": "KS",
+   "cap": 5252,
+   "d_rsi": 26.3
+  },
+  {
+   "code": "017940",
+   "name": "E1",
+   "market": "KS",
+   "cap": 5083,
+   "d_rsi": 29.3
+  },
+  {
+   "code": "003300",
+   "name": "한일홀딩스",
+   "market": "KS",
+   "cap": 5081,
+   "d_rsi": 37.9
+  },
+  {
+   "code": "036530",
+   "name": "SNT홀딩스",
+   "market": "KS",
+   "cap": 5072,
+   "d_rsi": 24.1
+  },
+  {
+   "code": "007700",
+   "name": "F&F홀딩스",
+   "market": "KS",
+   "cap": 4979,
+   "d_rsi": 39.5
+  },
+  {
+   "code": "499790",
+   "name": "GS피앤엘",
+   "market": "KS",
+   "cap": 4938,
+   "d_rsi": 34.7
+  },
+  {
+   "code": "284740",
+   "name": "쿠쿠홈시스",
+   "market": "KS",
+   "cap": 4925,
+   "d_rsi": 36.9
+  },
+  {
+   "code": "064290",
+   "name": "인텍플러스",
+   "market": "KQ",
+   "cap": 4900,
+   "d_rsi": 39.5
+  },
+  {
+   "code": "023160",
+   "name": "태광",
+   "market": "KQ",
+   "cap": 4886,
+   "d_rsi": 35.6
+  },
+  {
+   "code": "014620",
+   "name": "성광벤드",
+   "market": "KQ",
+   "cap": 4796,
+   "d_rsi": 32.0
+  },
+  {
+   "code": "119850",
+   "name": "지엔씨에너지",
+   "market": "KQ",
+   "cap": 4729,
+   "d_rsi": 36.4
+  },
+  {
+   "code": "213420",
+   "name": "덕산네오룩스",
+   "market": "KQ",
+   "cap": 4668,
+   "d_rsi": 33.3
+  },
+  {
+   "code": "000670",
+   "name": "영풍",
+   "market": "KS",
+   "cap": 4649,
+   "d_rsi": 26.8
+  },
+  {
+   "code": "476060",
+   "name": "온코닉테라퓨틱스",
+   "market": "KQ",
+   "cap": 4641,
+   "d_rsi": 35.1
+  },
+  {
+   "code": "009410",
+   "name": "태영건설",
+   "market": "KS",
+   "cap": 4567,
+   "d_rsi": 20.2
+  },
+  {
+   "code": "069260",
+   "name": "TKG휴켐스",
+   "market": "KS",
+   "cap": 4566,
+   "d_rsi": 19.5
+  },
+  {
+   "code": "248070",
+   "name": "솔루엠",
+   "market": "KS",
+   "cap": 4557,
+   "d_rsi": 29.5
+  },
+  {
+   "code": "225570",
+   "name": "넥슨게임즈",
+   "market": "KQ",
+   "cap": 4531,
+   "d_rsi": 27.8
+  },
+  {
+   "code": "456040",
+   "name": "OCI",
+   "market": "KS",
+   "cap": 4512,
+   "d_rsi": 36.1
+  },
+  {
+   "code": "114090",
+   "name": "GKL",
+   "market": "KS",
+   "cap": 4454,
+   "d_rsi": 34.0
+  },
+  {
+   "code": "377740",
+   "name": "바이오노트",
+   "market": "KS",
+   "cap": 4391,
+   "d_rsi": 30.7
+  },
+  {
+   "code": "025540",
+   "name": "한국단자",
+   "market": "KS",
+   "cap": 4334,
+   "d_rsi": 29.1
+  },
+  {
+   "code": "336370",
+   "name": "솔루스첨단소재",
+   "market": "KS",
+   "cap": 4262,
+   "d_rsi": 39.7
+  },
+  {
+   "code": "003620",
+   "name": "KG모빌리티",
+   "market": "KS",
+   "cap": 4220,
+   "d_rsi": 39.3
+  },
+  {
+   "code": "115180",
+   "name": "큐리언트",
+   "market": "KQ",
+   "cap": 4219,
+   "d_rsi": 28.1
+  },
+  {
+   "code": "016380",
+   "name": "KG스틸",
+   "market": "KS",
+   "cap": 4205,
+   "d_rsi": 27.8
+  },
+  {
+   "code": "124500",
+   "name": "아이티센글로벌",
+   "market": "KQ",
+   "cap": 4123,
+   "d_rsi": 39.7
+  },
+  {
+   "code": "003545",
+   "name": "대신증권우",
+   "market": "KS",
+   "cap": 4114,
+   "d_rsi": 28.2
+  },
+  {
+   "code": "005250",
+   "name": "녹십자홀딩스",
+   "market": "KS",
+   "cap": 4077,
+   "d_rsi": 34.4
+  },
+  {
+   "code": "005090",
+   "name": "SGC에너지",
+   "market": "KS",
+   "cap": 4071,
+   "d_rsi": 33.4
+  },
+  {
+   "code": "145990",
+   "name": "삼양사",
+   "market": "KS",
+   "cap": 4002,
+   "d_rsi": 28.1
+  },
+  {
+   "code": "448730",
+   "name": "삼성FN리츠",
+   "market": "KS",
+   "cap": 3979,
+   "d_rsi": 32.3
+  },
+  {
+   "code": "052020",
+   "name": "에스티큐브",
+   "market": "KQ",
+   "cap": 3943,
+   "d_rsi": 39.0
+  },
+  {
+   "code": "178920",
+   "name": "PI첨단소재",
+   "market": "KS",
+   "cap": 3894,
+   "d_rsi": 35.9
+  },
+  {
+   "code": "035890",
+   "name": "서희건설",
+   "market": "KQ",
+   "cap": 3859,
+   "d_rsi": 35.6
+  },
+  {
+   "code": "019170",
+   "name": "신풍제약",
+   "market": "KS",
+   "cap": 3853,
+   "d_rsi": 32.7
+  },
+  {
+   "code": "000070",
+   "name": "삼양홀딩스",
+   "market": "KS",
+   "cap": 3819,
+   "d_rsi": 31.5
+  },
+  {
+   "code": "052400",
+   "name": "코나아이",
+   "market": "KQ",
+   "cap": 3778,
+   "d_rsi": 35.8
+  },
+  {
+   "code": "010780",
+   "name": "아이에스동서",
+   "market": "KS",
+   "cap": 3707,
+   "d_rsi": 38.1
+  },
+  {
+   "code": "108320",
+   "name": "LX세미콘",
+   "market": "KS",
+   "cap": 3692,
+   "d_rsi": 33.2
+  },
+  {
+   "code": "452260",
+   "name": "한화갤러리아",
+   "market": "KS",
+   "cap": 3689,
+   "d_rsi": 36.4
+  },
+  {
+   "code": "003280",
+   "name": "흥아해운",
+   "market": "KS",
+   "cap": 3679,
+   "d_rsi": 38.9
+  },
+  {
+   "code": "002240",
+   "name": "고려제강",
+   "market": "KS",
+   "cap": 3664,
+   "d_rsi": 33.8
+  },
+  {
+   "code": "072710",
+   "name": "농심홀딩스",
+   "market": "KS",
+   "cap": 3641,
+   "d_rsi": 24.7
+  },
+  {
+   "code": "067160",
+   "name": "SOOP",
+   "market": "KQ",
+   "cap": 3636,
+   "d_rsi": 36.9
+  },
+  {
+   "code": "002810",
+   "name": "삼영무역",
+   "market": "KS",
+   "cap": 3590,
+   "d_rsi": 36.1
+  },
+  {
+   "code": "099190",
+   "name": "아이센스",
+   "market": "KQ",
+   "cap": 3590,
+   "d_rsi": 34.3
+  },
+  {
+   "code": "388210",
+   "name": "씨엠티엑스",
+   "market": "KQ",
+   "cap": 3461,
+   "d_rsi": 36.7
+  },
+  {
+   "code": "016610",
+   "name": "DB증권",
+   "market": "KS",
+   "cap": 3459,
+   "d_rsi": 35.5
+  },
+  {
+   "code": "075580",
+   "name": "세진중공업",
+   "market": "KS",
+   "cap": 3451,
+   "d_rsi": 31.7
+  },
+  {
+   "code": "278280",
+   "name": "천보",
+   "market": "KQ",
+   "cap": 3437,
+   "d_rsi": 37.7
+  },
+  {
+   "code": "015360",
+   "name": "INVENI",
+   "market": "KS",
+   "cap": 3360,
+   "d_rsi": 38.0
+  },
+  {
+   "code": "095660",
+   "name": "네오위즈",
+   "market": "KQ",
+   "cap": 3349,
+   "d_rsi": 35.0
+  },
+  {
+   "code": "271940",
+   "name": "일진하이솔루스",
+   "market": "KS",
+   "cap": 3330,
+   "d_rsi": 39.5
+  },
+  {
+   "code": "019210",
+   "name": "와이지-원",
+   "market": "KQ",
+   "cap": 3329,
+   "d_rsi": 36.1
+  },
+  {
+   "code": "044490",
+   "name": "태웅",
+   "market": "KQ",
+   "cap": 3317,
+   "d_rsi": 32.1
+  },
+  {
+   "code": "078350",
+   "name": "한양디지텍",
+   "market": "KQ",
+   "cap": 3316,
+   "d_rsi": 38.3
+  },
+  {
+   "code": "344820",
+   "name": "KCC글라스",
+   "market": "KS",
+   "cap": 3314,
+   "d_rsi": 34.3
+  },
+  {
+   "code": "009900",
+   "name": "명신산업",
+   "market": "KS",
+   "cap": 3295,
+   "d_rsi": 39.1
+  },
+  {
+   "code": "033500",
+   "name": "동성화인텍",
+   "market": "KQ",
+   "cap": 3293,
+   "d_rsi": 35.5
+  },
+  {
+   "code": "092230",
+   "name": "KPX홀딩스",
+   "market": "KS",
+   "cap": 3238,
+   "d_rsi": 35.0
+  },
+  {
+   "code": "003800",
+   "name": "에이스침대",
+   "market": "KQ",
+   "cap": 3227,
+   "d_rsi": 29.3
+  },
+  {
+   "code": "027410",
+   "name": "BGF",
+   "market": "KS",
+   "cap": 3187,
+   "d_rsi": 34.7
+  },
+  {
+   "code": "030520",
+   "name": "한컴",
+   "market": "KQ",
+   "cap": 3170,
+   "d_rsi": 32.4
+  },
+  {
+   "code": "170900",
+   "name": "동아에스티",
+   "market": "KS",
+   "cap": 3162,
+   "d_rsi": 38.2
+  },
+  {
+   "code": "078340",
+   "name": "컴투스",
+   "market": "KQ",
+   "cap": 3132,
+   "d_rsi": 31.0
+  },
+  {
+   "code": "460930",
+   "name": "현대힘스",
+   "market": "KQ",
+   "cap": 3121,
+   "d_rsi": 38.5
+  },
+  {
+   "code": "005420",
+   "name": "코스모화학",
+   "market": "KS",
+   "cap": 3050,
+   "d_rsi": 39.5
+  },
+  {
+   "code": "025980",
+   "name": "아난티",
+   "market": "KQ",
+   "cap": 3046,
+   "d_rsi": 31.3
+  },
+  {
+   "code": "042000",
+   "name": "카페24",
+   "market": "KQ",
+   "cap": 3010,
+   "d_rsi": 35.8
+  },
+  {
+   "code": "107640",
+   "name": "한중엔시에스",
+   "market": "KQ",
+   "cap": 2973,
+   "d_rsi": 36.9
+  },
+  {
+   "code": "036620",
+   "name": "감성코퍼레이션",
+   "market": "KQ",
+   "cap": 2967,
+   "d_rsi": 37.7
+  },
+  {
+   "code": "306200",
+   "name": "세아제강",
+   "market": "KS",
+   "cap": 2944,
+   "d_rsi": 30.6
+  },
+  {
+   "code": "357120",
+   "name": "코람코라이프인프라리츠",
+   "market": "KS",
+   "cap": 2935,
+   "d_rsi": 23.3
+  },
+  {
+   "code": "033240",
+   "name": "자화전자",
+   "market": "KS",
+   "cap": 2917,
+   "d_rsi": 32.1
+  },
+  {
+   "code": "060980",
+   "name": "HL홀딩스",
+   "market": "KS",
+   "cap": 2902,
+   "d_rsi": 37.3
+  },
+  {
+   "code": "080580",
+   "name": "오킨스전자",
+   "market": "KQ",
+   "cap": 2900,
+   "d_rsi": 36.4
+  },
+  {
+   "code": "183190",
+   "name": "아세아시멘트",
+   "market": "KS",
+   "cap": 2896,
+   "d_rsi": 21.1
+  },
+  {
+   "code": "105630",
+   "name": "한세실업",
+   "market": "KS",
+   "cap": 2896,
+   "d_rsi": 22.7
+  },
+  {
+   "code": "336570",
+   "name": "원텍",
+   "market": "KQ",
+   "cap": 2875,
+   "d_rsi": 35.2
+  },
+  {
+   "code": "047920",
+   "name": "HLB제약",
+   "market": "KQ",
+   "cap": 2871,
+   "d_rsi": 34.1
+  },
+  {
+   "code": "009290",
+   "name": "광동제약",
+   "market": "KS",
+   "cap": 2868,
+   "d_rsi": 35.6
+  },
+  {
+   "code": "130660",
+   "name": "한전산업",
+   "market": "KS",
+   "cap": 2862,
+   "d_rsi": 36.7
+  },
+  {
+   "code": "272290",
+   "name": "이녹스첨단소재",
+   "market": "KQ",
+   "cap": 2861,
+   "d_rsi": 35.9
+  },
+  {
+   "code": "475830",
+   "name": "오름테라퓨틱",
+   "market": "KQ",
+   "cap": 2839,
+   "d_rsi": 30.7
+  },
+  {
+   "code": "200470",
+   "name": "에이팩트",
+   "market": "KQ",
+   "cap": 2820,
+   "d_rsi": 38.8
+  },
+  {
+   "code": "004710",
+   "name": "한솔테크닉스",
+   "market": "KS",
+   "cap": 2811,
+   "d_rsi": 34.2
+  },
+  {
+   "code": "017810",
+   "name": "풀무원",
+   "market": "KS",
+   "cap": 2802,
+   "d_rsi": 27.3
+  },
+  {
+   "code": "011760",
+   "name": "현대코퍼레이션",
+   "market": "KS",
+   "cap": 2791,
+   "d_rsi": 33.3
+  },
+  {
+   "code": "365340",
+   "name": "성일하이텍",
+   "market": "KQ",
+   "cap": 2791,
+   "d_rsi": 30.7
+  },
+  {
+   "code": "017890",
+   "name": "한국알콜",
+   "market": "KQ",
+   "cap": 2785,
+   "d_rsi": 35.1
+  },
+  {
+   "code": "067630",
+   "name": "HLB생명과학",
+   "market": "KQ",
+   "cap": 2737,
+   "d_rsi": 35.6
+  },
+  {
+   "code": "475960",
+   "name": "토모큐브",
+   "market": "KQ",
+   "cap": 2736,
+   "d_rsi": 29.2
+  },
+  {
+   "code": "098120",
+   "name": "마이크로컨텍솔",
+   "market": "KQ",
+   "cap": 2731,
+   "d_rsi": 36.4
+  },
+  {
+   "code": "001750",
+   "name": "한양증권",
+   "market": "KS",
+   "cap": 2691,
+   "d_rsi": 33.2
+  },
+  {
+   "code": "309710",
+   "name": "아이티켐",
+   "market": "KQ",
+   "cap": 2684,
+   "d_rsi": 31.7
+  },
+  {
+   "code": "026890",
+   "name": "스틱인베스트먼트",
+   "market": "KS",
+   "cap": 2671,
+   "d_rsi": 39.6
+  },
+  {
+   "code": "441270",
+   "name": "파인엠텍",
+   "market": "KQ",
+   "cap": 2659,
+   "d_rsi": 36.5
+  },
+  {
+   "code": "025860",
+   "name": "남해화학",
+   "market": "KS",
+   "cap": 2653,
+   "d_rsi": 35.8
+  },
+  {
+   "code": "096760",
+   "name": "JW홀딩스",
+   "market": "KS",
+   "cap": 2643,
+   "d_rsi": 35.9
+  },
+  {
+   "code": "123890",
+   "name": "한국자산신탁",
+   "market": "KS",
+   "cap": 2625,
+   "d_rsi": 35.3
+  },
+  {
+   "code": "018250",
+   "name": "애경산업",
+   "market": "KS",
+   "cap": 2575,
+   "d_rsi": 33.5
+  },
+  {
+   "code": "215600",
+   "name": "신라젠",
+   "market": "KQ",
+   "cap": 2574,
+   "d_rsi": 34.6
+  },
+  {
+   "code": "007690",
+   "name": "국도화학",
+   "market": "KS",
+   "cap": 2565,
+   "d_rsi": 24.9
+  },
+  {
+   "code": "092190",
+   "name": "서울바이오시스",
+   "market": "KQ",
+   "cap": 2532,
+   "d_rsi": 38.2
+  },
+  {
+   "code": "126720",
+   "name": "수산인더스트리",
+   "market": "KS",
+   "cap": 2526,
+   "d_rsi": 30.0
+  },
+  {
+   "code": "033160",
+   "name": "엠케이전자",
+   "market": "KQ",
+   "cap": 2525,
+   "d_rsi": 39.5
+  },
+  {
+   "code": "381970",
+   "name": "KG모빌리티플랫폼",
+   "market": "KS",
+   "cap": 2514,
+   "d_rsi": 33.0
+  },
+  {
+   "code": "046970",
+   "name": "우리로",
+   "market": "KQ",
+   "cap": 2489,
+   "d_rsi": 38.7
+  },
+  {
+   "code": "001230",
+   "name": "동국홀딩스",
+   "market": "KS",
+   "cap": 2469,
+   "d_rsi": 30.3
+  },
+  {
+   "code": "348370",
+   "name": "엔켐",
+   "market": "KQ",
+   "cap": 2458,
+   "d_rsi": 31.5
+  },
+  {
+   "code": "002310",
+   "name": "아세아제지",
+   "market": "KS",
+   "cap": 2446,
+   "d_rsi": 26.5
+  },
+  {
+   "code": "025900",
+   "name": "동화기업",
+   "market": "KQ",
+   "cap": 2442,
+   "d_rsi": 37.7
+  },
+  {
+   "code": "286940",
+   "name": "롯데이노베이트",
+   "market": "KS",
+   "cap": 2406,
+   "d_rsi": 37.6
+  },
+  {
+   "code": "097520",
+   "name": "엠씨넥스",
+   "market": "KS",
+   "cap": 2393,
+   "d_rsi": 37.6
+  },
+  {
+   "code": "010580",
+   "name": "에스엠벡셀",
+   "market": "KS",
+   "cap": 2392,
+   "d_rsi": 36.6
+  },
+  {
+   "code": "051500",
+   "name": "CJ프레시웨이",
+   "market": "KQ",
+   "cap": 2392,
+   "d_rsi": 39.3
+  },
+  {
+   "code": "091580",
+   "name": "상신이디피",
+   "market": "KQ",
+   "cap": 2390,
+   "d_rsi": 39.4
+  },
+  {
+   "code": "035600",
+   "name": "KG이니시스",
+   "market": "KQ",
+   "cap": 2386,
+   "d_rsi": 32.2
+  },
+  {
+   "code": "900290",
+   "name": "GRT",
+   "market": "KQ",
+   "cap": 2379,
+   "d_rsi": 40.0
+  },
+  {
+   "code": "018000",
+   "name": "유니슨",
+   "market": "KQ",
+   "cap": 2376,
+   "d_rsi": 26.7
+  },
+  {
+   "code": "950210",
+   "name": "프레스티지바이오파마",
+   "market": "KS",
+   "cap": 2374,
+   "d_rsi": 38.5
+  },
+  {
+   "code": "010955",
+   "name": "S-Oil우",
+   "market": "KS",
+   "cap": 2373,
+   "d_rsi": 29.0
+  },
+  {
+   "code": "200880",
+   "name": "서연이화",
+   "market": "KS",
+   "cap": 2341,
+   "d_rsi": 35.8
+  },
+  {
+   "code": "114810",
+   "name": "한솔아이원스",
+   "market": "KQ",
+   "cap": 2339,
+   "d_rsi": 37.4
+  },
+  {
+   "code": "348950",
+   "name": "제이알글로벌리츠",
+   "market": "KS",
+   "cap": 2333,
+   "d_rsi": 31.7
+  },
+  {
+   "code": "352480",
+   "name": "씨앤씨인터내셔널",
+   "market": "KQ",
+   "cap": 2301,
+   "d_rsi": 37.6
+  },
+  {
+   "code": "044450",
+   "name": "KSS해운",
+   "market": "KS",
+   "cap": 2292,
+   "d_rsi": 25.3
+  },
+  {
+   "code": "348210",
+   "name": "넥스틴",
+   "market": "KQ",
+   "cap": 2284,
+   "d_rsi": 37.7
+  },
+  {
+   "code": "417840",
+   "name": "저스템",
+   "market": "KQ",
+   "cap": 2281,
+   "d_rsi": 39.8
+  },
+  {
+   "code": "002710",
+   "name": "TCC스틸",
+   "market": "KS",
+   "cap": 2257,
+   "d_rsi": 39.5
+  },
+  {
+   "code": "317400",
+   "name": "자이에스앤디",
+   "market": "KS",
+   "cap": 2214,
+   "d_rsi": 33.8
+  },
+  {
+   "code": "025000",
+   "name": "KPX케미칼",
+   "market": "KS",
+   "cap": 2156,
+   "d_rsi": 35.6
+  },
+  {
+   "code": "393890",
+   "name": "더블유씨피",
+   "market": "KQ",
+   "cap": 2150,
+   "d_rsi": 39.2
+  },
+  {
+   "code": "004360",
+   "name": "세방",
+   "market": "KS",
+   "cap": 2149,
+   "d_rsi": 33.5
+  },
+  {
+   "code": "005950",
+   "name": "이수화학",
+   "market": "KS",
+   "cap": 2148,
+   "d_rsi": 38.9
+  },
+  {
+   "code": "003120",
+   "name": "일성아이에스",
+   "market": "KS",
+   "cap": 2144,
+   "d_rsi": 38.0
+  },
+  {
+   "code": "008730",
+   "name": "율촌화학",
+   "market": "KS",
+   "cap": 2143,
+   "d_rsi": 19.9
+  },
+  {
+   "code": "011930",
+   "name": "신성이엔지",
+   "market": "KS",
+   "cap": 2142,
+   "d_rsi": 35.0
+  },
+  {
+   "code": "005680",
+   "name": "삼영전자",
+   "market": "KS",
+   "cap": 2128,
+   "d_rsi": 38.4
+  },
+  {
+   "code": "424870",
+   "name": "이뮨온시아",
+   "market": "KQ",
+   "cap": 2125,
+   "d_rsi": 35.3
+  },
+  {
+   "code": "009680",
+   "name": "모토닉",
+   "market": "KS",
+   "cap": 2121,
+   "d_rsi": 37.9
+  },
+  {
+   "code": "065710",
+   "name": "서호전기",
+   "market": "KQ",
+   "cap": 2104,
+   "d_rsi": 35.4
+  },
+  {
+   "code": "094360",
+   "name": "칩스앤미디어",
+   "market": "KQ",
+   "cap": 2098,
+   "d_rsi": 39.5
+  },
+  {
+   "code": "092460",
+   "name": "한라IMS",
+   "market": "KQ",
+   "cap": 2093,
+   "d_rsi": 36.6
+  },
+  {
+   "code": "001460",
+   "name": "BYC",
+   "market": "KS",
+   "cap": 2089,
+   "d_rsi": 39.1
+  },
+  {
+   "code": "078520",
+   "name": "에이블씨엔씨",
+   "market": "KS",
+   "cap": 2082,
+   "d_rsi": 36.4
+  },
+  {
+   "code": "215000",
+   "name": "골프존",
+   "market": "KQ",
+   "cap": 2077,
+   "d_rsi": 39.6
+  },
+  {
+   "code": "472850",
+   "name": "폰드그룹",
+   "market": "KQ",
+   "cap": 2070,
+   "d_rsi": 30.5
+  },
+  {
+   "code": "058430",
+   "name": "포스코스틸리온",
+   "market": "KS",
+   "cap": 2064,
+   "d_rsi": 30.7
+  },
+  {
+   "code": "108670",
+   "name": "LX하우시스",
+   "market": "KS",
+   "cap": 2058,
+   "d_rsi": 24.2
+  },
+  {
+   "code": "003960",
+   "name": "사조대림",
+   "market": "KS",
+   "cap": 2021,
+   "d_rsi": 30.5
+  },
+  {
+   "code": "006910",
+   "name": "보성파워텍",
+   "market": "KQ",
+   "cap": 2009,
+   "d_rsi": 36.4
+  },
+  {
+   "code": "228760",
+   "name": "지노믹트리",
+   "market": "KQ",
+   "cap": 2006,
+   "d_rsi": 34.9
+  },
+  {
+   "code": "330860",
+   "name": "네패스아크",
+   "market": "KQ",
+   "cap": 2005,
+   "d_rsi": 38.2
+  },
+  {
+   "code": "484590",
+   "name": "삼양컴텍",
+   "market": "KQ",
+   "cap": 1999,
+   "d_rsi": 39.9
+  },
+  {
+   "code": "477850",
+   "name": "마키나락스",
+   "market": "KQ",
+   "cap": 1998,
+   "d_rsi": 35.1
+  },
+  {
+   "code": "033920",
+   "name": "무학",
+   "market": "KS",
+   "cap": 1995,
+   "d_rsi": 36.6
+  },
+  {
+   "code": "001390",
+   "name": "KG케미칼",
+   "market": "KS",
+   "cap": 1989,
+   "d_rsi": 25.5
+  },
+  {
+   "code": "334890",
+   "name": "이지스밸류플러스리츠",
+   "market": "KS",
+   "cap": 1969,
+   "d_rsi": 30.0
+  },
+  {
+   "code": "216080",
+   "name": "제테마",
+   "market": "KQ",
+   "cap": 1969,
+   "d_rsi": 35.9
+  },
+  {
+   "code": "217590",
+   "name": "티엠씨",
+   "market": "KS",
+   "cap": 1949,
+   "d_rsi": 36.2
+  },
+  {
+   "code": "003070",
+   "name": "코오롱글로벌",
+   "market": "KS",
+   "cap": 1942,
+   "d_rsi": 27.0
+  },
+  {
+   "code": "030210",
+   "name": "다올투자증권",
+   "market": "KS",
+   "cap": 1934,
+   "d_rsi": 39.6
+  },
+  {
+   "code": "482630",
+   "name": "삼양엔씨켐",
+   "market": "KQ",
+   "cap": 1909,
+   "d_rsi": 37.9
+  },
+  {
+   "code": "010820",
+   "name": "퍼스텍",
+   "market": "KS",
+   "cap": 1875,
+   "d_rsi": 34.9
+  },
+  {
+   "code": "475560",
+   "name": "더본코리아",
+   "market": "KS",
+   "cap": 1853,
+   "d_rsi": 36.5
+  },
+  {
+   "code": "136490",
+   "name": "선진",
+   "market": "KS",
+   "cap": 1852,
+   "d_rsi": 23.8
+  },
+  {
+   "code": "000480",
+   "name": "CR홀딩스",
+   "market": "KS",
+   "cap": 1852,
+   "d_rsi": 39.4
+  },
+  {
+   "code": "036890",
+   "name": "진성티이씨",
+   "market": "KQ",
+   "cap": 1851,
+   "d_rsi": 35.2
+  },
+  {
+   "code": "089980",
+   "name": "상아프론테크",
+   "market": "KQ",
+   "cap": 1847,
+   "d_rsi": 38.6
+  },
+  {
+   "code": "088260",
+   "name": "이리츠코크렙",
+   "market": "KS",
+   "cap": 1840,
+   "d_rsi": 38.6
+  },
+  {
+   "code": "092790",
+   "name": "넥스틸",
+   "market": "KS",
+   "cap": 1833,
+   "d_rsi": 28.1
+  },
+  {
+   "code": "091700",
+   "name": "파트론",
+   "market": "KQ",
+   "cap": 1820,
+   "d_rsi": 28.8
+  },
+  {
+   "code": "950170",
+   "name": "JTC",
+   "market": "KQ",
+   "cap": 1817,
+   "d_rsi": 36.6
+  },
+  {
+   "code": "000540",
+   "name": "흥국화재",
+   "market": "KS",
+   "cap": 1815,
+   "d_rsi": 30.6
+  },
+  {
+   "code": "039570",
+   "name": "HDC랩스",
+   "market": "KS",
+   "cap": 1796,
+   "d_rsi": 35.9
+  },
+  {
+   "code": "001340",
+   "name": "PKC",
+   "market": "KS",
+   "cap": 1794,
+   "d_rsi": 33.0
+  },
+  {
+   "code": "035150",
+   "name": "백산",
+   "market": "KS",
+   "cap": 1791,
+   "d_rsi": 28.0
+  },
+  {
+   "code": "900140",
+   "name": "엘브이엠씨홀딩스",
+   "market": "KS",
+   "cap": 1779,
+   "d_rsi": 25.7
+  },
+  {
+   "code": "007160",
+   "name": "사조산업",
+   "market": "KS",
+   "cap": 1773,
+   "d_rsi": 30.9
+  },
+  {
+   "code": "243070",
+   "name": "휴온스",
+   "market": "KQ",
+   "cap": 1766,
+   "d_rsi": 30.8
+  },
+  {
+   "code": "053210",
+   "name": "스카이라이프",
+   "market": "KS",
+   "cap": 1765,
+   "d_rsi": 39.4
+  },
+  {
+   "code": "450950",
+   "name": "아스테라시스",
+   "market": "KQ",
+   "cap": 1761,
+   "d_rsi": 40.0
+  },
+  {
+   "code": "000680",
+   "name": "LS네트웍스",
+   "market": "KS",
+   "cap": 1757,
+   "d_rsi": 25.5
+  },
+  {
+   "code": "003650",
+   "name": "미창석유",
+   "market": "KS",
+   "cap": 1757,
+   "d_rsi": 25.2
+  },
+  {
+   "code": "095570",
+   "name": "AJ네트웍스",
+   "market": "KS",
+   "cap": 1744,
+   "d_rsi": 33.9
+  },
+  {
+   "code": "287840",
+   "name": "인투셀",
+   "market": "KQ",
+   "cap": 1743,
+   "d_rsi": 29.8
+  },
+  {
+   "code": "042520",
+   "name": "한스바이오메드",
+   "market": "KQ",
+   "cap": 1728,
+   "d_rsi": 32.1
+  },
+  {
+   "code": "416180",
+   "name": "신성에스티",
+   "market": "KQ",
+   "cap": 1724,
+   "d_rsi": 38.3
+  },
+  {
+   "code": "432320",
+   "name": "KB스타리츠",
+   "market": "KS",
+   "cap": 1722,
+   "d_rsi": 14.4
+  },
+  {
+   "code": "001130",
+   "name": "대한제분",
+   "market": "KS",
+   "cap": 1715,
+   "d_rsi": 34.1
+  },
+  {
+   "code": "180400",
+   "name": "DXVX",
+   "market": "KQ",
+   "cap": 1713,
+   "d_rsi": 30.5
+  },
+  {
+   "code": "067390",
+   "name": "아스트",
+   "market": "KQ",
+   "cap": 1712,
+   "d_rsi": 25.6
+  },
+  {
+   "code": "114190",
+   "name": "강원에너지",
+   "market": "KQ",
+   "cap": 1708,
+   "d_rsi": 38.8
+  },
+  {
+   "code": "013120",
+   "name": "동원개발",
+   "market": "KQ",
+   "cap": 1687,
+   "d_rsi": 31.4
+  },
+  {
+   "code": "102460",
+   "name": "이연제약",
+   "market": "KS",
+   "cap": 1686,
+   "d_rsi": 32.9
+  },
+  {
+   "code": "004980",
+   "name": "성신양회",
+   "market": "KS",
+   "cap": 1670,
+   "d_rsi": 37.4
+  },
+  {
+   "code": "151860",
+   "name": "KG에코솔루션",
+   "market": "KQ",
+   "cap": 1666,
+   "d_rsi": 25.1
+  },
+  {
+   "code": "002100",
+   "name": "경농",
+   "market": "KS",
+   "cap": 1654,
+   "d_rsi": 27.3
+  },
+  {
+   "code": "008490",
+   "name": "서흥",
+   "market": "KS",
+   "cap": 1653,
+   "d_rsi": 17.6
+  },
+  {
+   "code": "064820",
+   "name": "케이프",
+   "market": "KQ",
+   "cap": 1639,
+   "d_rsi": 36.0
+  },
+  {
+   "code": "317330",
+   "name": "덕산테코피아",
+   "market": "KQ",
+   "cap": 1638,
+   "d_rsi": 36.1
+  },
+  {
+   "code": "220100",
+   "name": "퓨쳐켐",
+   "market": "KQ",
+   "cap": 1636,
+   "d_rsi": 33.8
+  },
+  {
+   "code": "053690",
+   "name": "한미글로벌",
+   "market": "KS",
+   "cap": 1635,
+   "d_rsi": 35.6
+  },
+  {
+   "code": "009470",
+   "name": "삼화전기",
+   "market": "KS",
+   "cap": 1634,
+   "d_rsi": 36.9
+  },
+  {
+   "code": "067080",
+   "name": "대화제약",
+   "market": "KQ",
+   "cap": 1623,
+   "d_rsi": 39.3
+  },
+  {
+   "code": "484120",
+   "name": "도우인시스",
+   "market": "KQ",
+   "cap": 1621,
+   "d_rsi": 36.6
+  },
+  {
+   "code": "092130",
+   "name": "이크레더블",
+   "market": "KQ",
+   "cap": 1613,
+   "d_rsi": 36.2
+  },
+  {
+   "code": "102260",
+   "name": "동성케미컬",
+   "market": "KS",
+   "cap": 1611,
+   "d_rsi": 36.7
+  },
+  {
+   "code": "036560",
+   "name": "KZ정밀",
+   "market": "KQ",
+   "cap": 1607,
+   "d_rsi": 24.2
+  },
+  {
+   "code": "000490",
+   "name": "대동",
+   "market": "KS",
+   "cap": 1597,
+   "d_rsi": 33.3
+  },
+  {
+   "code": "394280",
+   "name": "오픈엣지테크놀로지",
+   "market": "KQ",
+   "cap": 1589,
+   "d_rsi": 39.9
+  },
+  {
+   "code": "307180",
+   "name": "아이엘",
+   "market": "KQ",
+   "cap": 1563,
+   "d_rsi": 35.8
+  },
+  {
+   "code": "128820",
+   "name": "대성산업",
+   "market": "KS",
+   "cap": 1558,
+   "d_rsi": 35.2
+  },
+  {
+   "code": "002150",
+   "name": "도화엔지니어링",
+   "market": "KS",
+   "cap": 1554,
+   "d_rsi": 36.6
+  },
+  {
+   "code": "144510",
+   "name": "지씨셀",
+   "market": "KQ",
+   "cap": 1553,
+   "d_rsi": 34.9
+  },
+  {
+   "code": "082800",
+   "name": "비보존 제약",
+   "market": "KQ",
+   "cap": 1551,
+   "d_rsi": 32.3
+  },
+  {
+   "code": "095500",
+   "name": "미래나노텍",
+   "market": "KQ",
+   "cap": 1547,
+   "d_rsi": 37.2
+  },
+  {
+   "code": "176750",
+   "name": "듀켐바이오",
+   "market": "KQ",
+   "cap": 1547,
+   "d_rsi": 39.6
+  },
+  {
+   "code": "365270",
+   "name": "큐라클",
+   "market": "KQ",
+   "cap": 1542,
+   "d_rsi": 31.5
+  },
+  {
+   "code": "353810",
+   "name": "이지바이오",
+   "market": "KQ",
+   "cap": 1542,
+   "d_rsi": 36.9
+  },
+  {
+   "code": "000157",
+   "name": "두산2우B",
+   "market": "KS",
+   "cap": 1541,
+   "d_rsi": 34.4
+  },
+  {
+   "code": "005160",
+   "name": "동국산업",
+   "market": "KQ",
+   "cap": 1541,
+   "d_rsi": 39.9
+  },
+  {
+   "code": "168360",
+   "name": "펨트론",
+   "market": "KQ",
+   "cap": 1536,
+   "d_rsi": 36.5
+  },
+  {
+   "code": "098070",
+   "name": "한텍",
+   "market": "KQ",
+   "cap": 1534,
+   "d_rsi": 33.3
+  },
+  {
+   "code": "049430",
+   "name": "코메론",
+   "market": "KQ",
+   "cap": 1532,
+   "d_rsi": 36.8
+  },
+  {
+   "code": "126600",
+   "name": "BGF에코머티리얼즈",
+   "market": "KQ",
+   "cap": 1532,
+   "d_rsi": 26.7
+  },
+  {
+   "code": "052330",
+   "name": "코텍",
+   "market": "KQ",
+   "cap": 1526,
+   "d_rsi": 33.2
+  },
+  {
+   "code": "000390",
+   "name": "SP삼화",
+   "market": "KS",
+   "cap": 1523,
+   "d_rsi": 28.3
+  },
+  {
+   "code": "090350",
+   "name": "노루페인트",
+   "market": "KS",
+   "cap": 1522,
+   "d_rsi": 36.4
+  },
+  {
+   "code": "000860",
+   "name": "강남제비스코",
+   "market": "KS",
+   "cap": 1517,
+   "d_rsi": 37.1
+  },
+  {
+   "code": "314930",
+   "name": "바이오다인",
+   "market": "KQ",
+   "cap": 1509,
+   "d_rsi": 35.1
+  },
+  {
+   "code": "019010",
+   "name": "베뉴지",
+   "market": "KQ",
+   "cap": 1509,
+   "d_rsi": 37.3
+  },
+  {
+   "code": "011040",
+   "name": "경동제약",
+   "market": "KQ",
+   "cap": 1503,
+   "d_rsi": 39.0
+  },
+  {
+   "code": "194700",
+   "name": "노바렉스",
+   "market": "KQ",
+   "cap": 1502,
+   "d_rsi": 37.2
+  },
+  {
+   "code": "104480",
+   "name": "티케이케미칼",
+   "market": "KQ",
+   "cap": 1502,
+   "d_rsi": 36.5
+  },
+  {
+   "code": "045390",
+   "name": "대아티아이",
+   "market": "KQ",
+   "cap": 1501,
+   "d_rsi": 35.4
+  },
+  {
+   "code": "004560",
+   "name": "현대비앤지스틸",
+   "market": "KS",
+   "cap": 1481,
+   "d_rsi": 39.4
+  },
+  {
+   "code": "256840",
+   "name": "한국비엔씨",
+   "market": "KQ",
+   "cap": 1477,
+   "d_rsi": 38.9
+  },
+  {
+   "code": "446540",
+   "name": "메가터치",
+   "market": "KQ",
+   "cap": 1474,
+   "d_rsi": 34.6
+  },
+  {
+   "code": "243840",
+   "name": "신흥에스이씨",
+   "market": "KQ",
+   "cap": 1471,
+   "d_rsi": 34.2
+  },
+  {
+   "code": "112290",
+   "name": "와이씨켐",
+   "market": "KQ",
+   "cap": 1470,
+   "d_rsi": 39.4
+  },
+  {
+   "code": "377190",
+   "name": "디앤디플랫폼리츠",
+   "market": "KS",
+   "cap": 1469,
+   "d_rsi": 28.1
+  },
+  {
+   "code": "085910",
+   "name": "네오티스",
+   "market": "KQ",
+   "cap": 1466,
+   "d_rsi": 30.4
+  },
+  {
+   "code": "015230",
+   "name": "대창단조",
+   "market": "KS",
+   "cap": 1463,
+   "d_rsi": 38.9
+  },
+  {
+   "code": "007860",
+   "name": "서연",
+   "market": "KS",
+   "cap": 1456,
+   "d_rsi": 36.8
+  },
+  {
+   "code": "083930",
+   "name": "아바코",
+   "market": "KQ",
+   "cap": 1449,
+   "d_rsi": 37.8
+  },
+  {
+   "code": "066620",
+   "name": "국보디자인",
+   "market": "KQ",
+   "cap": 1448,
+   "d_rsi": 37.3
+  },
+  {
+   "code": "002170",
+   "name": "SYTS",
+   "market": "KS",
+   "cap": 1445,
+   "d_rsi": 30.6
+  },
+  {
+   "code": "204610",
+   "name": "티쓰리",
+   "market": "KQ",
+   "cap": 1444,
+   "d_rsi": 32.9
+  },
+  {
+   "code": "084990",
+   "name": "헬릭스미스",
+   "market": "KQ",
+   "cap": 1440,
+   "d_rsi": 38.4
+  },
+  {
+   "code": "012210",
+   "name": "삼미금속",
+   "market": "KQ",
+   "cap": 1438,
+   "d_rsi": 39.6
+  },
+  {
+   "code": "032620",
+   "name": "GC메디아이",
+   "market": "KQ",
+   "cap": 1438,
+   "d_rsi": 37.6
+  },
+  {
+   "code": "023910",
+   "name": "대한약품",
+   "market": "KQ",
+   "cap": 1416,
+   "d_rsi": 30.1
+  },
+  {
+   "code": "293480",
+   "name": "하나제약",
+   "market": "KS",
+   "cap": 1415,
+   "d_rsi": 39.9
+  },
+  {
+   "code": "014940",
+   "name": "오리엔탈정공",
+   "market": "KQ",
+   "cap": 1415,
+   "d_rsi": 35.1
+  },
+  {
+   "code": "000970",
+   "name": "한국주철관",
+   "market": "KS",
+   "cap": 1414,
+   "d_rsi": 39.3
+  },
+  {
+   "code": "143160",
+   "name": "아이디스",
+   "market": "KQ",
+   "cap": 1412,
+   "d_rsi": 30.0
+  },
+  {
+   "code": "213500",
+   "name": "한솔제지",
+   "market": "KS",
+   "cap": 1411,
+   "d_rsi": 19.5
+  },
+  {
+   "code": "272550",
+   "name": "삼양패키징",
+   "market": "KS",
+   "cap": 1410,
+   "d_rsi": 36.1
+  },
+  {
+   "code": "403850",
+   "name": "더핑크퐁컴퍼니",
+   "market": "KQ",
+   "cap": 1410,
+   "d_rsi": 38.0
+  },
+  {
+   "code": "005960",
+   "name": "동부건설",
+   "market": "KS",
+   "cap": 1409,
+   "d_rsi": 30.7
+  },
+  {
+   "code": "058970",
+   "name": "엠로",
+   "market": "KQ",
+   "cap": 1407,
+   "d_rsi": 32.7
+  },
+  {
+   "code": "024060",
+   "name": "흥구석유",
+   "market": "KQ",
+   "cap": 1403,
+   "d_rsi": 35.0
+  },
+  {
+   "code": "003520",
+   "name": "영진약품",
+   "market": "KS",
+   "cap": 1399,
+   "d_rsi": 29.2
+  },
+  {
+   "code": "017860",
+   "name": "DS단석",
+   "market": "KS",
+   "cap": 1388,
+   "d_rsi": 29.0
+  },
+  {
+   "code": "061090",
+   "name": "세나테크놀로지",
+   "market": "KQ",
+   "cap": 1353,
+   "d_rsi": 39.7
+  },
+  {
+   "code": "000020",
+   "name": "동화약품",
+   "market": "KS",
+   "cap": 1352,
+   "d_rsi": 38.6
+  },
+  {
+   "code": "005010",
+   "name": "휴스틸",
+   "market": "KS",
+   "cap": 1351,
+   "d_rsi": 21.0
+  },
+  {
+   "code": "068790",
+   "name": "DMS",
+   "market": "KQ",
+   "cap": 1349,
+   "d_rsi": 34.8
+  },
+  {
+   "code": "004970",
+   "name": "신라교역",
+   "market": "KS",
+   "cap": 1344,
+   "d_rsi": 28.0
+  },
+  {
+   "code": "042420",
+   "name": "네오위즈홀딩스",
+   "market": "KQ",
+   "cap": 1339,
+   "d_rsi": 33.7
+  },
+  {
+   "code": "061970",
+   "name": "LB세미콘",
+   "market": "KQ",
+   "cap": 1338,
+   "d_rsi": 26.8
+  },
+  {
+   "code": "264450",
+   "name": "유비쿼스",
+   "market": "KQ",
+   "cap": 1335,
+   "d_rsi": 36.1
+  },
+  {
+   "code": "046440",
+   "name": "KG파이낸셜",
+   "market": "KQ",
+   "cap": 1332,
+   "d_rsi": 29.6
+  },
+  {
+   "code": "002420",
+   "name": "우양피앤엘",
+   "market": "KS",
+   "cap": 1329,
+   "d_rsi": 25.1
+  },
+  {
+   "code": "382800",
+   "name": "지앤비에스 에코",
+   "market": "KQ",
+   "cap": 1327,
+   "d_rsi": 39.2
+  },
+  {
+   "code": "108380",
+   "name": "대양전기공업",
+   "market": "KQ",
+   "cap": 1326,
+   "d_rsi": 36.2
+  },
+  {
+   "code": "025560",
+   "name": "미래산업",
+   "market": "KS",
+   "cap": 1319,
+   "d_rsi": 35.0
+  },
+  {
+   "code": "419530",
+   "name": "SAMG엔터",
+   "market": "KQ",
+   "cap": 1316,
+   "d_rsi": 33.7
+  },
+  {
+   "code": "094280",
+   "name": "효성ITX",
+   "market": "KS",
+   "cap": 1301,
+   "d_rsi": 35.3
+  },
+  {
+   "code": "468670",
+   "name": "브릴스",
+   "market": "KQ",
+   "cap": 1288,
+   "d_rsi": 35.5
+  },
+  {
+   "code": "078070",
+   "name": "유비쿼스홀딩스",
+   "market": "KQ",
+   "cap": 1286,
+   "d_rsi": 38.6
+  },
+  {
+   "code": "094820",
+   "name": "일진파워",
+   "market": "KQ",
+   "cap": 1286,
+   "d_rsi": 38.6
+  },
+  {
+   "code": "101530",
+   "name": "해태제과식품",
+   "market": "KS",
+   "cap": 1281,
+   "d_rsi": 22.1
+  },
+  {
+   "code": "041920",
+   "name": "메디아나",
+   "market": "KQ",
+   "cap": 1278,
+   "d_rsi": 37.8
+  },
+  {
+   "code": "005990",
+   "name": "매일홀딩스",
+   "market": "KQ",
+   "cap": 1277,
+   "d_rsi": 39.2
+  },
+  {
+   "code": "163730",
+   "name": "핑거",
+   "market": "KQ",
+   "cap": 1275,
+   "d_rsi": 39.1
+  },
+  {
+   "code": "065680",
+   "name": "우주일렉트로",
+   "market": "KQ",
+   "cap": 1275,
+   "d_rsi": 31.9
+  },
+  {
+   "code": "015890",
+   "name": "태경산업",
+   "market": "KS",
+   "cap": 1270,
+   "d_rsi": 29.7
+  },
+  {
+   "code": "049960",
+   "name": "쎌바이오텍",
+   "market": "KQ",
+   "cap": 1270,
+   "d_rsi": 38.1
+  },
+  {
+   "code": "101360",
+   "name": "에코앤드림",
+   "market": "KQ",
+   "cap": 1270,
+   "d_rsi": 39.7
+  },
+  {
+   "code": "460850",
+   "name": "동국씨엠",
+   "market": "KS",
+   "cap": 1259,
+   "d_rsi": 32.2
+  },
+  {
+   "code": "314130",
+   "name": "지놈앤컴퍼니",
+   "market": "KQ",
+   "cap": 1258,
+   "d_rsi": 24.2
+  },
+  {
+   "code": "125020",
+   "name": "티씨머티리얼즈",
+   "market": "KQ",
+   "cap": 1251,
+   "d_rsi": 36.7
+  },
+  {
+   "code": "194480",
+   "name": "데브시스터즈",
+   "market": "KQ",
+   "cap": 1238,
+   "d_rsi": 35.9
+  },
+  {
+   "code": "462520",
+   "name": "조선내화",
+   "market": "KS",
+   "cap": 1236,
+   "d_rsi": 31.0
+  },
+  {
+   "code": "382900",
+   "name": "범한퓨얼셀",
+   "market": "KQ",
+   "cap": 1233,
+   "d_rsi": 39.5
+  },
+  {
+   "code": "386380",
+   "name": "스카이랩스",
+   "market": "KQ",
+   "cap": 1225,
+   "d_rsi": 28.7
+  },
+  {
+   "code": "086890",
+   "name": "이수앱지스",
+   "market": "KQ",
+   "cap": 1223,
+   "d_rsi": 36.0
+  },
+  {
+   "code": "041520",
+   "name": "이엘씨",
+   "market": "KQ",
+   "cap": 1218,
+   "d_rsi": 33.7
+  },
+  {
+   "code": "004150",
+   "name": "한솔홀딩스",
+   "market": "KS",
+   "cap": 1206,
+   "d_rsi": 33.7
+  },
+  {
+   "code": "093640",
+   "name": "케이알엠",
+   "market": "KQ",
+   "cap": 1199,
+   "d_rsi": 38.5
+  },
+  {
+   "code": "001780",
+   "name": "알루코",
+   "market": "KS",
+   "cap": 1198,
+   "d_rsi": 36.4
+  },
+  {
+   "code": "123860",
+   "name": "아나패스",
+   "market": "KQ",
+   "cap": 1193,
+   "d_rsi": 35.2
+  },
+  {
+   "code": "071840",
+   "name": "롯데하이마트",
+   "market": "KS",
+   "cap": 1190,
+   "d_rsi": 22.3
+  },
+  {
+   "code": "049720",
+   "name": "고려신용정보",
+   "market": "KQ",
+   "cap": 1190,
+   "d_rsi": 34.8
+  },
+  {
+   "code": "298000",
+   "name": "효성화학",
+   "market": "KS",
+   "cap": 1185,
+   "d_rsi": 32.7
+  },
+  {
+   "code": "004090",
+   "name": "한국석유",
+   "market": "KS",
+   "cap": 1181,
+   "d_rsi": 29.1
+  },
+  {
+   "code": "290690",
+   "name": "아리바이오홀딩스",
+   "market": "KQ",
+   "cap": 1181,
+   "d_rsi": 34.6
+  },
+  {
+   "code": "054210",
+   "name": "이랜텍",
+   "market": "KQ",
+   "cap": 1180,
+   "d_rsi": 35.3
+  },
+  {
+   "code": "007570",
+   "name": "일양약품",
+   "market": "KS",
+   "cap": 1178,
+   "d_rsi": 23.9
+  },
+  {
+   "code": "018470",
+   "name": "조일알미늄",
+   "market": "KS",
+   "cap": 1171,
+   "d_rsi": 36.5
+  },
+  {
+   "code": "092070",
+   "name": "디엔에프",
+   "market": "KQ",
+   "cap": 1169,
+   "d_rsi": 38.7
+  },
+  {
+   "code": "024800",
+   "name": "유성티엔에스",
+   "market": "KQ",
+   "cap": 1168,
+   "d_rsi": 32.7
+  },
+  {
+   "code": "481070",
+   "name": "에이유브랜즈",
+   "market": "KQ",
+   "cap": 1168,
+   "d_rsi": 20.4
+  },
+  {
+   "code": "271980",
+   "name": "제일약품",
+   "market": "KS",
+   "cap": 1163,
+   "d_rsi": 29.0
+  },
+  {
+   "code": "900300",
+   "name": "오가닉티코스메틱",
+   "market": "KQ",
+   "cap": 1161,
+   "d_rsi": 33.6
+  },
+  {
+   "code": "388050",
+   "name": "지투파워",
+   "market": "KQ",
+   "cap": 1158,
+   "d_rsi": 36.9
+  },
+  {
+   "code": "012610",
+   "name": "경인양행",
+   "market": "KS",
+   "cap": 1147,
+   "d_rsi": 39.1
+  },
+  {
+   "code": "004960",
+   "name": "한신공영",
+   "market": "KS",
+   "cap": 1136,
+   "d_rsi": 37.9
+  },
+  {
+   "code": "003720",
+   "name": "삼영",
+   "market": "KS",
+   "cap": 1132,
+   "d_rsi": 28.6
+  },
+  {
+   "code": "372170",
+   "name": "윤성에프앤씨",
+   "market": "KQ",
+   "cap": 1132,
+   "d_rsi": 31.8
+  },
+  {
+   "code": "293780",
+   "name": "압타바이오",
+   "market": "KQ",
+   "cap": 1125,
+   "d_rsi": 24.7
+  },
+  {
+   "code": "300080",
+   "name": "플리토",
+   "market": "KQ",
+   "cap": 1122,
+   "d_rsi": 37.0
+  },
+  {
+   "code": "081000",
+   "name": "일진다이아",
+   "market": "KS",
+   "cap": 1119,
+   "d_rsi": 37.0
+  },
+  {
+   "code": "014280",
+   "name": "금강공업",
+   "market": "KS",
+   "cap": 1110,
+   "d_rsi": 38.5
+  },
+  {
+   "code": "011785",
+   "name": "금호석유화학우",
+   "market": "KS",
+   "cap": 1110,
+   "d_rsi": 25.2
+  },
+  {
+   "code": "002390",
+   "name": "한독",
+   "market": "KS",
+   "cap": 1094,
+   "d_rsi": 38.1
+  },
+  {
+   "code": "126700",
+   "name": "하이비젼시스템",
+   "market": "KQ",
+   "cap": 1091,
+   "d_rsi": 30.8
+  },
+  {
+   "code": "039840",
+   "name": "디오",
+   "market": "KQ",
+   "cap": 1091,
+   "d_rsi": 35.9
+  },
+  {
+   "code": "267320",
+   "name": "나인테크",
+   "market": "KQ",
+   "cap": 1090,
+   "d_rsi": 39.9
+  },
+  {
+   "code": "210980",
+   "name": "SK디앤디",
+   "market": "KS",
+   "cap": 1087,
+   "d_rsi": 22.5
+  },
+  {
+   "code": "016880",
+   "name": "웅진",
+   "market": "KS",
+   "cap": 1077,
+   "d_rsi": 31.2
+  },
+  {
+   "code": "115450",
+   "name": "HLB테라퓨틱스",
+   "market": "KQ",
+   "cap": 1077,
+   "d_rsi": 22.4
+  },
+  {
+   "code": "350520",
+   "name": "이지스레지던스리츠",
+   "market": "KS",
+   "cap": 1071,
+   "d_rsi": 39.4
+  },
+  {
+   "code": "142210",
+   "name": "유니트론텍",
+   "market": "KQ",
+   "cap": 1069,
+   "d_rsi": 38.0
+  },
+  {
+   "code": "147830",
+   "name": "제룡산업",
+   "market": "KQ",
+   "cap": 1064,
+   "d_rsi": 38.6
+  },
+  {
+   "code": "014530",
+   "name": "극동유화",
+   "market": "KS",
+   "cap": 1053,
+   "d_rsi": 35.2
+  },
+  {
+   "code": "251370",
+   "name": "와이엠티",
+   "market": "KQ",
+   "cap": 1052,
+   "d_rsi": 39.6
+  },
+  {
+   "code": "052260",
+   "name": "현대바이오랜드",
+   "market": "KQ",
+   "cap": 1050,
+   "d_rsi": 37.8
+  },
+  {
+   "code": "318060",
+   "name": "그래피",
+   "market": "KQ",
+   "cap": 1044,
+   "d_rsi": 35.8
+  },
+  {
+   "code": "025820",
+   "name": "이구산업",
+   "market": "KS",
+   "cap": 1035,
+   "d_rsi": 35.0
+  },
+  {
+   "code": "006060",
+   "name": "화승인더",
+   "market": "KS",
+   "cap": 1031,
+   "d_rsi": 33.3
+  },
+  {
+   "code": "089470",
+   "name": "HDC현대EP",
+   "market": "KS",
+   "cap": 1029,
+   "d_rsi": 29.7
+  },
+  {
+   "code": "210540",
+   "name": "디와이파워",
+   "market": "KS",
+   "cap": 1027,
+   "d_rsi": 28.3
+  },
+  {
+   "code": "321550",
+   "name": "티움바이오",
+   "market": "KQ",
+   "cap": 1021,
+   "d_rsi": 36.7
+  },
+  {
+   "code": "037560",
+   "name": "LG헬로비전",
+   "market": "KS",
+   "cap": 1020,
+   "d_rsi": 36.7
+  },
+  {
+   "code": "008970",
+   "name": "KBI동양철관",
+   "market": "KS",
+   "cap": 1019,
+   "d_rsi": 37.5
+  },
+  {
+   "code": "054050",
+   "name": "NH농우바이오",
+   "market": "KQ",
+   "cap": 1012,
+   "d_rsi": 37.4
+  },
+  {
+   "code": "006805",
+   "name": "미래에셋증권우",
+   "market": "KS",
+   "cap": 1009,
+   "d_rsi": 28.6
+  },
+  {
+   "code": "148150",
+   "name": "세경하이테크",
+   "market": "KQ",
+   "cap": 1004,
+   "d_rsi": 39.1
+  },
+  {
+   "code": "009070",
+   "name": "KCTC",
+   "market": "KS",
+   "cap": 1001,
+   "d_rsi": 37.3
+  },
+  {
+   "code": "158430",
+   "name": "아톤",
+   "market": "KQ",
+   "cap": 996,
+   "d_rsi": 38.9
+  },
+  {
+   "code": "048870",
+   "name": "시너지이노베이션",
+   "market": "KQ",
+   "cap": 995,
+   "d_rsi": 29.6
+  },
+  {
+   "code": "246720",
+   "name": "아스타",
+   "market": "KQ",
+   "cap": 994,
+   "d_rsi": 34.4
+  },
+  {
+   "code": "310200",
+   "name": "애니플러스",
+   "market": "KQ",
+   "cap": 988,
+   "d_rsi": 35.6
+  },
+  {
+   "code": "307750",
+   "name": "국전",
+   "market": "KQ",
+   "cap": 983,
+   "d_rsi": 35.0
+  },
+  {
+   "code": "009780",
+   "name": "엠에스씨",
+   "market": "KQ",
+   "cap": 980,
+   "d_rsi": 24.7
+  },
+  {
+   "code": "002210",
+   "name": "동성제약",
+   "market": "KS",
+   "cap": 966,
+   "d_rsi": 30.2
+  },
+  {
+   "code": "068240",
+   "name": "다원시스",
+   "market": "KQ",
+   "cap": 966,
+   "d_rsi": 39.7
+  },
+  {
+   "code": "079960",
+   "name": "동양이엔피",
+   "market": "KQ",
+   "cap": 963,
+   "d_rsi": 32.4
+  },
+  {
+   "code": "179290",
+   "name": "엠아이텍",
+   "market": "KQ",
+   "cap": 961,
+   "d_rsi": 29.2
+  },
+  {
+   "code": "266690",
+   "name": "덕산넵코어스",
+   "market": "KQ",
+   "cap": 961,
+   "d_rsi": 17.6
+  },
+  {
+   "code": "083420",
+   "name": "그린케미칼",
+   "market": "KS",
+   "cap": 956,
+   "d_rsi": 36.0
+  },
+  {
+   "code": "486510",
+   "name": "글로벌테크놀로지",
+   "market": "KQ",
+   "cap": 950,
+   "d_rsi": 33.8
+  },
+  {
+   "code": "122450",
+   "name": "KX",
+   "market": "KQ",
+   "cap": 939,
+   "d_rsi": 37.6
+  },
+  {
+   "code": "255440",
+   "name": "야스",
+   "market": "KQ",
+   "cap": 936,
+   "d_rsi": 37.6
+  },
+  {
+   "code": "009580",
+   "name": "무림P&P",
+   "market": "KS",
+   "cap": 933,
+   "d_rsi": 37.4
+  },
+  {
+   "code": "046120",
+   "name": "오르비텍",
+   "market": "KQ",
+   "cap": 928,
+   "d_rsi": 31.5
+  },
+  {
+   "code": "241590",
+   "name": "화승엔터프라이즈",
+   "market": "KS",
+   "cap": 925,
+   "d_rsi": 10.9
+  },
+  {
+   "code": "013520",
+   "name": "화승코퍼레이션",
+   "market": "KS",
+   "cap": 922,
+   "d_rsi": 21.3
+  },
+  {
+   "code": "388790",
+   "name": "라이콤",
+   "market": "KQ",
+   "cap": 921,
+   "d_rsi": 32.9
+  },
+  {
+   "code": "217270",
+   "name": "넵튠",
+   "market": "KQ",
+   "cap": 920,
+   "d_rsi": 38.8
+  },
+  {
+   "code": "469610",
+   "name": "이노테크",
+   "market": "KQ",
+   "cap": 919,
+   "d_rsi": 39.2
+  },
+  {
+   "code": "336680",
+   "name": "탑런토탈솔루션",
+   "market": "KQ",
+   "cap": 914,
+   "d_rsi": 28.9
+  },
+  {
+   "code": "086980",
+   "name": "쇼박스",
+   "market": "KQ",
+   "cap": 912,
+   "d_rsi": 36.4
+  },
+  {
+   "code": "105740",
+   "name": "디케이락",
+   "market": "KQ",
+   "cap": 910,
+   "d_rsi": 39.5
+  },
+  {
+   "code": "011690",
+   "name": "와이투솔루션",
+   "market": "KS",
+   "cap": 908,
+   "d_rsi": 38.7
+  },
+  {
+   "code": "115500",
+   "name": "케이씨에스",
+   "market": "KQ",
+   "cap": 900,
+   "d_rsi": 39.0
+  },
+  {
+   "code": "014440",
+   "name": "영보화학",
+   "market": "KS",
+   "cap": 899,
+   "d_rsi": 31.1
+  },
+  {
+   "code": "488280",
+   "name": "에스투더블유",
+   "market": "KQ",
+   "cap": 899,
+   "d_rsi": 39.8
+  },
+  {
+   "code": "419050",
+   "name": "삼기에너지솔루션즈",
+   "market": "KQ",
+   "cap": 895,
+   "d_rsi": 37.8
+  },
+  {
+   "code": "123040",
+   "name": "엠에스오토텍",
+   "market": "KQ",
+   "cap": 895,
+   "d_rsi": 34.6
+  },
+  {
+   "code": "063570",
+   "name": "NICE인프라",
+   "market": "KQ",
+   "cap": 895,
+   "d_rsi": 23.2
+  },
+  {
+   "code": "014580",
+   "name": "태경비케이",
+   "market": "KS",
+   "cap": 891,
+   "d_rsi": 30.1
+  },
+  {
+   "code": "073010",
+   "name": "케이에스피",
+   "market": "KQ",
+   "cap": 888,
+   "d_rsi": 37.7
+  },
+  {
+   "code": "017550",
+   "name": "수산세보틱스",
+   "market": "KS",
+   "cap": 887,
+   "d_rsi": 31.9
+  },
+  {
+   "code": "259630",
+   "name": "엠플러스",
+   "market": "KQ",
+   "cap": 882,
+   "d_rsi": 36.7
+  },
+  {
+   "code": "478340",
+   "name": "나라스페이스테크놀로지",
+   "market": "KQ",
+   "cap": 880,
+   "d_rsi": 38.9
+  },
+  {
+   "code": "120030",
+   "name": "조선선재",
+   "market": "KS",
+   "cap": 879,
+   "d_rsi": 36.0
+  },
+  {
+   "code": "047310",
+   "name": "파워로직스",
+   "market": "KQ",
+   "cap": 879,
+   "d_rsi": 35.6
+  },
+  {
+   "code": "059210",
+   "name": "메타바이오메드",
+   "market": "KQ",
+   "cap": 875,
+   "d_rsi": 39.4
+  },
+  {
+   "code": "017650",
+   "name": "대림제지",
+   "market": "KQ",
+   "cap": 874,
+   "d_rsi": 39.8
+  },
+  {
+   "code": "322510",
+   "name": "제이엘케이",
+   "market": "KQ",
+   "cap": 873,
+   "d_rsi": 22.6
+  },
+  {
+   "code": "108230",
+   "name": "톱텍",
+   "market": "KQ",
+   "cap": 873,
+   "d_rsi": 36.6
+  },
+  {
+   "code": "105330",
+   "name": "케이엔더블유",
+   "market": "KQ",
+   "cap": 871,
+   "d_rsi": 28.5
+  },
+  {
+   "code": "090850",
+   "name": "현대이지웰",
+   "market": "KQ",
+   "cap": 871,
+   "d_rsi": 25.9
+  },
+  {
+   "code": "366030",
+   "name": "나인앤컴퍼니",
+   "market": "KQ",
+   "cap": 870,
+   "d_rsi": 37.6
+  },
+  {
+   "code": "004250",
+   "name": "NPC",
+   "market": "KS",
+   "cap": 861,
+   "d_rsi": 29.1
+  },
+  {
+   "code": "053700",
+   "name": "삼보모터스",
+   "market": "KQ",
+   "cap": 855,
+   "d_rsi": 39.9
+  },
+  {
+   "code": "334970",
+   "name": "프레스티지바이오로직스",
+   "market": "KQ",
+   "cap": 848,
+   "d_rsi": 37.3
+  },
+  {
+   "code": "067830",
+   "name": "세이브존I&C",
+   "market": "KS",
+   "cap": 845,
+   "d_rsi": 39.5
+  },
+  {
+   "code": "308080",
+   "name": "바이젠셀",
+   "market": "KQ",
+   "cap": 841,
+   "d_rsi": 34.8
+  },
+  {
+   "code": "256940",
+   "name": "킵스파마",
+   "market": "KQ",
+   "cap": 841,
+   "d_rsi": 29.3
+  },
+  {
+   "code": "049180",
+   "name": "셀루메드",
+   "market": "KQ",
+   "cap": 840,
+   "d_rsi": 36.7
+  },
+  {
+   "code": "183490",
+   "name": "엔지켐생명과학",
+   "market": "KQ",
+   "cap": 838,
+   "d_rsi": 35.5
+  },
+  {
+   "code": "033290",
+   "name": "로젠",
+   "market": "KQ",
+   "cap": 836,
+   "d_rsi": 36.4
+  },
+  {
+   "code": "264900",
+   "name": "크라운제과",
+   "market": "KS",
+   "cap": 832,
+   "d_rsi": 23.2
+  },
+  {
+   "code": "078935",
+   "name": "GS우",
+   "market": "KS",
+   "cap": 826,
+   "d_rsi": 18.4
+  },
+  {
+   "code": "222040",
+   "name": "코스맥스엔비티",
+   "market": "KQ",
+   "cap": 826,
+   "d_rsi": 36.7
+  },
+  {
+   "code": "106190",
+   "name": "하이텍팜",
+   "market": "KQ",
+   "cap": 824,
+   "d_rsi": 30.9
+  },
+  {
+   "code": "226590",
+   "name": "엠디바이스",
+   "market": "KQ",
+   "cap": 820,
+   "d_rsi": 36.5
+  },
+  {
+   "code": "002200",
+   "name": "한국수출포장",
+   "market": "KS",
+   "cap": 819,
+   "d_rsi": 25.6
+  },
+  {
+   "code": "095700",
+   "name": "제넥신",
+   "market": "KQ",
+   "cap": 817,
+   "d_rsi": 25.7
+  },
+  {
+   "code": "096240",
+   "name": "크레버스",
+   "market": "KQ",
+   "cap": 817,
+   "d_rsi": 36.6
+  },
+  {
+   "code": "074430",
+   "name": "아미노로직스",
+   "market": "KQ",
+   "cap": 817,
+   "d_rsi": 31.0
+  },
+  {
+   "code": "323990",
+   "name": "박셀바이오",
+   "market": "KQ",
+   "cap": 814,
+   "d_rsi": 38.0
+  },
+  {
+   "code": "009300",
+   "name": "삼아제약",
+   "market": "KQ",
+   "cap": 809,
+   "d_rsi": 36.9
+  },
+  {
+   "code": "072020",
+   "name": "중앙백신",
+   "market": "KQ",
+   "cap": 807,
+   "d_rsi": 32.5
+  },
+  {
+   "code": "000590",
+   "name": "CS홀딩스",
+   "market": "KS",
+   "cap": 805,
+   "d_rsi": 37.1
+  },
+  {
+   "code": "361390",
+   "name": "제노코",
+   "market": "KQ",
+   "cap": 801,
+   "d_rsi": 36.0
+  },
+  {
+   "code": "458650",
+   "name": "성우",
+   "market": "KQ",
+   "cap": 796,
+   "d_rsi": 25.7
+  },
+  {
+   "code": "013700",
+   "name": "까뮤이앤씨",
+   "market": "KS",
+   "cap": 789,
+   "d_rsi": 36.6
+  },
+  {
+   "code": "037350",
+   "name": "성도이엔지",
+   "market": "KQ",
+   "cap": 788,
+   "d_rsi": 35.9
+  },
+  {
+   "code": "063170",
+   "name": "서울옥션",
+   "market": "KQ",
+   "cap": 787,
+   "d_rsi": 33.9
+  },
+  {
+   "code": "289930",
+   "name": "웨이비스",
+   "market": "KQ",
+   "cap": 785,
+   "d_rsi": 33.7
+  },
+  {
+   "code": "091120",
+   "name": "이엠텍",
+   "market": "KQ",
+   "cap": 784,
+   "d_rsi": 37.6
+  },
+  {
+   "code": "001290",
+   "name": "상상인증권",
+   "market": "KS",
+   "cap": 783,
+   "d_rsi": 35.8
+  },
+  {
+   "code": "474170",
+   "name": "루미르",
+   "market": "KQ",
+   "cap": 783,
+   "d_rsi": 36.1
+  },
+  {
+   "code": "023900",
+   "name": "풍국주정",
+   "market": "KQ",
+   "cap": 781,
+   "d_rsi": 33.9
+  },
+  {
+   "code": "355150",
+   "name": "코스텍시스",
+   "market": "KQ",
+   "cap": 777,
+   "d_rsi": 33.7
+  },
+  {
+   "code": "298540",
+   "name": "더네이쳐홀딩스",
+   "market": "KQ",
+   "cap": 776,
+   "d_rsi": 29.4
+  },
+  {
+   "code": "246710",
+   "name": "티앤알바이오팹",
+   "market": "KQ",
+   "cap": 768,
+   "d_rsi": 35.3
+  },
+  {
+   "code": "037760",
+   "name": "쎄니트",
+   "market": "KQ",
+   "cap": 768,
+   "d_rsi": 34.3
+  },
+  {
+   "code": "032300",
+   "name": "한국파마",
+   "market": "KQ",
+   "cap": 767,
+   "d_rsi": 36.6
+  },
+  {
+   "code": "333430",
+   "name": "일승",
+   "market": "KQ",
+   "cap": 764,
+   "d_rsi": 34.4
+  },
+  {
+   "code": "053580",
+   "name": "웹케시",
+   "market": "KQ",
+   "cap": 762,
+   "d_rsi": 33.3
+  },
+  {
+   "code": "139990",
+   "name": "아주스틸",
+   "market": "KS",
+   "cap": 761,
+   "d_rsi": 38.6
+  },
+  {
+   "code": "048530",
+   "name": "인트론바이오",
+   "market": "KQ",
+   "cap": 758,
+   "d_rsi": 35.2
+  },
+  {
+   "code": "021080",
+   "name": "에이티넘인베스트",
+   "market": "KQ",
+   "cap": 747,
+   "d_rsi": 32.4
+  },
+  {
+   "code": "005860",
+   "name": "한일사료",
+   "market": "KQ",
+   "cap": 747,
+   "d_rsi": 35.6
+  },
+  {
+   "code": "478560",
+   "name": "블랙야크아이앤씨",
+   "market": "KQ",
+   "cap": 745,
+   "d_rsi": 38.0
+  },
+  {
+   "code": "012800",
+   "name": "대창",
+   "market": "KS",
+   "cap": 744,
+   "d_rsi": 18.5
+  },
+  {
+   "code": "357230",
+   "name": "에이치피오",
+   "market": "KQ",
+   "cap": 744,
+   "d_rsi": 34.2
+  },
+  {
+   "code": "250060",
+   "name": "모비스",
+   "market": "KQ",
+   "cap": 743,
+   "d_rsi": 35.6
+  },
+  {
+   "code": "013310",
+   "name": "아진산업",
+   "market": "KQ",
+   "cap": 737,
+   "d_rsi": 32.0
+  },
+  {
+   "code": "011280",
+   "name": "태림포장",
+   "market": "KS",
+   "cap": 736,
+   "d_rsi": 33.4
+  },
+  {
+   "code": "299030",
+   "name": "하나기술",
+   "market": "KQ",
+   "cap": 736,
+   "d_rsi": 34.4
+  },
+  {
+   "code": "242040",
+   "name": "나무AX",
+   "market": "KQ",
+   "cap": 732,
+   "d_rsi": 33.7
+  },
+  {
+   "code": "030960",
+   "name": "양지사",
+   "market": "KQ",
+   "cap": 732,
+   "d_rsi": 36.7
+  },
+  {
+   "code": "061040",
+   "name": "알에프텍",
+   "market": "KQ",
+   "cap": 731,
+   "d_rsi": 33.2
+  },
+  {
+   "code": "115440",
+   "name": "우리넷",
+   "market": "KQ",
+   "cap": 729,
+   "d_rsi": 39.6
+  },
+  {
+   "code": "047770",
+   "name": "코데즈컴바인",
+   "market": "KQ",
+   "cap": 725,
+   "d_rsi": 29.8
+  },
+  {
+   "code": "475580",
+   "name": "에이럭스",
+   "market": "KQ",
+   "cap": 723,
+   "d_rsi": 37.4
+  },
+  {
+   "code": "007210",
+   "name": "벽산",
+   "market": "KS",
+   "cap": 722,
+   "d_rsi": 29.7
+  },
+  {
+   "code": "003010",
+   "name": "혜인",
+   "market": "KS",
+   "cap": 720,
+   "d_rsi": 37.4
+  },
+  {
+   "code": "002780",
+   "name": "진흥기업",
+   "market": "KS",
+   "cap": 718,
+   "d_rsi": 32.4
+  },
+  {
+   "code": "317770",
+   "name": "엑스페릭스",
+   "market": "KQ",
+   "cap": 718,
+   "d_rsi": 29.9
+  },
+  {
+   "code": "205100",
+   "name": "엑셈",
+   "market": "KQ",
+   "cap": 717,
+   "d_rsi": 34.8
+  },
+  {
+   "code": "338220",
+   "name": "뷰노",
+   "market": "KQ",
+   "cap": 715,
+   "d_rsi": 37.6
+  },
+  {
+   "code": "453450",
+   "name": "그리드위즈",
+   "market": "KQ",
+   "cap": 713,
+   "d_rsi": 38.1
+  },
+  {
+   "code": "066700",
+   "name": "테라젠이텍스",
+   "market": "KQ",
+   "cap": 712,
+   "d_rsi": 39.9
+  },
+  {
+   "code": "109740",
+   "name": "디에스케이",
+   "market": "KQ",
+   "cap": 707,
+   "d_rsi": 29.7
+  },
+  {
+   "code": "402490",
+   "name": "그린리소스",
+   "market": "KQ",
+   "cap": 705,
+   "d_rsi": 36.5
+  },
+  {
+   "code": "418470",
+   "name": "KT밀리의서재",
+   "market": "KQ",
+   "cap": 702,
+   "d_rsi": 37.6
+  },
+  {
+   "code": "004840",
+   "name": "DRB동일",
+   "market": "KS",
+   "cap": 696,
+   "d_rsi": 38.3
+  },
+  {
+   "code": "023800",
+   "name": "인지컨트롤스",
+   "market": "KS",
+   "cap": 696,
+   "d_rsi": 36.6
+  },
+  {
+   "code": "005740",
+   "name": "크라운해태홀딩스",
+   "market": "KS",
+   "cap": 693,
+   "d_rsi": 38.8
+  },
+  {
+   "code": "950250",
+   "name": "테라뷰",
+   "market": "KQ",
+   "cap": 693,
+   "d_rsi": 36.7
+  },
+  {
+   "code": "166480",
+   "name": "코아스템켐온",
+   "market": "KQ",
+   "cap": 693,
+   "d_rsi": 35.9
+  },
+  {
+   "code": "011320",
+   "name": "유니크",
+   "market": "KQ",
+   "cap": 692,
+   "d_rsi": 38.5
+  },
+  {
+   "code": "163560",
+   "name": "동일고무벨트",
+   "market": "KS",
+   "cap": 687,
+   "d_rsi": 38.7
+  },
+  {
+   "code": "100130",
+   "name": "동국S&C",
+   "market": "KQ",
+   "cap": 685,
+   "d_rsi": 34.9
+  },
+  {
+   "code": "096775",
+   "name": "SK이노베이션우",
+   "market": "KS",
+   "cap": 679,
+   "d_rsi": 35.5
+  },
+  {
+   "code": "007980",
+   "name": "TP",
+   "market": "KS",
+   "cap": 678,
+   "d_rsi": 26.0
+  },
+  {
+   "code": "192410",
+   "name": "오늘이엔엠",
+   "market": "KQ",
+   "cap": 678,
+   "d_rsi": 35.1
+  },
+  {
+   "code": "017480",
+   "name": "삼현철강",
+   "market": "KQ",
+   "cap": 675,
+   "d_rsi": 30.2
+  },
+  {
+   "code": "217190",
+   "name": "제너셈",
+   "market": "KQ",
+   "cap": 673,
+   "d_rsi": 35.7
+  },
+  {
+   "code": "198440",
+   "name": "강동씨앤엘",
+   "market": "KQ",
+   "cap": 670,
+   "d_rsi": 34.7
+  },
+  {
+   "code": "069730",
+   "name": "DSR제강",
+   "market": "KS",
+   "cap": 667,
+   "d_rsi": 32.3
+  },
+  {
+   "code": "389020",
+   "name": "자람테크놀로지",
+   "market": "KQ",
+   "cap": 661,
+   "d_rsi": 39.2
+  },
+  {
+   "code": "311320",
+   "name": "지오엘리먼트",
+   "market": "KQ",
+   "cap": 660,
+   "d_rsi": 29.8
+  },
+  {
+   "code": "208140",
+   "name": "정다운",
+   "market": "KQ",
+   "cap": 659,
+   "d_rsi": 24.9
+  },
+  {
+   "code": "000850",
+   "name": "화천기공",
+   "market": "KS",
+   "cap": 656,
+   "d_rsi": 28.0
+  },
+  {
+   "code": "002220",
+   "name": "한일철강",
+   "market": "KS",
+   "cap": 655,
+   "d_rsi": 37.0
+  },
+  {
+   "code": "005750",
+   "name": "대림바스",
+   "market": "KS",
+   "cap": 651,
+   "d_rsi": 38.4
+  },
+  {
+   "code": "170030",
+   "name": "현대공업",
+   "market": "KQ",
+   "cap": 651,
+   "d_rsi": 39.0
+  },
+  {
+   "code": "357880",
+   "name": "SKAI",
+   "market": "KQ",
+   "cap": 651,
+   "d_rsi": 32.3
+  },
+  {
+   "code": "417790",
+   "name": "트루엔",
+   "market": "KQ",
+   "cap": 650,
+   "d_rsi": 31.5
+  },
+  {
+   "code": "131370",
+   "name": "알서포트",
+   "market": "KQ",
+   "cap": 647,
+   "d_rsi": 30.8
+  },
+  {
+   "code": "047820",
+   "name": "초록뱀미디어",
+   "market": "KQ",
+   "cap": 646,
+   "d_rsi": 39.7
+  },
+  {
+   "code": "094860",
+   "name": "네오리진",
+   "market": "KQ",
+   "cap": 645,
+   "d_rsi": 28.3
+  },
+  {
+   "code": "012700",
+   "name": "리드코프",
+   "market": "KQ",
+   "cap": 645,
+   "d_rsi": 31.9
+  },
+  {
+   "code": "142280",
+   "name": "녹십자엠에스",
+   "market": "KQ",
+   "cap": 643,
+   "d_rsi": 37.5
+  },
+  {
+   "code": "493330",
+   "name": "지에프아이",
+   "market": "KQ",
+   "cap": 643,
+   "d_rsi": 38.2
+  },
+  {
+   "code": "041910",
+   "name": "폴라리스AI파마",
+   "market": "KQ",
+   "cap": 642,
+   "d_rsi": 37.7
+  },
+  {
+   "code": "053280",
+   "name": "예스24",
+   "market": "KQ",
+   "cap": 640,
+   "d_rsi": 35.9
+  },
+  {
+   "code": "291650",
+   "name": "츌립앤사이언스",
+   "market": "KQ",
+   "cap": 639,
+   "d_rsi": 38.8
+  },
+  {
+   "code": "038110",
+   "name": "에코플라스틱",
+   "market": "KQ",
+   "cap": 639,
+   "d_rsi": 31.3
+  },
+  {
+   "code": "111380",
+   "name": "동인기연",
+   "market": "KS",
+   "cap": 636,
+   "d_rsi": 37.4
+  },
+  {
+   "code": "080010",
+   "name": "이상네트웍스",
+   "market": "KQ",
+   "cap": 635,
+   "d_rsi": 39.6
+  },
+  {
+   "code": "168330",
+   "name": "내츄럴엔도텍",
+   "market": "KQ",
+   "cap": 634,
+   "d_rsi": 36.4
+  },
+  {
+   "code": "171120",
+   "name": "라이온켐텍",
+   "market": "KQ",
+   "cap": 633,
+   "d_rsi": 27.2
+  },
+  {
+   "code": "004780",
+   "name": "대륙제관",
+   "market": "KQ",
+   "cap": 631,
+   "d_rsi": 38.9
+  },
+  {
+   "code": "253840",
+   "name": "수젠텍",
+   "market": "KQ",
+   "cap": 630,
+   "d_rsi": 38.9
+  },
+  {
+   "code": "065510",
+   "name": "휴비츠",
+   "market": "KQ",
+   "cap": 627,
+   "d_rsi": 33.2
+  },
+  {
+   "code": "063080",
+   "name": "컴투스홀딩스",
+   "market": "KQ",
+   "cap": 627,
+   "d_rsi": 31.1
+  },
+  {
+   "code": "149980",
+   "name": "하이로닉",
+   "market": "KQ",
+   "cap": 626,
+   "d_rsi": 37.0
+  },
+  {
+   "code": "162300",
+   "name": "신스틸",
+   "market": "KQ",
+   "cap": 625,
+   "d_rsi": 27.7
+  },
+  {
+   "code": "475430",
+   "name": "키스트론",
+   "market": "KQ",
+   "cap": 625,
+   "d_rsi": 37.1
+  },
+  {
+   "code": "102370",
+   "name": "케이옥션",
+   "market": "KQ",
+   "cap": 623,
+   "d_rsi": 26.4
+  },
+  {
+   "code": "002720",
+   "name": "국제약품",
+   "market": "KS",
+   "cap": 615,
+   "d_rsi": 36.7
+  },
+  {
+   "code": "009770",
+   "name": "삼정펄프",
+   "market": "KS",
+   "cap": 614,
+   "d_rsi": 35.6
+  },
+  {
+   "code": "003580",
+   "name": "HLB글로벌",
+   "market": "KS",
+   "cap": 613,
+   "d_rsi": 27.3
+  },
+  {
+   "code": "091440",
+   "name": "한울소재과학",
+   "market": "KQ",
+   "cap": 613,
+   "d_rsi": 32.3
+  },
+  {
+   "code": "020710",
+   "name": "시공테크",
+   "market": "KQ",
+   "cap": 610,
+   "d_rsi": 38.6
+  },
+  {
+   "code": "025950",
+   "name": "동신건설",
+   "market": "KQ",
+   "cap": 610,
+   "d_rsi": 32.6
+  },
+  {
+   "code": "251120",
+   "name": "바이오에프디엔씨",
+   "market": "KQ",
+   "cap": 609,
+   "d_rsi": 30.9
+  },
+  {
+   "code": "027970",
+   "name": "한국제지",
+   "market": "KS",
+   "cap": 608,
+   "d_rsi": 13.6
+  },
+  {
+   "code": "001020",
+   "name": "페이퍼코리아",
+   "market": "KS",
+   "cap": 605,
+   "d_rsi": 39.7
+  },
+  {
+   "code": "038680",
+   "name": "에스넷",
+   "market": "KQ",
+   "cap": 605,
+   "d_rsi": 38.0
+  },
+  {
+   "code": "137950",
+   "name": "제이씨케미칼",
+   "market": "KQ",
+   "cap": 605,
+   "d_rsi": 35.5
+  },
+  {
+   "code": "306620",
+   "name": "지아이에스",
+   "market": "KQ",
+   "cap": 605,
+   "d_rsi": 37.3
+  },
+  {
+   "code": "155660",
+   "name": "DSR",
+   "market": "KS",
+   "cap": 603,
+   "d_rsi": 38.8
+  },
+  {
+   "code": "380550",
+   "name": "뉴로핏",
+   "market": "KQ",
+   "cap": 601,
+   "d_rsi": 39.6
+  },
+  {
+   "code": "041930",
+   "name": "SY동아",
+   "market": "KQ",
+   "cap": 600,
+   "d_rsi": 31.4
+  },
+  {
+   "code": "017370",
+   "name": "우신시스템",
+   "market": "KS",
+   "cap": 598,
+   "d_rsi": 38.5
+  },
+  {
+   "code": "024880",
+   "name": "케이피에프",
+   "market": "KQ",
+   "cap": 596,
+   "d_rsi": 37.6
+  },
+  {
+   "code": "155650",
+   "name": "와이엠씨",
+   "market": "KQ",
+   "cap": 592,
+   "d_rsi": 38.0
+  },
+  {
+   "code": "109070",
+   "name": "주성코퍼레이션",
+   "market": "KS",
+   "cap": 591,
+   "d_rsi": 30.2
+  },
+  {
+   "code": "043650",
+   "name": "국순당",
+   "market": "KQ",
+   "cap": 590,
+   "d_rsi": 37.7
+  },
+  {
+   "code": "117670",
+   "name": "알파칩스",
+   "market": "KQ",
+   "cap": 588,
+   "d_rsi": 37.2
+  },
+  {
+   "code": "011150",
+   "name": "CJ씨푸드",
+   "market": "KS",
+   "cap": 586,
+   "d_rsi": 35.9
+  },
+  {
+   "code": "078890",
+   "name": "가온그룹",
+   "market": "KQ",
+   "cap": 583,
+   "d_rsi": 37.8
+  },
+  {
+   "code": "019680",
+   "name": "대교",
+   "market": "KS",
+   "cap": 580,
+   "d_rsi": 36.7
+  },
+  {
+   "code": "000230",
+   "name": "일동홀딩스",
+   "market": "KS",
+   "cap": 577,
+   "d_rsi": 30.4
+  },
+  {
+   "code": "063160",
+   "name": "종근당바이오",
+   "market": "KS",
+   "cap": 577,
+   "d_rsi": 36.8
+  },
+  {
+   "code": "120115",
+   "name": "코오롱인더우",
+   "market": "KS",
+   "cap": 576,
+   "d_rsi": 38.4
+  },
+  {
+   "code": "109860",
+   "name": "동일금속",
+   "market": "KQ",
+   "cap": 574,
+   "d_rsi": 35.1
+  },
+  {
+   "code": "000440",
+   "name": "중앙에너비스",
+   "market": "KQ",
+   "cap": 573,
+   "d_rsi": 27.1
+  },
+  {
+   "code": "189330",
+   "name": "씨이랩",
+   "market": "KQ",
+   "cap": 571,
+   "d_rsi": 31.2
+  },
+  {
+   "code": "079980",
+   "name": "휴비스",
+   "market": "KS",
+   "cap": 570,
+   "d_rsi": 38.4
+  },
+  {
+   "code": "347890",
+   "name": "엠엑스온",
+   "market": "KQ",
+   "cap": 570,
+   "d_rsi": 38.9
+  },
+  {
+   "code": "084730",
+   "name": "팅크웨어",
+   "market": "KQ",
+   "cap": 570,
+   "d_rsi": 34.3
+  },
+  {
+   "code": "413390",
+   "name": "엠오티",
+   "market": "KQ",
+   "cap": 569,
+   "d_rsi": 38.7
+  },
+  {
+   "code": "172670",
+   "name": "에이엘티",
+   "market": "KQ",
+   "cap": 567,
+   "d_rsi": 30.8
+  },
+  {
+   "code": "068290",
+   "name": "삼성출판사",
+   "market": "KS",
+   "cap": 564,
+   "d_rsi": 38.1
+  },
+  {
+   "code": "457550",
+   "name": "우진엔텍",
+   "market": "KQ",
+   "cap": 564,
+   "d_rsi": 27.6
+  },
+  {
+   "code": "054040",
+   "name": "한국컴퓨터",
+   "market": "KQ",
+   "cap": 562,
+   "d_rsi": 29.7
+  },
+  {
+   "code": "010240",
+   "name": "흥국",
+   "market": "KQ",
+   "cap": 562,
+   "d_rsi": 39.1
+  },
+  {
+   "code": "373200",
+   "name": "엑스플러스",
+   "market": "KQ",
+   "cap": 560,
+   "d_rsi": 37.5
+  },
+  {
+   "code": "033130",
+   "name": "디지틀조선",
+   "market": "KQ",
+   "cap": 560,
+   "d_rsi": 27.2
+  },
+  {
+   "code": "357580",
+   "name": "아모센스",
+   "market": "KQ",
+   "cap": 559,
+   "d_rsi": 37.7
+  },
+  {
+   "code": "048430",
+   "name": "유라테크",
+   "market": "KQ",
+   "cap": 559,
+   "d_rsi": 32.5
+  },
+  {
+   "code": "024740",
+   "name": "한일단조",
+   "market": "KQ",
+   "cap": 559,
+   "d_rsi": 31.5
+  },
+  {
+   "code": "066980",
+   "name": "한성크린텍",
+   "market": "KQ",
+   "cap": 559,
+   "d_rsi": 34.5
+  },
+  {
+   "code": "054540",
+   "name": "삼영엠텍",
+   "market": "KQ",
+   "cap": 559,
+   "d_rsi": 31.7
+  },
+  {
+   "code": "104540",
+   "name": "코렌텍",
+   "market": "KQ",
+   "cap": 556,
+   "d_rsi": 35.4
+  },
+  {
+   "code": "084680",
+   "name": "이월드",
+   "market": "KS",
+   "cap": 555,
+   "d_rsi": 34.4
+  },
+  {
+   "code": "340930",
+   "name": "성원에너텍",
+   "market": "KQ",
+   "cap": 555,
+   "d_rsi": 33.3
+  },
+  {
+   "code": "036220",
+   "name": "오상헬스케어",
+   "market": "KQ",
+   "cap": 554,
+   "d_rsi": 23.2
+  },
+  {
+   "code": "417030",
+   "name": "니어스랩",
+   "market": "KQ",
+   "cap": 552,
+   "d_rsi": 27.5
+  },
+  {
+   "code": "263800",
+   "name": "데이타솔루션",
+   "market": "KQ",
+   "cap": 551,
+   "d_rsi": 35.6
+  },
+  {
+   "code": "004450",
+   "name": "삼화왕관",
+   "market": "KS",
+   "cap": 549,
+   "d_rsi": 40.0
+  },
+  {
+   "code": "278650",
+   "name": "HLB바이오스텝",
+   "market": "KQ",
+   "cap": 549,
+   "d_rsi": 36.1
+  },
+  {
+   "code": "026150",
+   "name": "특수건설",
+   "market": "KQ",
+   "cap": 544,
+   "d_rsi": 32.8
+  },
+  {
+   "code": "002800",
+   "name": "신신제약",
+   "market": "KQ",
+   "cap": 543,
+   "d_rsi": 29.5
+  },
+  {
+   "code": "053620",
+   "name": "태양",
+   "market": "KQ",
+   "cap": 543,
+   "d_rsi": 33.9
+  },
+  {
+   "code": "128660",
+   "name": "피제이메탈",
+   "market": "KQ",
+   "cap": 542,
+   "d_rsi": 29.4
+  },
+  {
+   "code": "214330",
+   "name": "금호에이치티",
+   "market": "KS",
+   "cap": 541,
+   "d_rsi": 35.5
+  },
+  {
+   "code": "360070",
+   "name": "탑머티리얼",
+   "market": "KQ",
+   "cap": 540,
+   "d_rsi": 36.2
+  },
+  {
+   "code": "412350",
+   "name": "레이저쎌",
+   "market": "KQ",
+   "cap": 537,
+   "d_rsi": 36.9
+  },
+  {
+   "code": "111710",
+   "name": "남화산업",
+   "market": "KQ",
+   "cap": 537,
+   "d_rsi": 31.7
+  },
+  {
+   "code": "062970",
+   "name": "한국첨단소재",
+   "market": "KQ",
+   "cap": 537,
+   "d_rsi": 35.9
+  },
+  {
+   "code": "048550",
+   "name": "SM C&C",
+   "market": "KQ",
+   "cap": 537,
+   "d_rsi": 24.3
+  },
+  {
+   "code": "331920",
+   "name": "셀레믹스",
+   "market": "KQ",
+   "cap": 537,
+   "d_rsi": 26.7
+  },
+  {
+   "code": "009200",
+   "name": "무림페이퍼",
+   "market": "KS",
+   "cap": 534,
+   "d_rsi": 32.1
+  },
+  {
+   "code": "234030",
+   "name": "싸이닉솔루션",
+   "market": "KQ",
+   "cap": 533,
+   "d_rsi": 40.0
+  },
+  {
+   "code": "089850",
+   "name": "유비벨록스",
+   "market": "KQ",
+   "cap": 533,
+   "d_rsi": 32.5
+  },
+  {
+   "code": "088390",
+   "name": "이녹스",
+   "market": "KQ",
+   "cap": 533,
+   "d_rsi": 38.2
+  },
+  {
+   "code": "004440",
+   "name": "삼일씨엔에스",
+   "market": "KS",
+   "cap": 532,
+   "d_rsi": 30.5
+  },
+  {
+   "code": "187420",
+   "name": "HLB제넥스",
+   "market": "KQ",
+   "cap": 531,
+   "d_rsi": 28.9
+  },
+  {
+   "code": "263690",
+   "name": "디알젬",
+   "market": "KQ",
+   "cap": 529,
+   "d_rsi": 34.0
+  },
+  {
+   "code": "095270",
+   "name": "웨이브일렉트로",
+   "market": "KQ",
+   "cap": 522,
+   "d_rsi": 37.8
+  },
+  {
+   "code": "060570",
+   "name": "드림어스컴퍼니",
+   "market": "KQ",
+   "cap": 519,
+   "d_rsi": 30.5
+  },
+  {
+   "code": "123420",
+   "name": "위메이드플레이",
+   "market": "KQ",
+   "cap": 518,
+   "d_rsi": 35.5
+  },
+  {
+   "code": "417970",
+   "name": "모델솔루션",
+   "market": "KQ",
+   "cap": 517,
+   "d_rsi": 36.0
+  },
+  {
+   "code": "081150",
+   "name": "티플랙스",
+   "market": "KQ",
+   "cap": 514,
+   "d_rsi": 38.1
+  },
+  {
+   "code": "096350",
+   "name": "대창솔루션",
+   "market": "KQ",
+   "cap": 513,
+   "d_rsi": 29.5
+  },
+  {
+   "code": "097800",
+   "name": "윈팩",
+   "market": "KQ",
+   "cap": 505,
+   "d_rsi": 35.7
+  },
+  {
+   "code": "187790",
+   "name": "나노",
+   "market": "KQ",
+   "cap": 505,
+   "d_rsi": 37.2
+  },
+  {
+   "code": "393970",
+   "name": "대진첨단소재",
+   "market": "KQ",
+   "cap": 504,
+   "d_rsi": 32.3
+  },
+  {
+   "code": "016250",
+   "name": "SGC E&C",
+   "market": "KQ",
+   "cap": 504,
+   "d_rsi": 37.0
+  },
+  {
+   "code": "355690",
+   "name": "에이텀",
+   "market": "KQ",
+   "cap": 503,
+   "d_rsi": 38.8
+  },
+  {
+   "code": "003925",
+   "name": "남양유업우",
+   "market": "KS",
+   "cap": 501,
+   "d_rsi": 37.4
+  },
+  {
+   "code": "277880",
+   "name": "티에스아이",
+   "market": "KQ",
+   "cap": 501,
+   "d_rsi": 33.9
+  },
+  {
+   "code": "001465",
+   "name": "BYC우",
+   "market": "KS",
+   "cap": 500,
+   "d_rsi": 38.2
+  },
+  {
+   "code": "071090",
+   "name": "하이스틸",
+   "market": "KS",
+   "cap": 498,
+   "d_rsi": 32.7
+  },
+  {
+   "code": "088280",
+   "name": "쏘닉스",
+   "market": "KQ",
+   "cap": 498,
+   "d_rsi": 36.5
+  },
+  {
+   "code": "058820",
+   "name": "CMG제약",
+   "market": "KQ",
+   "cap": 497,
+   "d_rsi": 16.3
+  },
+  {
+   "code": "457370",
+   "name": "한켐",
+   "market": "KQ",
+   "cap": 496,
+   "d_rsi": 36.5
+  },
+  {
+   "code": "014160",
+   "name": "대영포장",
+   "market": "KS",
+   "cap": 495,
+   "d_rsi": 29.0
+  },
+  {
+   "code": "950220",
+   "name": "네오이뮨텍",
+   "market": "KQ",
+   "cap": 495,
+   "d_rsi": 38.1
+  },
+  {
+   "code": "273640",
+   "name": "와이엠텍",
+   "market": "KQ",
+   "cap": 495,
+   "d_rsi": 39.3
+  },
+  {
+   "code": "136150",
+   "name": "원일티엔아이",
+   "market": "KQ",
+   "cap": 494,
+   "d_rsi": 35.3
+  },
+  {
+   "code": "303810",
+   "name": "동국생명과학",
+   "market": "KQ",
+   "cap": 493,
+   "d_rsi": 23.5
+  },
+  {
+   "code": "382840",
+   "name": "원준",
+   "market": "KQ",
+   "cap": 493,
+   "d_rsi": 26.8
+  },
+  {
+   "code": "037950",
+   "name": "엘컴텍",
+   "market": "KQ",
+   "cap": 492,
+   "d_rsi": 38.6
+  },
+  {
+   "code": "033320",
+   "name": "제이씨현시스템",
+   "market": "KQ",
+   "cap": 492,
+   "d_rsi": 36.2
+  },
+  {
+   "code": "039240",
+   "name": "경남스틸",
+   "market": "KQ",
+   "cap": 488,
+   "d_rsi": 38.9
+  },
+  {
+   "code": "352910",
+   "name": "오비고",
+   "market": "KQ",
+   "cap": 487,
+   "d_rsi": 30.7
+  },
+  {
+   "code": "000950",
+   "name": "전방",
+   "market": "KS",
+   "cap": 486,
+   "d_rsi": 39.1
+  },
+  {
+   "code": "107600",
+   "name": "새빗켐",
+   "market": "KQ",
+   "cap": 486,
+   "d_rsi": 34.3
+  },
+  {
+   "code": "011000",
+   "name": "진원생명과학",
+   "market": "KS",
+   "cap": 485,
+   "d_rsi": 27.5
+  },
+  {
+   "code": "263600",
+   "name": "덕우전자",
+   "market": "KQ",
+   "cap": 484,
+   "d_rsi": 39.7
+  },
+  {
+   "code": "382480",
+   "name": "지아이텍",
+   "market": "KQ",
+   "cap": 484,
+   "d_rsi": 26.6
+  },
+  {
+   "code": "303360",
+   "name": "프로티아",
+   "market": "KQ",
+   "cap": 484,
+   "d_rsi": 22.1
+  },
+  {
+   "code": "053270",
+   "name": "구영테크",
+   "market": "KQ",
+   "cap": 482,
+   "d_rsi": 39.9
+  },
+  {
+   "code": "007280",
+   "name": "한국특강",
+   "market": "KS",
+   "cap": 481,
+   "d_rsi": 30.2
+  },
+  {
+   "code": "291230",
+   "name": "컴투스엔",
+   "market": "KQ",
+   "cap": 481,
+   "d_rsi": 36.9
+  },
+  {
+   "code": "109670",
+   "name": "씨싸이트",
+   "market": "KQ",
+   "cap": 480,
+   "d_rsi": 39.4
+  },
+  {
+   "code": "299660",
+   "name": "셀리드",
+   "market": "KQ",
+   "cap": 480,
+   "d_rsi": 32.0
+  },
+  {
+   "code": "005870",
+   "name": "휴니드",
+   "market": "KS",
+   "cap": 478,
+   "d_rsi": 32.8
+  },
+  {
+   "code": "950200",
+   "name": "소마젠",
+   "market": "KQ",
+   "cap": 477,
+   "d_rsi": 34.8
+  },
+  {
+   "code": "006890",
+   "name": "태경케미컬",
+   "market": "KS",
+   "cap": 475,
+   "d_rsi": 36.4
+  },
+  {
+   "code": "037440",
+   "name": "희림",
+   "market": "KQ",
+   "cap": 474,
+   "d_rsi": 38.4
+  },
+  {
+   "code": "451220",
+   "name": "아이엠티",
+   "market": "KQ",
+   "cap": 473,
+   "d_rsi": 31.6
+  },
+  {
+   "code": "004770",
+   "name": "써니전자",
+   "market": "KS",
+   "cap": 472,
+   "d_rsi": 29.2
+  },
+  {
+   "code": "054300",
+   "name": "팬스타엔터프라이즈",
+   "market": "KQ",
+   "cap": 472,
+   "d_rsi": 39.2
+  },
+  {
+   "code": "003475",
+   "name": "유안타증권우",
+   "market": "KS",
+   "cap": 470,
+   "d_rsi": 39.5
+  },
+  {
+   "code": "208370",
+   "name": "셀바스헬스케어",
+   "market": "KQ",
+   "cap": 470,
+   "d_rsi": 35.0
+  },
+  {
+   "code": "023440",
+   "name": "제이스코홀딩스",
+   "market": "KQ",
+   "cap": 470,
+   "d_rsi": 28.2
+  },
+  {
+   "code": "294630",
+   "name": "서남",
+   "market": "KQ",
+   "cap": 469,
+   "d_rsi": 20.9
+  },
+  {
+   "code": "337930",
+   "name": "젝시믹스",
+   "market": "KQ",
+   "cap": 468,
+   "d_rsi": 26.2
+  },
+  {
+   "code": "221800",
+   "name": "지구홀딩스",
+   "market": "KQ",
+   "cap": 467,
+   "d_rsi": 37.9
+  },
+  {
+   "code": "215360",
+   "name": "우리산업",
+   "market": "KQ",
+   "cap": 465,
+   "d_rsi": 32.2
+  },
+  {
+   "code": "302430",
+   "name": "이노메트리",
+   "market": "KQ",
+   "cap": 464,
+   "d_rsi": 37.6
+  },
+  {
+   "code": "069460",
+   "name": "대호에이엘",
+   "market": "KS",
+   "cap": 463,
+   "d_rsi": 29.4
+  },
+  {
+   "code": "459100",
+   "name": "위츠",
+   "market": "KQ",
+   "cap": 463,
+   "d_rsi": 36.0
+  },
+  {
+   "code": "900110",
+   "name": "딥커머스",
+   "market": "KQ",
+   "cap": 463,
+   "d_rsi": 32.4
+  },
+  {
+   "code": "053050",
+   "name": "지에스이",
+   "market": "KQ",
+   "cap": 462,
+   "d_rsi": 29.6
+  },
+  {
+   "code": "347860",
+   "name": "알체라",
+   "market": "KQ",
+   "cap": 462,
+   "d_rsi": 34.7
+  },
+  {
+   "code": "051980",
+   "name": "중앙첨단소재",
+   "market": "KQ",
+   "cap": 460,
+   "d_rsi": 19.6
+  },
+  {
+   "code": "076610",
+   "name": "해성옵틱스",
+   "market": "KQ",
+   "cap": 458,
+   "d_rsi": 31.0
+  },
+  {
+   "code": "290660",
+   "name": "다이나믹솔루션",
+   "market": "KQ",
+   "cap": 458,
+   "d_rsi": 39.4
+  },
+  {
+   "code": "396270",
+   "name": "넥스트칩",
+   "market": "KQ",
+   "cap": 457,
+   "d_rsi": 36.4
+  },
+  {
+   "code": "001550",
+   "name": "조비",
+   "market": "KS",
+   "cap": 456,
+   "d_rsi": 29.9
+  },
+  {
+   "code": "043610",
+   "name": "KT지니뮤직",
+   "market": "KQ",
+   "cap": 456,
+   "d_rsi": 26.8
+  },
+  {
+   "code": "204840",
+   "name": "지엘팜텍",
+   "market": "KQ",
+   "cap": 454,
+   "d_rsi": 27.3
+  },
+  {
+   "code": "033230",
+   "name": "인성정보",
+   "market": "KQ",
+   "cap": 453,
+   "d_rsi": 34.6
+  },
+  {
+   "code": "318160",
+   "name": "셀바이오휴먼텍",
+   "market": "KQ",
+   "cap": 452,
+   "d_rsi": 32.2
+  },
+  {
+   "code": "012690",
+   "name": "모나리자",
+   "market": "KS",
+   "cap": 451,
+   "d_rsi": 34.1
+  },
+  {
+   "code": "033310",
+   "name": "엠투엔",
+   "market": "KQ",
+   "cap": 447,
+   "d_rsi": 33.0
+  },
+  {
+   "code": "123010",
+   "name": "MSDI",
+   "market": "KQ",
+   "cap": 447,
+   "d_rsi": 28.9
+  },
+  {
+   "code": "046210",
+   "name": "HLB파나진",
+   "market": "KQ",
+   "cap": 444,
+   "d_rsi": 32.2
+  },
+  {
+   "code": "010770",
+   "name": "평화홀딩스",
+   "market": "KS",
+   "cap": 443,
+   "d_rsi": 37.6
+  },
+  {
+   "code": "448710",
+   "name": "코츠테크놀로지",
+   "market": "KQ",
+   "cap": 442,
+   "d_rsi": 29.7
+  },
+  {
+   "code": "056360",
+   "name": "코위버",
+   "market": "KQ",
+   "cap": 441,
+   "d_rsi": 37.8
+  },
+  {
+   "code": "288330",
+   "name": "파라택시스코리아",
+   "market": "KQ",
+   "cap": 441,
+   "d_rsi": 29.2
+  },
+  {
+   "code": "331740",
+   "name": "아우토크립트",
+   "market": "KQ",
+   "cap": 439,
+   "d_rsi": 26.3
+  },
+  {
+   "code": "049080",
+   "name": "기가레인",
+   "market": "KQ",
+   "cap": 436,
+   "d_rsi": 33.6
+  },
+  {
+   "code": "456070",
+   "name": "이엔셀",
+   "market": "KQ",
+   "cap": 430,
+   "d_rsi": 35.5
+  },
+  {
+   "code": "003310",
+   "name": "대주산업",
+   "market": "KQ",
+   "cap": 429,
+   "d_rsi": 27.7
+  },
+  {
+   "code": "061250",
+   "name": "화일약품",
+   "market": "KQ",
+   "cap": 427,
+   "d_rsi": 28.3
+  },
+  {
+   "code": "023810",
+   "name": "인팩",
+   "market": "KS",
+   "cap": 425,
+   "d_rsi": 28.8
+  },
+  {
+   "code": "317850",
+   "name": "대모",
+   "market": "KQ",
+   "cap": 423,
+   "d_rsi": 40.0
+  },
+  {
+   "code": "122310",
+   "name": "제노레이",
+   "market": "KQ",
+   "cap": 423,
+   "d_rsi": 39.0
+  },
+  {
+   "code": "460870",
+   "name": "에스엠씨지",
+   "market": "KQ",
+   "cap": 423,
+   "d_rsi": 31.9
+  },
+  {
+   "code": "394420",
+   "name": "리센스메디컬",
+   "market": "KQ",
+   "cap": 420,
+   "d_rsi": 23.7
+  },
+  {
+   "code": "219550",
+   "name": "디와이디",
+   "market": "KQ",
+   "cap": 420,
+   "d_rsi": 39.8
+  },
+  {
+   "code": "372910",
+   "name": "한컴라이프케어",
+   "market": "KS",
+   "cap": 418,
+   "d_rsi": 32.5
+  },
+  {
+   "code": "059270",
+   "name": "해성에어로보틱스",
+   "market": "KQ",
+   "cap": 414,
+   "d_rsi": 38.2
+  },
+  {
+   "code": "040350",
+   "name": "크레오에스지",
+   "market": "KQ",
+   "cap": 414,
+   "d_rsi": 31.0
+  },
+  {
+   "code": "189980",
+   "name": "흥국에프엔비",
+   "market": "KQ",
+   "cap": 414,
+   "d_rsi": 39.4
+  },
+  {
+   "code": "464490",
+   "name": "쿼드메디슨",
+   "market": "KQ",
+   "cap": 414,
+   "d_rsi": 31.1
+  },
+  {
+   "code": "440290",
+   "name": "HB인베스트먼트",
+   "market": "KQ",
+   "cap": 413,
+   "d_rsi": 36.3
+  },
+  {
+   "code": "000725",
+   "name": "현대건설우",
+   "market": "KS",
+   "cap": 412,
+   "d_rsi": 35.9
+  },
+  {
+   "code": "261520",
+   "name": "이지스",
+   "market": "KQ",
+   "cap": 412,
+   "d_rsi": 31.5
+  },
+  {
+   "code": "109080",
+   "name": "옵티시스",
+   "market": "KQ",
+   "cap": 412,
+   "d_rsi": 36.2
+  },
+  {
+   "code": "315640",
+   "name": "딥노이드",
+   "market": "KQ",
+   "cap": 410,
+   "d_rsi": 28.5
+  },
+  {
+   "code": "003080",
+   "name": "SB성보",
+   "market": "KS",
+   "cap": 406,
+   "d_rsi": 23.4
+  },
+  {
+   "code": "007460",
+   "name": "에이프로젠",
+   "market": "KS",
+   "cap": 405,
+   "d_rsi": 35.6
+  },
+  {
+   "code": "017040",
+   "name": "광명전기",
+   "market": "KS",
+   "cap": 404,
+   "d_rsi": 33.4
+  },
+  {
+   "code": "024910",
+   "name": "경창산업",
+   "market": "KQ",
+   "cap": 404,
+   "d_rsi": 22.3
+  },
+  {
+   "code": "001620",
+   "name": "케이비아이동국실업",
+   "market": "KS",
+   "cap": 403,
+   "d_rsi": 32.3
+  },
+  {
+   "code": "222420",
+   "name": "쎄노텍",
+   "market": "KQ",
+   "cap": 403,
+   "d_rsi": 32.5
+  },
+  {
+   "code": "002140",
+   "name": "고려산업",
+   "market": "KS",
+   "cap": 402,
+   "d_rsi": 34.5
+  },
+  {
+   "code": "022220",
+   "name": "티케이지애강",
+   "market": "KQ",
+   "cap": 400,
+   "d_rsi": 39.0
+  },
+  {
+   "code": "145170",
+   "name": "노브랜드",
+   "market": "KQ",
+   "cap": 400,
+   "d_rsi": 39.8
+  },
+  {
+   "code": "393210",
+   "name": "토마토시스템",
+   "market": "KQ",
+   "cap": 400,
+   "d_rsi": 39.3
+  },
+  {
+   "code": "064090",
+   "name": "인크레더블버즈",
+   "market": "KQ",
+   "cap": 397,
+   "d_rsi": 0.0
+  },
+  {
+   "code": "056700",
+   "name": "신화인터텍",
+   "market": "KQ",
+   "cap": 397,
+   "d_rsi": 36.7
+  },
+  {
+   "code": "073110",
+   "name": "엘엠에스",
+   "market": "KQ",
+   "cap": 397,
+   "d_rsi": 38.0
+  },
+  {
+   "code": "053980",
+   "name": "오상자이엘",
+   "market": "KQ",
+   "cap": 397,
+   "d_rsi": 27.7
+  },
+  {
+   "code": "131400",
+   "name": "이브이첨단소재",
+   "market": "KQ",
+   "cap": 396,
+   "d_rsi": 31.9
+  },
+  {
+   "code": "083790",
+   "name": "CG인바이츠",
+   "market": "KQ",
+   "cap": 396,
+   "d_rsi": 18.8
+  },
+  {
+   "code": "378850",
+   "name": "화승알앤에이",
+   "market": "KS",
+   "cap": 395,
+   "d_rsi": 21.9
+  },
+  {
+   "code": "017180",
+   "name": "명문제약",
+   "market": "KS",
+   "cap": 395,
+   "d_rsi": 36.8
+  },
+  {
+   "code": "311690",
+   "name": "CJ 바이오사이언스",
+   "market": "KQ",
+   "cap": 395,
+   "d_rsi": 31.4
+  },
+  {
+   "code": "046940",
+   "name": "우원개발",
+   "market": "KQ",
+   "cap": 393,
+   "d_rsi": 27.9
+  },
+  {
+   "code": "376290",
+   "name": "씨유테크",
+   "market": "KQ",
+   "cap": 393,
+   "d_rsi": 33.6
+  },
+  {
+   "code": "071670",
+   "name": "에이테크솔루션",
+   "market": "KQ",
+   "cap": 391,
+   "d_rsi": 34.9
+  },
+  {
+   "code": "002920",
+   "name": "유성기업",
+   "market": "KS",
+   "cap": 388,
+   "d_rsi": 38.2
+  },
+  {
+   "code": "357250",
+   "name": "미래에셋맵스리츠",
+   "market": "KS",
+   "cap": 386,
+   "d_rsi": 35.1
+  },
+  {
+   "code": "361570",
+   "name": "알비더블유",
+   "market": "KQ",
+   "cap": 382,
+   "d_rsi": 36.3
+  },
+  {
+   "code": "466410",
+   "name": "사이냅소프트",
+   "market": "KQ",
+   "cap": 382,
+   "d_rsi": 39.5
+  },
+  {
+   "code": "021050",
+   "name": "서원",
+   "market": "KS",
+   "cap": 380,
+   "d_rsi": 22.7
+  },
+  {
+   "code": "090080",
+   "name": "평화산업",
+   "market": "KS",
+   "cap": 380,
+   "d_rsi": 19.0
+  },
+  {
+   "code": "140520",
+   "name": "대창스틸",
+   "market": "KQ",
+   "cap": 378,
+   "d_rsi": 25.1
+  },
+  {
+   "code": "065170",
+   "name": "비엘팜텍",
+   "market": "KQ",
+   "cap": 377,
+   "d_rsi": 32.7
+  },
+  {
+   "code": "040160",
+   "name": "누리플렉스",
+   "market": "KQ",
+   "cap": 376,
+   "d_rsi": 30.8
+  },
+  {
+   "code": "092780",
+   "name": "DYP",
+   "market": "KS",
+   "cap": 368,
+   "d_rsi": 35.7
+  },
+  {
+   "code": "089790",
+   "name": "제이티",
+   "market": "KQ",
+   "cap": 367,
+   "d_rsi": 35.2
+  },
+  {
+   "code": "453860",
+   "name": "에이에스텍",
+   "market": "KQ",
+   "cap": 367,
+   "d_rsi": 38.3
+  },
+  {
+   "code": "900340",
+   "name": "윙입푸드",
+   "market": "KQ",
+   "cap": 366,
+   "d_rsi": 38.3
+  },
+  {
+   "code": "023350",
+   "name": "한국종합기술",
+   "market": "KS",
+   "cap": 365,
+   "d_rsi": 39.7
+  },
+  {
+   "code": "042940",
+   "name": "상지건설",
+   "market": "KQ",
+   "cap": 364,
+   "d_rsi": 38.5
+  },
+  {
+   "code": "008420",
+   "name": "문배철강",
+   "market": "KS",
+   "cap": 363,
+   "d_rsi": 28.5
+  },
+  {
+   "code": "900270",
+   "name": "헝셩그룹",
+   "market": "KQ",
+   "cap": 363,
+   "d_rsi": 15.4
+  },
+  {
+   "code": "333620",
+   "name": "엔시스",
+   "market": "KQ",
+   "cap": 363,
+   "d_rsi": 21.7
+  },
+  {
+   "code": "263020",
+   "name": "디케이앤디",
+   "market": "KQ",
+   "cap": 363,
+   "d_rsi": 38.0
+  },
+  {
+   "code": "019990",
+   "name": "에너토크",
+   "market": "KQ",
+   "cap": 363,
+   "d_rsi": 37.9
+  },
+  {
+   "code": "019770",
+   "name": "서연탑메탈",
+   "market": "KQ",
+   "cap": 362,
+   "d_rsi": 33.8
+  },
+  {
+   "code": "288180",
+   "name": "케이피항공산업",
+   "market": "KQ",
+   "cap": 362,
+   "d_rsi": 33.8
+  },
+  {
+   "code": "041650",
+   "name": "상신브레이크",
+   "market": "KS",
+   "cap": 360,
+   "d_rsi": 34.7
+  },
+  {
+   "code": "002070",
+   "name": "비비안",
+   "market": "KS",
+   "cap": 359,
+   "d_rsi": 33.8
+  },
+  {
+   "code": "217500",
+   "name": "러셀",
+   "market": "KQ",
+   "cap": 359,
+   "d_rsi": 36.3
+  },
+  {
+   "code": "004910",
+   "name": "조광페인트",
+   "market": "KS",
+   "cap": 358,
+   "d_rsi": 36.6
+  },
+  {
+   "code": "019550",
+   "name": "SBI인베스트먼트",
+   "market": "KQ",
+   "cap": 358,
+   "d_rsi": 19.9
+  },
+  {
+   "code": "384470",
+   "name": "코어라인소프트",
+   "market": "KQ",
+   "cap": 357,
+   "d_rsi": 36.4
+  },
+  {
+   "code": "002630",
+   "name": "오리엔트바이오",
+   "market": "KS",
+   "cap": 355,
+   "d_rsi": 25.8
+  },
+  {
+   "code": "424960",
+   "name": "스마트레이더시스템",
+   "market": "KQ",
+   "cap": 354,
+   "d_rsi": 24.7
+  },
+  {
+   "code": "014190",
+   "name": "원익큐브",
+   "market": "KQ",
+   "cap": 354,
+   "d_rsi": 36.3
+  },
+  {
+   "code": "212710",
+   "name": "아이에스티이",
+   "market": "KQ",
+   "cap": 354,
+   "d_rsi": 33.0
+  },
+  {
+   "code": "452400",
+   "name": "이닉스",
+   "market": "KQ",
+   "cap": 354,
+   "d_rsi": 34.5
+  },
+  {
+   "code": "065130",
+   "name": "탑엔지니어링",
+   "market": "KQ",
+   "cap": 354,
+   "d_rsi": 30.7
+  },
+  {
+   "code": "011390",
+   "name": "부산산업",
+   "market": "KS",
+   "cap": 353,
+   "d_rsi": 30.8
+  },
+  {
+   "code": "479960",
+   "name": "위너스일렉",
+   "market": "KQ",
+   "cap": 353,
+   "d_rsi": 35.0
+  },
+  {
+   "code": "256630",
+   "name": "포인트엔지니어링",
+   "market": "KQ",
+   "cap": 353,
+   "d_rsi": 19.9
+  },
+  {
+   "code": "221980",
+   "name": "케이디켐",
+   "market": "KQ",
+   "cap": 352,
+   "d_rsi": 38.4
+  },
+  {
+   "code": "424980",
+   "name": "마이크로투나노",
+   "market": "KQ",
+   "cap": 352,
+   "d_rsi": 31.7
+  },
+  {
+   "code": "320000",
+   "name": "한울반도체",
+   "market": "KQ",
+   "cap": 351,
+   "d_rsi": 28.0
+  },
+  {
+   "code": "011300",
+   "name": "우성머티리얼스",
+   "market": "KS",
+   "cap": 347,
+   "d_rsi": 28.7
+  },
+  {
+   "code": "072470",
+   "name": "우리산업홀딩스",
+   "market": "KQ",
+   "cap": 347,
+   "d_rsi": 39.0
+  },
+  {
+   "code": "094970",
+   "name": "제이엠티",
+   "market": "KQ",
+   "cap": 347,
+   "d_rsi": 28.7
+  },
+  {
+   "code": "066130",
+   "name": "하츠",
+   "market": "KQ",
+   "cap": 346,
+   "d_rsi": 20.3
+  },
+  {
+   "code": "026940",
+   "name": "부국철강",
+   "market": "KS",
+   "cap": 345,
+   "d_rsi": 33.0
+  },
+  {
+   "code": "408470",
+   "name": "한패스",
+   "market": "KQ",
+   "cap": 344,
+   "d_rsi": 34.6
+  },
+  {
+   "code": "000910",
+   "name": "유니온",
+   "market": "KS",
+   "cap": 343,
+   "d_rsi": 30.4
+  },
+  {
+   "code": "159580",
+   "name": "제로투세븐",
+   "market": "KQ",
+   "cap": 343,
+   "d_rsi": 36.3
+  },
+  {
+   "code": "005320",
+   "name": "온타이드",
+   "market": "KS",
+   "cap": 342,
+   "d_rsi": 34.0
+  },
+  {
+   "code": "262260",
+   "name": "에이프로",
+   "market": "KQ",
+   "cap": 342,
+   "d_rsi": 32.1
+  },
+  {
+   "code": "012280",
+   "name": "영화금속",
+   "market": "KS",
+   "cap": 341,
+   "d_rsi": 37.7
+  },
+  {
+   "code": "050860",
+   "name": "아세아텍",
+   "market": "KQ",
+   "cap": 340,
+   "d_rsi": 28.2
+  },
+  {
+   "code": "009835",
+   "name": "한화솔루션우",
+   "market": "KS",
+   "cap": 339,
+   "d_rsi": 35.6
+  },
+  {
+   "code": "189860",
+   "name": "서전기전",
+   "market": "KQ",
+   "cap": 339,
+   "d_rsi": 37.0
+  },
+  {
+   "code": "370090",
+   "name": "퓨런티어",
+   "market": "KQ",
+   "cap": 339,
+   "d_rsi": 36.2
+  },
+  {
+   "code": "203450",
+   "name": "유니온바이오메트릭스",
+   "market": "KQ",
+   "cap": 339,
+   "d_rsi": 36.2
+  },
+  {
+   "code": "003060",
+   "name": "에이프로젠바이오로직스",
+   "market": "KS",
+   "cap": 337,
+   "d_rsi": 17.8
+  },
+  {
+   "code": "471820",
+   "name": "셀로맥스사이언스",
+   "market": "KQ",
+   "cap": 337,
+   "d_rsi": 23.4
+  },
+  {
+   "code": "004060",
+   "name": "SG세계물산",
+   "market": "KS",
+   "cap": 334,
+   "d_rsi": 24.9
+  },
+  {
+   "code": "011230",
+   "name": "삼화전자",
+   "market": "KS",
+   "cap": 333,
+   "d_rsi": 27.9
+  },
+  {
+   "code": "481850",
+   "name": "신한글로벌액티브리츠",
+   "market": "KS",
+   "cap": 332,
+   "d_rsi": 18.6
+  },
+  {
+   "code": "007680",
+   "name": "대원",
+   "market": "KQ",
+   "cap": 331,
+   "d_rsi": 38.0
+  },
+  {
+   "code": "042040",
+   "name": "케이피엠테크",
+   "market": "KQ",
+   "cap": 329,
+   "d_rsi": 32.3
+  },
+  {
+   "code": "221840",
+   "name": "하이즈항공",
+   "market": "KQ",
+   "cap": 328,
+   "d_rsi": 33.6
+  },
+  {
+   "code": "024120",
+   "name": "KB오토시스",
+   "market": "KQ",
+   "cap": 327,
+   "d_rsi": 28.3
+  },
+  {
+   "code": "134790",
+   "name": "시디즈",
+   "market": "KS",
+   "cap": 326,
+   "d_rsi": 36.1
+  },
+  {
+   "code": "136410",
+   "name": "아셈스",
+   "market": "KQ",
+   "cap": 325,
+   "d_rsi": 23.8
+  },
+  {
+   "code": "290720",
+   "name": "푸드나무",
+   "market": "KQ",
+   "cap": 324,
+   "d_rsi": 22.9
+  },
+  {
+   "code": "900120",
+   "name": "씨엑스아이",
+   "market": "KQ",
+   "cap": 323,
+   "d_rsi": 36.7
+  },
+  {
+   "code": "476040",
+   "name": "오가노이드사이언스",
+   "market": "KQ",
+   "cap": 322,
+   "d_rsi": 38.7
+  },
+  {
+   "code": "000215",
+   "name": "DL우",
+   "market": "KS",
+   "cap": 320,
+   "d_rsi": 35.9
+  },
+  {
+   "code": "352700",
+   "name": "씨앤투스",
+   "market": "KQ",
+   "cap": 320,
+   "d_rsi": 35.5
+  },
+  {
+   "code": "198080",
+   "name": "캐프",
+   "market": "KQ",
+   "cap": 320,
+   "d_rsi": 23.0
+  },
+  {
+   "code": "332290",
+   "name": "누보",
+   "market": "KQ",
+   "cap": 317,
+   "d_rsi": 39.3
+  },
+  {
+   "code": "032790",
+   "name": "엠젠솔루션",
+   "market": "KQ",
+   "cap": 316,
+   "d_rsi": 38.4
+  },
+  {
+   "code": "450330",
+   "name": "하스",
+   "market": "KQ",
+   "cap": 316,
+   "d_rsi": 39.2
+  },
+  {
+   "code": "232830",
+   "name": "아이티센피엔에스",
+   "market": "KQ",
+   "cap": 315,
+   "d_rsi": 39.8
+  },
+  {
+   "code": "082850",
+   "name": "우리바이오",
+   "market": "KQ",
+   "cap": 314,
+   "d_rsi": 27.9
+  },
+  {
+   "code": "900250",
+   "name": "크리스탈신소재",
+   "market": "KQ",
+   "cap": 313,
+   "d_rsi": 29.0
+  },
+  {
+   "code": "037230",
+   "name": "한국팩키지",
+   "market": "KQ",
+   "cap": 312,
+   "d_rsi": 28.8
+  },
+  {
+   "code": "038070",
+   "name": "서린바이오",
+   "market": "KQ",
+   "cap": 312,
+   "d_rsi": 36.6
+  },
+  {
+   "code": "027830",
+   "name": "대성창투",
+   "market": "KQ",
+   "cap": 311,
+   "d_rsi": 11.1
+  },
+  {
+   "code": "059100",
+   "name": "아이컴포넌트",
+   "market": "KQ",
+   "cap": 310,
+   "d_rsi": 27.9
+  },
+  {
+   "code": "290670",
+   "name": "대보마그네틱",
+   "market": "KQ",
+   "cap": 309,
+   "d_rsi": 36.0
+  },
+  {
+   "code": "250030",
+   "name": "진코스텍",
+   "market": "KQ",
+   "cap": 306,
+   "d_rsi": 27.8
+  },
+  {
+   "code": "097870",
+   "name": "효성오앤비",
+   "market": "KQ",
+   "cap": 306,
+   "d_rsi": 31.9
+  },
+  {
+   "code": "260930",
+   "name": "씨티케이",
+   "market": "KQ",
+   "cap": 306,
+   "d_rsi": 31.7
+  },
+  {
+   "code": "373160",
+   "name": "데이원컴퍼니",
+   "market": "KQ",
+   "cap": 305,
+   "d_rsi": 24.3
+  },
+  {
+   "code": "121890",
+   "name": "에스디시스템",
+   "market": "KQ",
+   "cap": 304,
+   "d_rsi": 38.8
+  },
+  {
+   "code": "014570",
+   "name": "고려제약",
+   "market": "KQ",
+   "cap": 304,
+   "d_rsi": 39.1
+  },
+  {
+   "code": "461030",
+   "name": "아이엠비디엑스",
+   "market": "KQ",
+   "cap": 304,
+   "d_rsi": 36.3
+  },
+  {
+   "code": "475460",
+   "name": "미트박스",
+   "market": "KQ",
+   "cap": 303,
+   "d_rsi": 30.3
+  },
+  {
+   "code": "321260",
+   "name": "프로이천",
+   "market": "KQ",
+   "cap": 303,
+   "d_rsi": 31.3
+  },
+  {
+   "code": "463480",
+   "name": "모티브링크",
+   "market": "KQ",
+   "cap": 302,
+   "d_rsi": 29.6
+  },
+  {
+   "code": "196300",
+   "name": "HLB펩",
+   "market": "KQ",
+   "cap": 301,
+   "d_rsi": 34.1
+  },
+  {
+   "code": "101240",
+   "name": "씨큐브",
+   "market": "KQ",
+   "cap": 300,
+   "d_rsi": 28.1
+  },
+  {
+   "code": "115160",
+   "name": "휴맥스",
+   "market": "KQ",
+   "cap": 299,
+   "d_rsi": 22.5
+  },
+  {
+   "code": "199480",
+   "name": "뱅크웨어글로벌",
+   "market": "KQ",
+   "cap": 299,
+   "d_rsi": 34.6
+  },
+  {
+   "code": "218150",
+   "name": "미래생명자원",
+   "market": "KQ",
+   "cap": 299,
+   "d_rsi": 24.6
+  },
+  {
+   "code": "051490",
+   "name": "나라엠앤디",
+   "market": "KQ",
+   "cap": 299,
+   "d_rsi": 31.9
+  },
+  {
+   "code": "148930",
+   "name": "에이치와이티씨",
+   "market": "KQ",
+   "cap": 298,
+   "d_rsi": 39.0
+  },
+  {
+   "code": "286750",
+   "name": "나노실리칸첨단소재",
+   "market": "KQ",
+   "cap": 298,
+   "d_rsi": 23.9
+  },
+  {
+   "code": "045060",
+   "name": "오공",
+   "market": "KQ",
+   "cap": 298,
+   "d_rsi": 19.8
+  },
+  {
+   "code": "238090",
+   "name": "앤디포스",
+   "market": "KQ",
+   "cap": 298,
+   "d_rsi": 25.3
+  },
+  {
+   "code": "033340",
+   "name": "좋은사람들",
+   "market": "KQ",
+   "cap": 294,
+   "d_rsi": 35.7
+  },
+  {
+   "code": "204020",
+   "name": "그리티",
+   "market": "KQ",
+   "cap": 293,
+   "d_rsi": 34.6
+  },
+  {
+   "code": "223310",
+   "name": "사토시홀딩스",
+   "market": "KQ",
+   "cap": 293,
+   "d_rsi": 30.3
+  },
+  {
+   "code": "171010",
+   "name": "램테크놀러지",
+   "market": "KQ",
+   "cap": 292,
+   "d_rsi": 38.1
+  },
+  {
+   "code": "005820",
+   "name": "원림",
+   "market": "KS",
+   "cap": 291,
+   "d_rsi": 38.5
+  },
+  {
+   "code": "239890",
+   "name": "피엔에이치테크",
+   "market": "KQ",
+   "cap": 290,
+   "d_rsi": 39.9
+  },
+  {
+   "code": "004920",
+   "name": "씨아이테크",
+   "market": "KS",
+   "cap": 289,
+   "d_rsi": 34.4
+  },
+  {
+   "code": "215380",
+   "name": "콜마바이오텍",
+   "market": "KQ",
+   "cap": 289,
+   "d_rsi": 30.3
+  },
+  {
+   "code": "365660",
+   "name": "레몬헬스케어",
+   "market": "KQ",
+   "cap": 288,
+   "d_rsi": 31.0
+  },
+  {
+   "code": "104200",
+   "name": "NHN벅스",
+   "market": "KQ",
+   "cap": 288,
+   "d_rsi": 32.1
+  },
+  {
+   "code": "452300",
+   "name": "캡스톤파트너스",
+   "market": "KQ",
+   "cap": 288,
+   "d_rsi": 34.3
+  },
+  {
+   "code": "270870",
+   "name": "뉴트리",
+   "market": "KQ",
+   "cap": 287,
+   "d_rsi": 35.2
+  },
+  {
+   "code": "043910",
+   "name": "자연과환경",
+   "market": "KQ",
+   "cap": 287,
+   "d_rsi": 32.0
+  },
+  {
+   "code": "006740",
+   "name": "블루산업개발",
+   "market": "KS",
+   "cap": 286,
+   "d_rsi": 35.6
+  },
+  {
+   "code": "075130",
+   "name": "플랜티넷",
+   "market": "KQ",
+   "cap": 285,
+   "d_rsi": 40.0
+  },
+  {
+   "code": "011420",
+   "name": "갤럭시아에스엠",
+   "market": "KS",
+   "cap": 284,
+   "d_rsi": 26.5
+  },
+  {
+   "code": "200350",
+   "name": "스튜디오쏠쏠",
+   "market": "KQ",
+   "cap": 284,
+   "d_rsi": 35.8
+  },
+  {
+   "code": "014990",
+   "name": "인디에프",
+   "market": "KS",
+   "cap": 283,
+   "d_rsi": 34.1
+  },
+  {
+   "code": "122690",
+   "name": "서진오토모티브",
+   "market": "KQ",
+   "cap": 283,
+   "d_rsi": 35.3
+  },
+  {
+   "code": "317870",
+   "name": "엔바이오니아",
+   "market": "KQ",
+   "cap": 283,
+   "d_rsi": 25.9
+  },
+  {
+   "code": "060540",
+   "name": "에스에이티",
+   "market": "KQ",
+   "cap": 282,
+   "d_rsi": 37.6
+  },
+  {
+   "code": "045300",
+   "name": "성우테크론",
+   "market": "KQ",
+   "cap": 282,
+   "d_rsi": 39.7
+  },
+  {
+   "code": "004365",
+   "name": "세방우",
+   "market": "KS",
+   "cap": 281,
+   "d_rsi": 32.1
+  },
+  {
+   "code": "066360",
+   "name": "체리부로",
+   "market": "KQ",
+   "cap": 281,
+   "d_rsi": 27.2
+  },
+  {
+   "code": "036420",
+   "name": "콘텐트리중앙",
+   "market": "KS",
+   "cap": 279,
+   "d_rsi": 34.9
+  },
+  {
+   "code": "258790",
+   "name": "소프트캠프",
+   "market": "KQ",
+   "cap": 279,
+   "d_rsi": 34.5
+  },
+  {
+   "code": "065500",
+   "name": "오리엔트정공",
+   "market": "KQ",
+   "cap": 279,
+   "d_rsi": 37.4
+  },
+  {
+   "code": "008250",
+   "name": "이건산업",
+   "market": "KS",
+   "cap": 278,
+   "d_rsi": 32.4
+  },
+  {
+   "code": "106240",
+   "name": "파인테크닉스",
+   "market": "KQ",
+   "cap": 278,
+   "d_rsi": 38.5
+  },
+  {
+   "code": "090410",
+   "name": "덕신이피씨",
+   "market": "KQ",
+   "cap": 277,
+   "d_rsi": 37.8
+  },
+  {
+   "code": "396690",
+   "name": "미래에셋글로벌리츠",
+   "market": "KS",
+   "cap": 276,
+   "d_rsi": 27.7
+  },
+  {
+   "code": "014910",
+   "name": "성문전자",
+   "market": "KS",
+   "cap": 276,
+   "d_rsi": 31.4
+  },
+  {
+   "code": "277070",
+   "name": "린드먼아시아",
+   "market": "KQ",
+   "cap": 276,
+   "d_rsi": 22.2
+  },
+  {
+   "code": "219420",
+   "name": "링크제니시스",
+   "market": "KQ",
+   "cap": 275,
+   "d_rsi": 32.8
+  },
+  {
+   "code": "487400",
+   "name": "케이앤에스아이앤씨",
+   "market": "KQ",
+   "cap": 274,
+   "d_rsi": 23.8
+  },
+  {
+   "code": "021650",
+   "name": "한국큐빅",
+   "market": "KQ",
+   "cap": 271,
+   "d_rsi": 31.5
+  },
+  {
+   "code": "260660",
+   "name": "알리코제약",
+   "market": "KQ",
+   "cap": 270,
+   "d_rsi": 37.5
+  },
+  {
+   "code": "052600",
+   "name": "한네트",
+   "market": "KQ",
+   "cap": 270,
+   "d_rsi": 30.0
+  },
+  {
+   "code": "053950",
+   "name": "경남제약",
+   "market": "KQ",
+   "cap": 269,
+   "d_rsi": 22.0
+  },
+  {
+   "code": "099410",
+   "name": "동방선기",
+   "market": "KQ",
+   "cap": 269,
+   "d_rsi": 27.9
+  },
+  {
+   "code": "007110",
+   "name": "일신석재",
+   "market": "KS",
+   "cap": 267,
+   "d_rsi": 31.6
+  },
+  {
+   "code": "025440",
+   "name": "DH오토웨어",
+   "market": "KQ",
+   "cap": 267,
+   "d_rsi": 30.9
+  },
+  {
+   "code": "099220",
+   "name": "SDN",
+   "market": "KQ",
+   "cap": 267,
+   "d_rsi": 39.9
+  },
+  {
+   "code": "460470",
+   "name": "아이빔테크놀로지",
+   "market": "KQ",
+   "cap": 265,
+   "d_rsi": 25.4
+  },
+  {
+   "code": "006920",
+   "name": "모헨즈",
+   "market": "KQ",
+   "cap": 264,
+   "d_rsi": 34.8
+  },
+  {
+   "code": "208860",
+   "name": "다산디엠씨",
+   "market": "KQ",
+   "cap": 263,
+   "d_rsi": 35.0
+  },
+  {
+   "code": "035460",
+   "name": "기산텔레콤",
+   "market": "KQ",
+   "cap": 260,
+   "d_rsi": 30.0
+  },
+  {
+   "code": "009460",
+   "name": "한창제지",
+   "market": "KS",
+   "cap": 259,
+   "d_rsi": 34.3
+  },
+  {
+   "code": "290120",
+   "name": "DH오토리드",
+   "market": "KQ",
+   "cap": 259,
+   "d_rsi": 26.5
+  },
+  {
+   "code": "215090",
+   "name": "솔디펜스",
+   "market": "KQ",
+   "cap": 259,
+   "d_rsi": 39.3
+  },
+  {
+   "code": "452200",
+   "name": "민테크",
+   "market": "KQ",
+   "cap": 258,
+   "d_rsi": 25.5
+  },
+  {
+   "code": "089150",
+   "name": "케이씨티",
+   "market": "KQ",
+   "cap": 257,
+   "d_rsi": 26.7
+  },
+  {
+   "code": "010400",
+   "name": "우진아이엔에스",
+   "market": "KS",
+   "cap": 256,
+   "d_rsi": 39.8
+  },
+  {
+   "code": "038620",
+   "name": "위즈코프",
+   "market": "KQ",
+   "cap": 256,
+   "d_rsi": 36.6
+  },
+  {
+   "code": "318410",
+   "name": "비비씨",
+   "market": "KQ",
+   "cap": 256,
+   "d_rsi": 18.6
+  },
+  {
+   "code": "064480",
+   "name": "브리지텍",
+   "market": "KQ",
+   "cap": 255,
+   "d_rsi": 38.0
+  },
+  {
+   "code": "079170",
+   "name": "한창산업",
+   "market": "KQ",
+   "cap": 255,
+   "d_rsi": 39.7
+  },
+  {
+   "code": "006570",
+   "name": "대림통상",
+   "market": "KS",
+   "cap": 254,
+   "d_rsi": 36.8
+  },
+  {
+   "code": "038870",
+   "name": "에코심플렉스",
+   "market": "KQ",
+   "cap": 254,
+   "d_rsi": 38.8
+  },
+  {
+   "code": "179530",
+   "name": "애드바이오텍",
+   "market": "KQ",
+   "cap": 254,
+   "d_rsi": 35.4
+  },
+  {
+   "code": "109960",
+   "name": "앱토크롬",
+   "market": "KQ",
+   "cap": 252,
+   "d_rsi": 38.4
+  },
+  {
+   "code": "177900",
+   "name": "쓰리에이로직스",
+   "market": "KQ",
+   "cap": 252,
+   "d_rsi": 35.2
+  },
+  {
+   "code": "068100",
+   "name": "케이웨더",
+   "market": "KQ",
+   "cap": 251,
+   "d_rsi": 39.9
+  },
+  {
+   "code": "075970",
+   "name": "동국알앤에스",
+   "market": "KQ",
+   "cap": 250,
+   "d_rsi": 31.4
+  },
+  {
+   "code": "387570",
+   "name": "파인메딕스",
+   "market": "KQ",
+   "cap": 248,
+   "d_rsi": 28.0
+  },
+  {
+   "code": "237820",
+   "name": "플레이디",
+   "market": "KQ",
+   "cap": 248,
+   "d_rsi": 35.3
+  },
+  {
+   "code": "091340",
+   "name": "S&K글로벌",
+   "market": "KQ",
+   "cap": 247,
+   "d_rsi": 24.0
+  },
+  {
+   "code": "007120",
+   "name": "미래아이앤지",
+   "market": "KS",
+   "cap": 246,
+   "d_rsi": 39.7
+  },
+  {
+   "code": "014130",
+   "name": "한익스프레스",
+   "market": "KS",
+   "cap": 246,
+   "d_rsi": 34.4
+  },
+  {
+   "code": "019570",
+   "name": "GMI벤처",
+   "market": "KQ",
+   "cap": 246,
+   "d_rsi": 32.5
+  },
+  {
+   "code": "109820",
+   "name": "진매트릭스",
+   "market": "KQ",
+   "cap": 245,
+   "d_rsi": 26.7
+  },
+  {
+   "code": "300120",
+   "name": "라온피플",
+   "market": "KQ",
+   "cap": 243,
+   "d_rsi": 38.2
+  },
+  {
+   "code": "263920",
+   "name": "휴엠앤씨",
+   "market": "KQ",
+   "cap": 238,
+   "d_rsi": 25.9
+  },
+  {
+   "code": "047080",
+   "name": "한빛소프트",
+   "market": "KQ",
+   "cap": 235,
+   "d_rsi": 39.8
+  },
+  {
+   "code": "002355",
+   "name": "넥센타이어1우B",
+   "market": "KS",
+   "cap": 234,
+   "d_rsi": 37.7
+  },
+  {
+   "code": "019175",
+   "name": "신풍제약우",
+   "market": "KS",
+   "cap": 234,
+   "d_rsi": 33.9
+  },
+  {
+   "code": "099390",
+   "name": "브레인즈컴퍼니",
+   "market": "KQ",
+   "cap": 233,
+   "d_rsi": 35.0
+  },
+  {
+   "code": "317240",
+   "name": "TS트릴리온",
+   "market": "KQ",
+   "cap": 233,
+   "d_rsi": 36.1
+  },
+  {
+   "code": "087600",
+   "name": "픽셀플러스",
+   "market": "KQ",
+   "cap": 232,
+   "d_rsi": 28.0
+  },
+  {
+   "code": "016600",
+   "name": "큐캐피탈",
+   "market": "KQ",
+   "cap": 231,
+   "d_rsi": 31.2
+  },
+  {
+   "code": "013720",
+   "name": "청보",
+   "market": "KQ",
+   "cap": 230,
+   "d_rsi": 39.1
+  },
+  {
+   "code": "146060",
+   "name": "율촌",
+   "market": "KQ",
+   "cap": 230,
+   "d_rsi": 39.3
+  },
+  {
+   "code": "032750",
+   "name": "삼진",
+   "market": "KQ",
+   "cap": 230,
+   "d_rsi": 30.6
+  },
+  {
+   "code": "017000",
+   "name": "신원종합개발",
+   "market": "KQ",
+   "cap": 229,
+   "d_rsi": 35.1
+  },
+  {
+   "code": "367000",
+   "name": "플래티어",
+   "market": "KQ",
+   "cap": 229,
+   "d_rsi": 30.3
+  },
+  {
+   "code": "383930",
+   "name": "디티앤씨알오",
+   "market": "KQ",
+   "cap": 229,
+   "d_rsi": 37.1
+  },
+  {
+   "code": "290090",
+   "name": "트윔",
+   "market": "KQ",
+   "cap": 225,
+   "d_rsi": 37.1
+  },
+  {
+   "code": "365590",
+   "name": "하이딥",
+   "market": "KQ",
+   "cap": 225,
+   "d_rsi": 39.6
+  },
+  {
+   "code": "079000",
+   "name": "와토스코리아",
+   "market": "KQ",
+   "cap": 223,
+   "d_rsi": 29.8
+  },
+  {
+   "code": "377030",
+   "name": "비트맥스",
+   "market": "KQ",
+   "cap": 222,
+   "d_rsi": 34.1
+  },
+  {
+   "code": "254120",
+   "name": "자비스",
+   "market": "KQ",
+   "cap": 219,
+   "d_rsi": 32.2
+  },
+  {
+   "code": "076080",
+   "name": "웰크론한텍",
+   "market": "KQ",
+   "cap": 218,
+   "d_rsi": 37.5
+  },
+  {
+   "code": "023150",
+   "name": "MH에탄올",
+   "market": "KS",
+   "cap": 217,
+   "d_rsi": 30.6
+  },
+  {
+   "code": "900310",
+   "name": "컬러레이",
+   "market": "KQ",
+   "cap": 216,
+   "d_rsi": 38.5
+  },
+  {
+   "code": "043200",
+   "name": "파루",
+   "market": "KQ",
+   "cap": 216,
+   "d_rsi": 30.6
+  },
+  {
+   "code": "226340",
+   "name": "본느",
+   "market": "KQ",
+   "cap": 215,
+   "d_rsi": 26.5
+  },
+  {
+   "code": "060380",
+   "name": "동양에스텍",
+   "market": "KQ",
+   "cap": 215,
+   "d_rsi": 38.4
+  },
+  {
+   "code": "096630",
+   "name": "에스코넥",
+   "market": "KQ",
+   "cap": 214,
+   "d_rsi": 27.3
+  },
+  {
+   "code": "226330",
+   "name": "신테카바이오",
+   "market": "KQ",
+   "cap": 214,
+   "d_rsi": 35.4
+  },
+  {
+   "code": "048470",
+   "name": "대동스틸",
+   "market": "KQ",
+   "cap": 212,
+   "d_rsi": 34.5
+  },
+  {
+   "code": "311390",
+   "name": "네오크레마",
+   "market": "KQ",
+   "cap": 212,
+   "d_rsi": 19.6
+  },
+  {
+   "code": "037330",
+   "name": "인지디스플레",
+   "market": "KQ",
+   "cap": 212,
+   "d_rsi": 11.6
+  },
+  {
+   "code": "050090",
+   "name": "비케이홀딩스",
+   "market": "KQ",
+   "cap": 211,
+   "d_rsi": 36.5
+  },
+  {
+   "code": "462980",
+   "name": "아이지넷",
+   "market": "KQ",
+   "cap": 210,
+   "d_rsi": 27.9
+  },
+  {
+   "code": "004870",
+   "name": "티웨이홀딩스",
+   "market": "KS",
+   "cap": 209,
+   "d_rsi": 30.1
+  },
+  {
+   "code": "373170",
+   "name": "엠아이큐브솔루션",
+   "market": "KQ",
+   "cap": 209,
+   "d_rsi": 39.7
+  },
+  {
+   "code": "012160",
+   "name": "영흥",
+   "market": "KS",
+   "cap": 208,
+   "d_rsi": 28.9
+  },
+  {
+   "code": "073540",
+   "name": "에프알텍",
+   "market": "KQ",
+   "cap": 208,
+   "d_rsi": 25.5
+  },
+  {
+   "code": "464580",
+   "name": "닷밀",
+   "market": "KQ",
+   "cap": 207,
+   "d_rsi": 29.5
+  },
+  {
+   "code": "462310",
+   "name": "뉴키즈온",
+   "market": "KQ",
+   "cap": 207,
+   "d_rsi": 34.7
+  },
+  {
+   "code": "090150",
+   "name": "아이윈",
+   "market": "KQ",
+   "cap": 206,
+   "d_rsi": 36.9
+  },
+  {
+   "code": "469750",
+   "name": "아이비젼웍스",
+   "market": "KQ",
+   "cap": 205,
+   "d_rsi": 30.2
+  },
+  {
+   "code": "008470",
+   "name": "부스타",
+   "market": "KQ",
+   "cap": 205,
+   "d_rsi": 28.8
+  },
+  {
+   "code": "069140",
+   "name": "누리플랜",
+   "market": "KQ",
+   "cap": 205,
+   "d_rsi": 32.6
+  },
+  {
+   "code": "206560",
+   "name": "덱스터",
+   "market": "KQ",
+   "cap": 204,
+   "d_rsi": 35.9
+  },
+  {
+   "code": "047400",
+   "name": "유니온머티리얼",
+   "market": "KS",
+   "cap": 203,
+   "d_rsi": 24.3
+  },
+  {
+   "code": "415380",
+   "name": "스튜디오삼익",
+   "market": "KQ",
+   "cap": 203,
+   "d_rsi": 34.4
+  },
+  {
+   "code": "003680",
+   "name": "한성기업",
+   "market": "KS",
+   "cap": 202,
+   "d_rsi": 37.9
+  },
+  {
+   "code": "057030",
+   "name": "YBM넷",
+   "market": "KQ",
+   "cap": 202,
+   "d_rsi": 24.7
+  },
+  {
+   "code": "458350",
+   "name": "에스팀",
+   "market": "KQ",
+   "cap": 202,
+   "d_rsi": 39.4
+  },
+  {
+   "code": "351330",
+   "name": "이삭엔지니어링",
+   "market": "KQ",
+   "cap": 201,
+   "d_rsi": 37.8
+  },
+  {
+   "code": "288620",
+   "name": "에스프리즘",
+   "market": "KQ",
+   "cap": 200,
+   "d_rsi": 39.4
+  },
+  {
+   "code": "101400",
+   "name": "엔시트론",
+   "market": "KQ",
+   "cap": 200,
+   "d_rsi": 33.6
+  },
+  {
+   "code": "065060",
+   "name": "지엔코",
+   "market": "KQ",
+   "cap": 199,
+   "d_rsi": 39.0
+  },
+  {
+   "code": "088340",
+   "name": "유라클",
+   "market": "KQ",
+   "cap": 197,
+   "d_rsi": 26.8
+  },
+  {
+   "code": "208350",
+   "name": "지란지교시큐리티",
+   "market": "KQ",
+   "cap": 197,
+   "d_rsi": 36.4
+  },
+  {
+   "code": "007720",
+   "name": "소노스퀘어",
+   "market": "KQ",
+   "cap": 197,
+   "d_rsi": 39.6
+  },
+  {
+   "code": "290560",
+   "name": "파라택시스이더리움",
+   "market": "KQ",
+   "cap": 196,
+   "d_rsi": 38.9
+  },
+  {
+   "code": "101680",
+   "name": "한국정밀기계",
+   "market": "KQ",
+   "cap": 195,
+   "d_rsi": 39.3
+  },
+  {
+   "code": "032800",
+   "name": "판타지오",
+   "market": "KQ",
+   "cap": 194,
+   "d_rsi": 31.7
+  },
+  {
+   "code": "398120",
+   "name": "에스지헬스케어",
+   "market": "KQ",
+   "cap": 194,
+   "d_rsi": 28.6
+  },
+  {
+   "code": "352940",
+   "name": "인바이오",
+   "market": "KQ",
+   "cap": 194,
+   "d_rsi": 35.2
+  },
+  {
+   "code": "103840",
+   "name": "우양",
+   "market": "KQ",
+   "cap": 193,
+   "d_rsi": 30.0
+  },
+  {
+   "code": "464280",
+   "name": "티디에스팜",
+   "market": "KQ",
+   "cap": 193,
+   "d_rsi": 21.6
+  },
+  {
+   "code": "036480",
+   "name": "대성미생물",
+   "market": "KQ",
+   "cap": 193,
+   "d_rsi": 34.5
+  },
+  {
+   "code": "214610",
+   "name": "롤링스톤",
+   "market": "KQ",
+   "cap": 192,
+   "d_rsi": 29.2
+  },
+  {
+   "code": "043340",
+   "name": "에쎈테크",
+   "market": "KQ",
+   "cap": 191,
+   "d_rsi": 19.9
+  },
+  {
+   "code": "001685",
+   "name": "대상우",
+   "market": "KS",
+   "cap": 189,
+   "d_rsi": 39.4
+  },
+  {
+   "code": "290520",
+   "name": "신도기연",
+   "market": "KQ",
+   "cap": 189,
+   "d_rsi": 32.1
+  },
+  {
+   "code": "052300",
+   "name": "오션인더블유",
+   "market": "KQ",
+   "cap": 188,
+   "d_rsi": 35.7
+  },
+  {
+   "code": "475660",
+   "name": "에스켐",
+   "market": "KQ",
+   "cap": 188,
+   "d_rsi": 36.9
+  },
+  {
+   "code": "464500",
+   "name": "아이언디바이스",
+   "market": "KQ",
+   "cap": 188,
+   "d_rsi": 36.8
+  },
+  {
+   "code": "018680",
+   "name": "서울제약",
+   "market": "KQ",
+   "cap": 188,
+   "d_rsi": 32.1
+  },
+  {
+   "code": "198940",
+   "name": "한주라이트메탈",
+   "market": "KQ",
+   "cap": 187,
+   "d_rsi": 29.2
+  },
+  {
+   "code": "318000",
+   "name": "KBG",
+   "market": "KQ",
+   "cap": 187,
+   "d_rsi": 38.8
+  },
+  {
+   "code": "405920",
+   "name": "나라셀라",
+   "market": "KQ",
+   "cap": 187,
+   "d_rsi": 32.7
+  },
+  {
+   "code": "069410",
+   "name": "엔텔스",
+   "market": "KQ",
+   "cap": 186,
+   "d_rsi": 37.5
+  },
+  {
+   "code": "066910",
+   "name": "손오공",
+   "market": "KQ",
+   "cap": 186,
+   "d_rsi": 20.4
+  },
+  {
+   "code": "083660",
+   "name": "CSA 코스믹",
+   "market": "KQ",
+   "cap": 184,
+   "d_rsi": 39.1
+  },
+  {
+   "code": "002690",
+   "name": "동일제강",
+   "market": "KS",
+   "cap": 183,
+   "d_rsi": 20.1
+  },
+  {
+   "code": "105550",
+   "name": "엣지파운드리",
+   "market": "KQ",
+   "cap": 183,
+   "d_rsi": 37.0
+  },
+  {
+   "code": "267790",
+   "name": "배럴",
+   "market": "KQ",
+   "cap": 183,
+   "d_rsi": 31.3
+  },
+  {
+   "code": "357430",
+   "name": "마스턴프리미어리츠",
+   "market": "KS",
+   "cap": 182,
+   "d_rsi": 30.4
+  },
+  {
+   "code": "115480",
+   "name": "씨유메디칼",
+   "market": "KQ",
+   "cap": 182,
+   "d_rsi": 26.5
+  },
+  {
+   "code": "344860",
+   "name": "이노진",
+   "market": "KQ",
+   "cap": 182,
+   "d_rsi": 35.3
+  },
+  {
+   "code": "054940",
+   "name": "엑사이엔씨",
+   "market": "KQ",
+   "cap": 179,
+   "d_rsi": 30.8
+  },
+  {
+   "code": "033050",
+   "name": "제이엠아이",
+   "market": "KQ",
+   "cap": 179,
+   "d_rsi": 19.9
+  },
+  {
+   "code": "376180",
+   "name": "피코그램",
+   "market": "KQ",
+   "cap": 178,
+   "d_rsi": 29.5
+  },
+  {
+   "code": "018700",
+   "name": "졸스",
+   "market": "KQ",
+   "cap": 177,
+   "d_rsi": 30.0
+  },
+  {
+   "code": "008600",
+   "name": "윌비스",
+   "market": "KS",
+   "cap": 176,
+   "d_rsi": 28.2
+  },
+  {
+   "code": "009140",
+   "name": "케이아이이",
+   "market": "KS",
+   "cap": 175,
+   "d_rsi": 26.3
+  },
+  {
+   "code": "238490",
+   "name": "힘스",
+   "market": "KQ",
+   "cap": 175,
+   "d_rsi": 31.0
+  },
+  {
+   "code": "054090",
+   "name": "삼진엘앤디",
+   "market": "KQ",
+   "cap": 175,
+   "d_rsi": 31.0
+  },
+  {
+   "code": "444530",
+   "name": "심플랫폼",
+   "market": "KQ",
+   "cap": 175,
+   "d_rsi": 31.5
+  },
+  {
+   "code": "328380",
+   "name": "솔트웨어",
+   "market": "KQ",
+   "cap": 174,
+   "d_rsi": 31.0
+  },
+  {
+   "code": "118000",
+   "name": "메타케어",
+   "market": "KS",
+   "cap": 172,
+   "d_rsi": 34.5
+  },
+  {
+   "code": "331520",
+   "name": "밸로프",
+   "market": "KQ",
+   "cap": 172,
+   "d_rsi": 38.3
+  },
+  {
+   "code": "257370",
+   "name": "피엔티엠에스",
+   "market": "KQ",
+   "cap": 172,
+   "d_rsi": 36.2
+  },
+  {
+   "code": "462510",
+   "name": "라메디텍",
+   "market": "KQ",
+   "cap": 171,
+   "d_rsi": 38.5
+  },
+  {
+   "code": "123840",
+   "name": "뉴온",
+   "market": "KQ",
+   "cap": 168,
+   "d_rsi": 33.1
+  },
+  {
+   "code": "038880",
+   "name": "아이에이",
+   "market": "KQ",
+   "cap": 166,
+   "d_rsi": 33.7
+  },
+  {
+   "code": "347770",
+   "name": "핌스",
+   "market": "KQ",
+   "cap": 166,
+   "d_rsi": 32.4
+  },
+  {
+   "code": "024940",
+   "name": "PN풍년",
+   "market": "KQ",
+   "cap": 164,
+   "d_rsi": 33.9
+  },
+  {
+   "code": "115570",
+   "name": "스타플렉스",
+   "market": "KQ",
+   "cap": 164,
+   "d_rsi": 32.1
+  },
+  {
+   "code": "013810",
+   "name": "스페코",
+   "market": "KQ",
+   "cap": 163,
+   "d_rsi": 33.6
+  },
+  {
+   "code": "108675",
+   "name": "LX하우시스우",
+   "market": "KS",
+   "cap": 160,
+   "d_rsi": 30.1
+  },
+  {
+   "code": "200230",
+   "name": "텔콘RF제약",
+   "market": "KQ",
+   "cap": 160,
+   "d_rsi": 25.4
+  },
+  {
+   "code": "080470",
+   "name": "성창오토텍",
+   "market": "KQ",
+   "cap": 160,
+   "d_rsi": 34.7
+  },
+  {
+   "code": "009620",
+   "name": "삼보산업",
+   "market": "KQ",
+   "cap": 158,
+   "d_rsi": 39.0
+  },
+  {
+   "code": "115530",
+   "name": "씨엔플러스",
+   "market": "KQ",
+   "cap": 158,
+   "d_rsi": 26.0
+  },
+  {
+   "code": "431190",
+   "name": "케이쓰리아이",
+   "market": "KQ",
+   "cap": 158,
+   "d_rsi": 25.8
+  },
+  {
+   "code": "317120",
+   "name": "라닉스",
+   "market": "KQ",
+   "cap": 158,
+   "d_rsi": 32.9
+  },
+  {
+   "code": "038060",
+   "name": "루멘스바이오스",
+   "market": "KQ",
+   "cap": 155,
+   "d_rsi": 21.5
+  },
+  {
+   "code": "001420",
+   "name": "태원물산",
+   "market": "KS",
+   "cap": 152,
+   "d_rsi": 32.9
+  },
+  {
+   "code": "306040",
+   "name": "에스제이그룹",
+   "market": "KQ",
+   "cap": 152,
+   "d_rsi": 37.1
+  },
+  {
+   "code": "429270",
+   "name": "시지트로닉스",
+   "market": "KQ",
+   "cap": 150,
+   "d_rsi": 33.8
+  },
+  {
+   "code": "095910",
+   "name": "에스에너지",
+   "market": "KQ",
+   "cap": 146,
+   "d_rsi": 26.7
+  },
+  {
+   "code": "060230",
+   "name": "제이케이시냅스",
+   "market": "KQ",
+   "cap": 144,
+   "d_rsi": 25.4
+  },
+  {
+   "code": "215790",
+   "name": "이노인스트루먼트",
+   "market": "KQ",
+   "cap": 137,
+   "d_rsi": 27.4
+  },
+  {
+   "code": "005257",
+   "name": "녹십자홀딩스2우",
+   "market": "KS",
+   "cap": 136,
+   "d_rsi": 38.3
+  },
+  {
+   "code": "004270",
+   "name": "남성",
+   "market": "KS",
+   "cap": 136,
+   "d_rsi": 15.8
+  },
+  {
+   "code": "092600",
+   "name": "앤씨앤",
+   "market": "KQ",
+   "cap": 136,
+   "d_rsi": 36.6
+  },
+  {
+   "code": "340360",
+   "name": "다보링크",
+   "market": "KQ",
+   "cap": 134,
+   "d_rsi": 21.3
+  },
+  {
+   "code": "001380",
+   "name": "SG글로벌",
+   "market": "KS",
+   "cap": 131,
+   "d_rsi": 27.2
+  },
+  {
+   "code": "044480",
+   "name": "빌리언스",
+   "market": "KQ",
+   "cap": 128,
+   "d_rsi": 22.0
+  },
+  {
+   "code": "225590",
+   "name": "패션플랫폼",
+   "market": "KQ",
+   "cap": 127,
+   "d_rsi": 22.9
+  },
+  {
+   "code": "002025",
+   "name": "코오롱우",
+   "market": "KS",
+   "cap": 125,
+   "d_rsi": 36.9
+  },
+  {
+   "code": "101670",
+   "name": "하이드로리튬",
+   "market": "KQ",
+   "cap": 124,
+   "d_rsi": 15.3
+  },
+  {
+   "code": "096870",
+   "name": "엘디티",
+   "market": "KQ",
+   "cap": 124,
+   "d_rsi": 33.0
+  },
+  {
+   "code": "101000",
+   "name": "KS인더스트리",
+   "market": "KQ",
+   "cap": 124,
+   "d_rsi": 27.3
+  },
+  {
+   "code": "455180",
+   "name": "케이지에이",
+   "market": "KQ",
+   "cap": 123,
+   "d_rsi": 38.0
+  },
+  {
+   "code": "025750",
+   "name": "한솔홈데코",
+   "market": "KS",
+   "cap": 119,
+   "d_rsi": 9.0
+  },
+  {
+   "code": "048830",
+   "name": "엔피케이",
+   "market": "KQ",
+   "cap": 117,
+   "d_rsi": 18.1
+  },
+  {
+   "code": "438700",
+   "name": "버넥트",
+   "market": "KQ",
+   "cap": 116,
+   "d_rsi": 16.7
+  },
+  {
+   "code": "196700",
+   "name": "웹스",
+   "market": "KQ",
+   "cap": 113,
+   "d_rsi": 32.8
+  },
+  {
+   "code": "054410",
+   "name": "케이피티유",
+   "market": "KQ",
+   "cap": 113,
+   "d_rsi": 33.1
+  },
+  {
+   "code": "071950",
+   "name": "코아스",
+   "market": "KS",
+   "cap": 111,
+   "d_rsi": 32.8
+  },
+  {
+   "code": "145995",
+   "name": "삼양사우",
+   "market": "KS",
+   "cap": 111,
+   "d_rsi": 33.1
+  },
+  {
+   "code": "270520",
+   "name": "앱튼",
+   "market": "KQ",
+   "cap": 110,
+   "d_rsi": 18.8
+  },
+  {
+   "code": "002820",
+   "name": "SUN&L",
+   "market": "KS",
+   "cap": 109,
+   "d_rsi": 32.8
+  },
+  {
+   "code": "115610",
+   "name": "이미지스",
+   "market": "KQ",
+   "cap": 109,
+   "d_rsi": 19.4
+  },
+  {
+   "code": "043100",
+   "name": "알파AI",
+   "market": "KQ",
+   "cap": 105,
+   "d_rsi": 21.3
+  },
+  {
+   "code": "024890",
+   "name": "대원화성",
+   "market": "KS",
+   "cap": 103,
+   "d_rsi": 29.7
+  },
+  {
+   "code": "340440",
+   "name": "세림B&G",
+   "market": "KQ",
+   "cap": 102,
+   "d_rsi": 18.7
+  },
+  {
+   "code": "354200",
+   "name": "엔젠바이오",
+   "market": "KQ",
+   "cap": 102,
+   "d_rsi": 39.4
+  },
+  {
+   "code": "305090",
+   "name": "마이크로디지탈",
+   "market": "KQ",
+   "cap": 102,
+   "d_rsi": 18.6
+  },
+  {
+   "code": "026910",
+   "name": "광진실업",
+   "market": "KQ",
+   "cap": 102,
+   "d_rsi": 26.7
+  },
+  {
+   "code": "001067",
+   "name": "JW중외제약2우B",
+   "market": "KS",
+   "cap": 101,
+   "d_rsi": 34.1
+  },
+  {
+   "code": "465770",
+   "name": "STX그린로지스",
+   "market": "KS",
+   "cap": 100,
+   "d_rsi": 27.7
+  },
+  {
+   "code": "045520",
+   "name": "크린앤사이언스",
+   "market": "KQ",
+   "cap": 99,
+   "d_rsi": 16.3
+  },
+  {
+   "code": "103230",
+   "name": "에스앤더블류",
+   "market": "KQ",
+   "cap": 98,
+   "d_rsi": 27.2
+  },
+  {
+   "code": "145210",
+   "name": "다이나믹디자인",
+   "market": "KS",
+   "cap": 95,
+   "d_rsi": 31.2
+  },
+  {
+   "code": "106080",
+   "name": "케이이엠텍",
+   "market": "KQ",
+   "cap": 95,
+   "d_rsi": 24.8
+  },
+  {
+   "code": "038530",
+   "name": "케이바이오랩스",
+   "market": "KQ",
+   "cap": 93,
+   "d_rsi": 17.5
+  },
+  {
+   "code": "054220",
+   "name": "비츠로시스",
+   "market": "KQ",
+   "cap": 92,
+   "d_rsi": 26.6
+  },
+  {
+   "code": "034940",
+   "name": "조아제약",
+   "market": "KQ",
+   "cap": 87,
+   "d_rsi": 25.9
+  },
+  {
+   "code": "418620",
+   "name": "E8",
+   "market": "KQ",
+   "cap": 87,
+   "d_rsi": 31.7
+  },
+  {
+   "code": "067770",
+   "name": "세진티에스",
+   "market": "KQ",
+   "cap": 87,
+   "d_rsi": 23.0
+  },
+  {
+   "code": "056730",
+   "name": "CNT85",
+   "market": "KQ",
+   "cap": 85,
+   "d_rsi": 23.5
+  },
+  {
+   "code": "239340",
+   "name": "이스트에이드",
+   "market": "KQ",
+   "cap": 84,
+   "d_rsi": 28.7
+  },
+  {
+   "code": "355390",
+   "name": "크라우드웍스",
+   "market": "KQ",
+   "cap": 84,
+   "d_rsi": 17.3
+  },
+  {
+   "code": "087260",
+   "name": "모바일어플라이언스",
+   "market": "KQ",
+   "cap": 80,
+   "d_rsi": 29.1
+  },
+  {
+   "code": "353190",
+   "name": "휴럼",
+   "market": "KQ",
+   "cap": 79,
+   "d_rsi": 18.8
+  },
+  {
+   "code": "001000",
+   "name": "신라섬유",
+   "market": "KQ",
+   "cap": 78,
+   "d_rsi": 32.8
+  },
+  {
+   "code": "035620",
+   "name": "바른손이앤에이",
+   "market": "KQ",
+   "cap": 78,
+   "d_rsi": 29.2
+  },
+  {
+   "code": "060900",
+   "name": "에이전트AI",
+   "market": "KQ",
+   "cap": 74,
+   "d_rsi": 29.1
+  },
+  {
+   "code": "289010",
+   "name": "아이스크림에듀",
+   "market": "KQ",
+   "cap": 73,
+   "d_rsi": 26.8
+  },
+  {
+   "code": "065420",
+   "name": "에스아이리소스",
+   "market": "KQ",
+   "cap": 73,
+   "d_rsi": 35.8
+  },
+  {
+   "code": "285800",
+   "name": "진영",
+   "market": "KQ",
+   "cap": 72,
+   "d_rsi": 20.2
+  },
+  {
+   "code": "006050",
+   "name": "국영지앤엠",
+   "market": "KQ",
+   "cap": 71,
+   "d_rsi": 26.0
+  },
+  {
+   "code": "276040",
+   "name": "스코넥",
+   "market": "KQ",
+   "cap": 71,
+   "d_rsi": 22.3
+  },
+  {
+   "code": "060260",
+   "name": "뉴보텍",
+   "market": "KQ",
+   "cap": 67,
+   "d_rsi": 30.2
+  },
+  {
+   "code": "240600",
+   "name": "유진테크놀로지",
+   "market": "KQ",
+   "cap": 66,
+   "d_rsi": 38.6
+  },
+  {
+   "code": "065770",
+   "name": "CS",
+   "market": "KQ",
+   "cap": 66,
+   "d_rsi": 39.4
+  },
+  {
+   "code": "377220",
+   "name": "프롬바이오",
+   "market": "KQ",
+   "cap": 66,
+   "d_rsi": 27.0
+  },
+  {
+   "code": "001515",
+   "name": "SK증권우",
+   "market": "KS",
+   "cap": 65,
+   "d_rsi": 36.6
+  },
+  {
+   "code": "131760",
+   "name": "파인텍",
+   "market": "KQ",
+   "cap": 65,
+   "d_rsi": 30.7
+  },
+  {
+   "code": "070300",
+   "name": "퀀텀레일",
+   "market": "KQ",
+   "cap": 63,
+   "d_rsi": 17.0
+  },
+  {
+   "code": "224060",
+   "name": "더코디",
+   "market": "KQ",
+   "cap": 62,
+   "d_rsi": 25.0
+  },
+  {
+   "code": "044380",
+   "name": "주연테크",
+   "market": "KS",
+   "cap": 61,
+   "d_rsi": 28.2
+  },
+  {
+   "code": "291810",
+   "name": "핀텔",
+   "market": "KQ",
+   "cap": 57,
+   "d_rsi": 24.7
+  },
+  {
+   "code": "044180",
+   "name": "KD",
+   "market": "KQ",
+   "cap": 55,
+   "d_rsi": 30.0
+  },
+  {
+   "code": "313760",
+   "name": "캐리",
+   "market": "KQ",
+   "cap": 52,
+   "d_rsi": 35.0
+  },
+  {
+   "code": "001770",
+   "name": "SHD",
+   "market": "KS",
+   "cap": 48,
+   "d_rsi": 32.7
+  },
+  {
+   "code": "052770",
+   "name": "아이톡시",
+   "market": "KQ",
+   "cap": 45,
+   "d_rsi": 23.7
+  },
+  {
+   "code": "225430",
+   "name": "케이엠제약",
+   "market": "KQ",
+   "cap": 45,
+   "d_rsi": 32.2
+  },
+  {
+   "code": "025870",
+   "name": "신라에스지",
+   "market": "KQ",
+   "cap": 42,
+   "d_rsi": 33.8
+  },
+  {
+   "code": "288980",
+   "name": "모아데이타",
+   "market": "KQ",
+   "cap": 39,
+   "d_rsi": 19.9
+  },
+  {
+   "code": "011080",
+   "name": "형지I&C",
+   "market": "KQ",
+   "cap": 37,
+   "d_rsi": 37.9
+  },
+  {
+   "code": "058450",
+   "name": "한주에이알티",
+   "market": "KQ",
+   "cap": 32,
+   "d_rsi": 18.4
+  },
+  {
+   "code": "142760",
+   "name": "모아라이프플러스",
+   "market": "KQ",
+   "cap": 25,
+   "d_rsi": 23.6
+  },
+  {
+   "code": "014915",
+   "name": "성문전자우",
+   "market": "KS",
+   "cap": 22,
+   "d_rsi": 39.8
+  },
+  {
+   "code": "008355",
+   "name": "남선알미우",
+   "market": "KS",
+   "cap": 19,
+   "d_rsi": 35.5
+  },
+  {
+   "code": "035290",
+   "name": "골드앤에스",
+   "market": "KQ",
+   "cap": 18,
+   "d_rsi": 26.4
+  },
+  {
+   "code": "021045",
+   "name": "대호특수강우",
+   "market": "KQ",
+   "cap": 11,
+   "d_rsi": 36.8
+  },
+  {
+   "code": "312610",
+   "name": "에이에프더블류",
+   "market": "KQ",
+   "cap": 7,
+   "d_rsi": 21.7
+  }
+ ]
 }
