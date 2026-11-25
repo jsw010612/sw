@@ -6,8 +6,8 @@ on:
       mode:
         description: "전략"
         type: choice
-        options: ["횡보돌파", "바닥반등"]
-        default: "횡보돌파"
+        options: ["이평선지지", "횡보돌파", "바닥반등"]
+        default: "이평선지지"
       years:
         description: "기간 (년)"
         default: "5"
