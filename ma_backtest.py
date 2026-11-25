@@ -24,10 +24,16 @@
 
 손절: 지지선 -3% 아래로 종가 이탈
 매도 비교
-  X1 저항 매도   : 위쪽에 있는 가장 가까운 주·월 60/120선에 닿으면 전량
-  X2 추적        : +30% 넘으면 최고 종가 대비 -20%
-  X3 절반+추적   : 위쪽 저항에서 절반, 나머지 추적
-  공통 최대 120거래일 · 비용 왕복 0.3%
+  X1 저항 매도        : 위쪽에 있는 가장 가까운 주·월 60/120선에 닿으면 전량
+  X2 추적             : +30% 넘으면 최고 종가 대비 -20%
+  X3 절반+추적        : 위쪽 저항에서 절반, 나머지 추적
+  X4 눌림목 손절선    : +10% 넘게 오른 뒤 눌림목 저점이 생길 때마다 손절선을 그 저점으로 올림 (최대 250일)
+  X5 절반 익절+눌림목 : +50% 또는 위쪽 월60·월120선 중 먼저 닿는 곳에서 절반, 나머지는 X4 방식 (최대 250일)
+  X1~X3 최대 120거래일 · 비용 왕복 0.3%
+
+시장 필터 (진입일 기준)
+  코스피 정배열: 코스피 종가 > 20일선 > 60일선 > 120일선
+  시장 폭: 분석한 전체 종목 중 60일선 위에 있는 비율
 """
 import os
 import time
@@ -50,7 +56,8 @@ BUY_COST, SELL_COST = 0.0005, 0.0025
 LEVELS = ["주60", "주120", "월60", "월120"]
 TRIGGERS = ["닿은 날 바로", "5일선 회복", "5·20 골든크로스", "기준선 돌파", "전환·기준 교차", "후행스팬 돌파",
             "반전 캔들", "RSI 다이버전스"]
-EXITS = ["X1 저항 매도", "X2 추적", "X3 절반+추적"]
+EXITS = ["X1 저항 매도", "X2 추적", "X3 절반+추적", "X4 눌림목 손절선", "X5 절반 익절+눌림목"]
+HOLD_LONG = 250
 P = replace(Params(), piv_r=2)
 
 
@@ -67,6 +74,34 @@ def htf_ma(d1, frame, n):
     else:
         ma.index = ma.index + pd.offsets.MonthBegin(1)
     return ma.reindex(d1.index, method="ffill").to_numpy()
+
+
+def sim_swing(O, H, L, C, ei, stop, half_px, pivots):
+    """X4/X5: +10% 이후 눌림목 저점으로 손절선 올리기. half_px 가 있으면 거기서 절반 익절"""
+    entry = O[ei]
+    last = min(len(C) - 1, ei + HOLD_LONG)
+    held, cash, armed, half = 1.0, -BUY_COST, False, False
+    reason = "기간 만료"
+    pi = 0
+    while pi < len(pivots) and pivots[pi][0] <= ei:
+        pi += 1
+    j = ei
+    for j in range(ei, last + 1):
+        if half_px and not half and H[j] >= half_px:
+            px = max(O[j], half_px) if j > ei else half_px
+            cash += 0.5 * px / entry * (1 - SELL_COST); held = 0.5; half = True
+        if H[j] >= entry * 1.10:
+            armed = True
+        while pi < len(pivots) and pivots[pi][0] <= j:
+            conf, low = pivots[pi]
+            if armed and low * 0.99 > stop:
+                stop = low * 0.99
+            pi += 1
+        if C[j] < stop:
+            reason = "눌림목 손절선 이탈" if armed else "지지 이탈 손절"
+            break
+    cash += held * C[j] / entry * (1 - SELL_COST)
+    return round((cash - 1) * 100, 2), reason, j - ei
 
 
 def sim(O, H, L, C, ei, stop, resist, mode):
@@ -94,10 +129,14 @@ def sim(O, H, L, C, ei, stop, resist, mode):
     return round((cash - 1) * 100, 2), reason, j - ei
 
 
+def ma60_all(C):
+    return pd.Series(C).rolling(60).mean().to_numpy()
+
+
 def stock_trades(s, start):
     d1 = scan.naver_daily(s["code"], 3200, s["market"])
     if len(d1) < 700:
-        return []
+        return [], None
     d1 = d1[~d1.index.duplicated()].sort_index()
     n = len(d1)
     O, H, L, C = (d1[c].to_numpy(float) for c in ("open", "high", "low", "close"))
@@ -112,10 +151,15 @@ def stock_trades(s, start):
     span_a = ((tenkan_s + kijun_s) / 2).shift(26).to_numpy()            # 오늘 위치에 그려지는 선행스팬1
     span_b = ((Hs.rolling(52).max() + Ls.rolling(52).min()) / 2).shift(26).to_numpy()
     cloud_top, cloud_bot = np.fmax(span_a, span_b), np.fmin(span_a, span_b)
-    ma60 = pd.Series(C).rolling(60).mean().to_numpy()
+    ma60 = ma60_all(C)
     dev = []
     analyze_frame(d1, 1, P, dev)
     div_days = {i for i, _ in dev}
+    piv = []
+    for p in range(3, n - 3):
+        if L[p] < L[p - 3:p].min() and L[p] <= L[p + 1:p + 4].min():
+            piv.append((p + 3, L[p]))      # 오른쪽 3봉 지나야 확정
+    above60 = pd.Series(C > ma60_all(C), index=d1.index)
     first = d1.index.searchsorted(start)
 
     def trig_ok(name, j):
@@ -186,12 +230,18 @@ def stock_trades(s, start):
                                    stop_dist=round((1 - stop / entry) * 100, 2),
                                    resist_gap=round((resist / entry - 1) * 100, 1) if resist else None,
                                    above_w120=bool(not np.isnan(lv["주120"][j]) and C[j] > lv["주120"][j]))
-                        for ex in EXITS:
+                        for ex in EXITS[:3]:
                             r, why, days = sim(O, H, L, C, ei, stop, resist, ex)
                             rec[ex], rec[ex + " 사유"], rec[ex + " 일수"] = r, why, days
+                        r, why, days = sim_swing(O, H, L, C, ei, stop, None, piv)
+                        rec["X4 눌림목 손절선"], rec["X4 눌림목 손절선 사유"], rec["X4 눌림목 손절선 일수"] = r, why, days
+                        mups = [lv[k][j] for k in ("월60", "월120") if not np.isnan(lv[k][j]) and lv[k][j] > entry * 1.03]
+                        hp = min([entry * 1.5] + mups)
+                        r, why, days = sim_swing(O, H, L, C, ei, stop, hp, piv)
+                        rec["X5 절반 익절+눌림목"], rec["X5 절반 익절+눌림목 사유"], rec["X5 절반 익절+눌림목 일수"] = r, why, days
                         out.append(rec)
                         break
-    return out
+    return out, above60
 
 
 def st(v):
@@ -239,65 +289,64 @@ def portfolio(g, ex, risk=0.01, cap=0.20, max_open=8, total=0.80):
     return cash, ((cash / 100) ** (1 / YEARS) - 1) * 100 if cash > 0 else -100, mdd * 100, taken
 
 
+def regime_rows(df, ex, title):
+    L = [f"### {title}", HEAD,
+         row("전체", df[ex]),
+         row("코스피 정배열", df[df.kospi_up == True][ex]), row("코스피 정배열 아님", df[df.kospi_up == False][ex]),
+         row("시장 폭 50% 이상", df[df.breadth >= 50][ex]), row("시장 폭 50% 미만", df[df.breadth < 50][ex]),
+         row("정배열 + 시장 폭 50% 이상", df[(df.kospi_up == True) & (df.breadth >= 50)][ex])]
+    return L
+
+
 def report(df, n, t0):
-    L = ["# 상위 프레임 이평선 지지 백테스트", "",
+    L = ["# 상위 프레임 이평선 지지 백테스트 (매도·시장 필터 개선)", "",
          f"- 실행: {datetime.now(scan.KST).strftime('%Y-%m-%d %H:%M')} · 최근 {YEARS:g}년 · {n}종목 (현재 상장 기준) · 비용 왕복 0.3%",
          "- 지지선: 완성된 주봉·월봉의 60·120 이평선 · 위에서 내려와 ±3% 안에 닿으면 일봉 타점을 10일 동안 기다림",
-         "- 손절: 지지선 -3% 종가 이탈 · 최대 120거래일", ""]
-    L += ["## 1. 매도 방식 비교 (전체)", HEAD]
-    for ex in EXITS:
-        L.append(row(ex, df[ex]))
-    best_ex = max(EXITS, key=lambda e: (st(df[e]) or {"pf": 0})["pf"])
-    L += ["", f"이하 표는 **{best_ex}** 기준이에요.", "", "## 2. 지지선별", HEAD]
-    for lv in LEVELS:
-        L.append(row(lv, df[df.level == lv][best_ex]))
-    L += ["", "## 3. 일봉 타점별", HEAD]
-    for tg in TRIGGERS:
-        L.append(row(tg, df[df.trigger == tg][best_ex]))
-    L += ["", "## 4. 지지선 × 타점 (거래 30건 이상, PF 순)", "| 지지선 | 타점 | 거래 | 승률 | 평균 | PF |", "|---|---|---|---|---|---|"]
-    combos = []
-    for (lv, tg), g in df.groupby(["level", "trigger"]):
-        s = st(g[best_ex])
-        if s and s["n"] >= 30:
-            combos.append((s["pf"], lv, tg, s))
-    for pf, lv, tg, s in sorted(combos, reverse=True)[:12]:
-        L.append(f"| {lv} | {tg} | {s['n']} | {s['win']:.0f}% | {s['avg']:+.2f}% | {pf:.2f} |")
-    L += ["", "## 5. 겹침·추세", HEAD,
-          row("다른 큰 이평선과 5% 안에 겹침", df[df.confl >= 1][best_ex]),
-          row("겹침 없음", df[df.confl == 0][best_ex]),
-          row("주120선 위에서 지지 (상승 추세)", df[df.above_w120][best_ex]),
-          row("주120선 아래", df[~df.above_w120][best_ex]),
-          row("위쪽 저항까지 15% 이상 여유", df[df.resist_gap >= 15][best_ex]),
-          row("위쪽 저항까지 15% 미만", df[df.resist_gap < 15][best_ex]),
-          row("위쪽 저항 없음", df[df.resist_gap.isna()][best_ex])]
-    L += ["", "## 6. 일목·이평선 상태 (진입 시점)", HEAD,
-          row("구름 위", df[df.cloud == "위"][best_ex]), row("구름 안", df[df.cloud == "안"][best_ex]),
-          row("구름 아래", df[df.cloud == "아래"][best_ex]),
-          row("구름 얇음 (가격의 3% 미만)", df[df.thick < 3][best_ex]), row("구름 두꺼움 (8% 이상)", df[df.thick >= 8][best_ex]),
-          row("구름 아래 + 두꺼운 구름 (막히는 선)", df[(df.cloud == "아래") & (df.thick >= 8)][best_ex]),
-          row("구름 아래 + 얇은 구름 (뚫기 쉬운 선)", df[(df.cloud == "아래") & (df.thick < 3)][best_ex]),
-          row("5·20·60선 수렴 (5% 안)", df[df.conv][best_ex]), row("수렴 없음", df[~df.conv][best_ex]),
-          row("이평선 수렴 + 구름 위", df[df.conv_cloud][best_ex]),
-          row("최근 20일 저항 맞고 밀린 이력 있음", df[df.rej][best_ex]), row("밀린 이력 없음", df[~df.rej][best_ex])]
-    L += ["", "## 7. 좋은 상태끼리 겹쳤을 때", HEAD]
-    good = df[(df.cloud == "위") & (~df.rej)]
-    L += [row("구름 위 + 밀린 이력 없음", good[best_ex]),
-          row("구름 위 + 밀린 이력 없음 + 주120선 위", good[good.above_w120][best_ex]),
-          row("구름 위 + 밀린 이력 없음 + 큰 이평선 겹침", good[good.confl >= 1][best_ex]),
-          row("이평선 수렴 + 구름 위 + 밀린 이력 없음", df[df.conv_cloud & ~df.rej][best_ex])]
-    L += ["", "## 8. 연도별", HEAD]
-    for y, g in df.groupby(df.date.str[:4]):
+         "- 손절: 지지선 -3% 종가 이탈 · X4/X5는 +10% 이후 눌림목 저점으로 손절선을 올림", ""]
+    core = df[df.level.isin(["월60", "월120"]) & df.trigger.isin(["후행스팬 돌파", "기준선 돌파"])]
+    core = core.drop_duplicates(["code", "date"])
+    good_stop = core[(core.stop_dist >= 4) & (core.stop_dist <= 10)]
+    L += ["## 1. 매도 방식 비교", "", "### 전체 신호", HEAD] + [row(ex, df[ex]) for ex in EXITS]
+    L += ["", "### 핵심 조합: 월60·월120 지지 + 후행스팬/기준선 돌파", HEAD] + [row(ex, core[ex]) for ex in EXITS]
+    L += ["", "### 핵심 조합 + 손절폭 4~10%", HEAD] + [row(ex, good_stop[ex]) for ex in EXITS]
+    best_ex = max(EXITS, key=lambda e: (st(good_stop[e]) or {"pf": 0})["pf"])
+    L += ["", f"이하 표는 **{best_ex}** 기준이에요.", "", "## 2. 시장 필터"]
+    L += regime_rows(df, best_ex, "전체 신호") + [""] + regime_rows(good_stop, best_ex, "핵심 조합 + 손절폭 4~10%")
+    final = good_stop[(good_stop.kospi_up == True) & (good_stop.breadth >= 50)]
+    alt = good_stop[good_stop.breadth >= 50]
+    L += ["", "## 3. 최종 후보의 연도별 성과", "",
+          "### A) 핵심 조합 + 손절폭 4~10% + 정배열 + 시장 폭 50%↑", HEAD]
+    for y, g in final.groupby(final.date.str[:4]):
         L.append(row(y, g[best_ex]))
-    # 계좌 시뮬레이션: 상위 조합
-    L += ["", "## 9. 계좌 시뮬레이션 (상위 조합 · 1회 손실 원금 1% · 종목당 20% · 보유 8 · 총 80%, 원금 100)",
-          "| 지지선 | 타점 | 최종 자산 | 연평균 | 최대 낙폭 | 들어간 거래 |", "|---|---|---|---|---|---|"]
-    for pf, lv, tg, s in sorted(combos, reverse=True)[:5]:
-        fin, cagr, mdd, tk = portfolio(df[(df.level == lv) & (df.trigger == tg)], best_ex)
-        L.append(f"| {lv} | {tg} | **{fin:.1f}** | {cagr:+.1f}% | {mdd:.1f}% | {tk} |")
-    fin, cagr, mdd, tk = portfolio(df[df.trigger == "닿은 날 바로"], best_ex)
-    L.append(f"| 전체 | 닿은 날 바로 (기준) | {fin:.1f} | {cagr:+.1f}% | {mdd:.1f}% | {tk} |")
+    L += ["", "### B) 핵심 조합 + 손절폭 4~10% + 시장 폭 50%↑", HEAD]
+    for y, g in alt.groupby(alt.date.str[:4]):
+        L.append(row(y, g[best_ex]))
+    L += ["", "### C) 필터 없이 핵심 조합 + 손절폭 4~10%", HEAD]
+    for y, g in good_stop.groupby(good_stop.date.str[:4]):
+        L.append(row(y, g[best_ex]))
+    L += ["", "## 4. 손절폭별 (핵심 조합)", HEAD]
+    for a, b in ((0, 4), (4, 6), (6, 8), (8, 10), (10, 15), (15, 100)):
+        L.append(row(f"{a}~{b}%", core[(core.stop_dist >= a) & (core.stop_dist < b)][best_ex]))
+    L += ["", "## 5. 상태 조건 (핵심 조합 + 손절폭 4~10%)", HEAD,
+          row("구름 위", good_stop[good_stop.cloud == "위"][best_ex]), row("구름 아래", good_stop[good_stop.cloud == "아래"][best_ex]),
+          row("구름 얇음", good_stop[good_stop.thick < 3][best_ex]), row("구름 두꺼움", good_stop[good_stop.thick >= 8][best_ex]),
+          row("이평선 수렴", good_stop[good_stop.conv][best_ex]), row("저항에 밀린 이력 없음", good_stop[~good_stop.rej][best_ex]),
+          row("월120 지지", good_stop[good_stop.level == "월120"][best_ex]), row("월60 지지", good_stop[good_stop.level == "월60"][best_ex])]
+    L += ["", "## 6. 청산 사유 (최종 후보 A)", "| 사유 | 횟수 | 평균 |", "|---|---|---|"]
+    for k, g in final.groupby(best_ex + " 사유"):
+        L.append(f"| {k} | {len(g)} | {g[best_ex].mean():+.1f}% |")
+    L += ["", "## 7. 계좌 시뮬레이션 (1회 손실 원금 1% · 종목당 20% · 보유 8 · 총 80%, 원금 100)",
+          "| 후보 | 매도 | 최종 자산 | 연평균 | 최대 낙폭 | 들어간 거래 |", "|---|---|---|---|---|---|"]
+    for lab, g in (("A) +정배열+시장폭", final), ("B) +시장폭", alt), ("C) 필터 없음", good_stop)):
+        for ex in ("X1 저항 매도", "X4 눌림목 손절선", "X5 절반 익절+눌림목"):
+            if len(g):
+                fin, cagr, mdd, tk = portfolio(g, ex)
+                L.append(f"| {lab} | {ex} | **{fin:.1f}** | {cagr:+.1f}% | {mdd:.1f}% | {tk} |")
+    L += ["", "### 수익 상위 10건 (후보 A)", "| 진입 | 종목 | 지지선 | 타점 | 수익 | 사유 |", "|---|---|---|---|---|---|"]
+    for _, t in final.nlargest(10, best_ex).iterrows():
+        L.append(f"| {t['date']} | {t['name']} | {t['level']} | {t['trigger']} | {t[best_ex]:+.0f}% | {t[best_ex + ' 사유']} |")
     L += ["", "## 주의", "- 상장폐지 종목이 빠져 있어서 결과가 실제보다 좋게 나와요.",
-          "- 여러 조합 중 가장 좋은 걸 고르면 과거에만 맞춘 결과일 수 있어요. 거래 수가 많고 연도별로 고르게 좋은 조합만 믿으세요.", "",
+          "- 여러 조합 중 가장 좋은 걸 고르면 과거에만 맞춘 결과일 수 있어요. 연도별로 고르게 좋은지가 제일 중요해요.", "",
           f"_계산 시간 {time.time() - t0:.0f}초_"]
     (scan.STATE / "backtest.md").write_text("\n".join(L), encoding="utf-8")
     df.to_csv(scan.STATE / "backtest_trades.csv", index=False, encoding="utf-8-sig")
@@ -317,16 +366,39 @@ def main():
             return stock_trades(s, start)
         except Exception as e:
             log("오류", s["name"], e)
-            return []
+            return [], None
         finally:
             done[0] += 1
             if done[0] % 200 == 0:
                 log(f"  {done[0]}/{len(uni)}")
 
+    up_cnt, tot_cnt = None, None
     with ThreadPoolExecutor(scan.WORKERS) as ex:
-        for r in ex.map(job, uni):
+        for r, a60 in ex.map(job, uni):
             allr += r
+            if a60 is not None:
+                a = a60.astype(float)
+                up_cnt = a if up_cnt is None else up_cnt.add(a, fill_value=0)
+                one = pd.Series(1.0, index=a60.index)
+                tot_cnt = one if tot_cnt is None else tot_cnt.add(one, fill_value=0)
     df = pd.DataFrame(allr)
+    if not df.empty:
+        breadth = (up_cnt / tot_cnt * 100) if up_cnt is not None else None
+        import deep_backtest
+        kp = deep_backtest.kospi()
+        dts = pd.to_datetime(df.date)
+        if breadth is not None:
+            b = breadth.sort_index().shift(1)         # 진입 전날까지의 시장 폭
+            df["breadth"] = b.reindex(dts, method="ffill").round(1).to_numpy()
+        else:
+            df["breadth"] = np.nan
+        if kp is not None:
+            k = kp.sort_index()
+            up = (k > k.rolling(20).mean()) & (k.rolling(20).mean() > k.rolling(60).mean()) & (k.rolling(60).mean() > k.rolling(120).mean())
+            df["kospi_up"] = up.shift(1).reindex(dts, method="ffill").to_numpy()
+        else:
+            df["kospi_up"] = None
+        log(f"시장 폭 계산: {'됨' if breadth is not None else '안 됨'} · 코스피: {'있음' if kp is not None else '없음'}")
     log(f"거래 {len(df)}건")
     if df.empty:
         (scan.STATE / "backtest.md").write_text("# 결과 없음", encoding="utf-8")
