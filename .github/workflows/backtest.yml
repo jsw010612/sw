@@ -3,12 +3,17 @@ name: 백테스트
 on:
   workflow_dispatch:
     inputs:
+      mode:
+        description: "전략"
+        type: choice
+        options: ["횡보돌파", "바닥반등"]
+        default: "횡보돌파"
       years:
         description: "기간 (년)"
-        default: "3"
+        default: "5"
       top:
-        description: "시총 상위 몇 종목"
-        default: "500"
+        description: "시총 상위 몇 종목 (전 종목은 3000)"
+        default: "3000"
 
 permissions:
   contents: write
@@ -16,7 +21,7 @@ permissions:
 jobs:
   backtest:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 90
     steps:
       - uses: actions/checkout@v4
 
@@ -30,6 +35,7 @@ jobs:
 
       - name: 백테스트
         env:
+          BT_MODE: ${{ github.event.inputs.mode }}
           BT_YEARS: ${{ github.event.inputs.years }}
           BT_TOP: ${{ github.event.inputs.top }}
         run: python backtest.py
