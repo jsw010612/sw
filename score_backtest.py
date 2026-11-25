@@ -13,6 +13,7 @@
 """
 import json
 import os
+import zlib
 import threading
 import time
 from concurrent.futures import ThreadPoolExecutor
@@ -164,7 +165,7 @@ def learn(df):
     """배운 기간 안에서도 종목을 반으로 나눠 두 쪽 모두 같은 방향인 특징만 씀 (우연 걸러내기)"""
     tr = df[df.year <= TRAIN_END].copy()
     base = tr.y.mean()
-    half = tr.code.apply(lambda c: int(c[-1]) % 2 if str(c)[-1].isdigit() else 0)
+    half = tr.code.apply(lambda c: zlib.crc32(str(c).encode()) % 2)      # 종목코드 끝자리는 대부분 0이라 해시로 나눔
     cand = []
     for name, desc, edges in FEATS:
         eff = {i: e for i, e in _effects(tr, name, edges, base).items() if e[1] >= MIN_N}
@@ -433,6 +434,11 @@ def report(sigs, n, t0):
           "- 4번의 검증 기간 표에서 강 > 보통 > 약 순서가 안 지켜지면 점수표를 믿으면 안 돼요.", "",
           f"_계산 시간 {time.time() - t0:.0f}초_"]
     (scan.STATE / "backtest.md").write_text("\n".join(L), encoding="utf-8")
+    keep = ["code", "name", "date", "year", "old_a", "old_score", "score", "tier"] + [f[0] for f in FEATS] + EXITS
+    out = df[keep].copy()
+    for ex in EXITS:
+        out[ex + " 일수"] = [len(t[ex]["vals"]) for t in sigs]
+    out.to_csv(scan.STATE / "score_trades.csv", index=False)
     log("보고서·점수표 저장")
 
 
