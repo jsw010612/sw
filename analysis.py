@@ -92,7 +92,7 @@ def candle_code(o, c, h, l, p) -> int:
     return 6
 
 
-def analyze_frame(df: pd.DataFrame, direction: int, P: Params) -> dict:
+def analyze_frame(df: pd.DataFrame, direction: int, P: Params, events: list = None) -> dict:
     """한 프레임을 처음부터 끝까지 봉 단위로 훑어서 마지막 봉 시점의 상태를 돌려줌.
     direction = 1: 과매도(매수) / -1: 과매수(익절, 가격·RSI를 뒤집어서 같은 계산)"""
     res = {"r": np.nan, "act": False}
@@ -168,8 +168,10 @@ def analyze_frame(df: pd.DataFrame, direction: int, P: Params) -> dict:
                             h4=hh * d, h4t=T[hti] if hti is not None else None,
                             l5p=lo[p] * d, l5t=T[p], l5r=r[p], l5vr=vr, l5c=cpiv,
                             zt=(hh - b4 * P.fib_a) * d, zb=(hh - b4 * P.fib_b) * d,
-                            _l5raw=lo[p],
+                            _l5raw=lo[p], _l3i=l3i, _l5i=p, _h4i=hti,
                         )
+                        if events is not None:
+                            events.append((i, dict(snap)))
                 pivs.append(dict(p=lo[p], r=r[p], v=vpiv, vr=vr, idx=p, c=cpiv))
         if dv and not broken and lo[i] < snap["_l5raw"]:
             broken = True
