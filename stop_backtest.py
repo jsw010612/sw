@@ -134,6 +134,28 @@ def path(O, H, L, C, ei, stop, mode):
     return np.array(vals), "기간 만료", last
 
 
+def neg_hump(h, i, maxi, near=5):
+    """i 근처(±5봉)의 PPO 히스토그램 음(-) 구간 '산' → (시작, 끝, 바닥값). maxi 뒤는 안 봄 (미래 정보 없음)"""
+    n = len(h)
+    k = None
+    for d in range(near + 1):
+        for j in (i - d, i + d):
+            if 0 <= j <= maxi and j < n and np.isfinite(h[j]) and h[j] < 0:
+                k = j
+                break
+        if k is not None:
+            break
+    if k is None:
+        return None
+    a = k
+    while a > 0 and h[a - 1] < 0:
+        a -= 1
+    b = k
+    while b < min(n - 1, maxi) and h[b + 1] < 0:
+        b += 1
+    return a, b, float(np.min(h[a:b + 1]))
+
+
 def stock_sigs(s, start, kp, mk):
     try:
         d1 = EB.cached_daily(s["code"], 2000, s["market"])
@@ -150,6 +172,9 @@ def stock_sigs(s, start, kp, mk):
         macd = e12 - e26
         t.macd, t.sig = macd.to_numpy(), macd.ewm(span=9, adjust=False).mean().to_numpy()
         hist = t.macd - t.sig
+        ppo = (e12 - e26) / e26 * 100
+        ph = (ppo - ppo.ewm(span=9, adjust=False).mean()).to_numpy()
+        t.ph = ph
         t.res = [htf_ma(d1, f, m) for f, m in (("W", 60), ("W", 120), ("M", 60), ("M", 120))]
         idx = mk.get(s["market"])
         if idx is not None:
@@ -194,7 +219,12 @@ def stock_sigs(s, start, kp, mk):
                 l3i, l5i = snap.get("_l3i"), snap.get("_l5i")
                 if l3i is not None and l5i is not None:
                     macd_div = bool(hist[l5i] > hist[l3i])
-            rec = dict(code=s["code"], name=s["name"], market=s["market"], date=d1.index[ei], old_a=old_a,
+            ppo_div = None
+            if not wb and snap.get("_l3i") is not None and snap.get("_l5i") is not None:
+                r3, r5 = neg_hump(ph, snap["_l3i"], snap["_l5i"]), neg_hump(ph, snap["_l5i"], det_i)
+                if r3 and r5 and r3[1] < r5[0]:
+                    ppo_div = bool(r5[2] > r3[2])          # 5파 쪽 산의 바닥이 3파 쪽보다 얕음
+            rec = dict(code=s["code"], name=s["name"], market=s["market"], date=d1.index[ei], old_a=old_a, ppo_div=ppo_div,
                        strong=bool(RULES and new >= RULES["strong"]), new_score=new, macd_div=macd_div,
                        mkt_rsi=float(t.mrsi[det_i]) if np.isfinite(t.mrsi[det_i]) else np.nan, **f)
             for m in MODES:
