@@ -6,8 +6,8 @@ on:
       mode:
         description: "전략"
         type: choice
-        options: ["점수분석", "매도분석", "통합", "파동하모닉", "이평선지지", "프랙탈", "횡보돌파", "바닥반등"]
-        default: "점수분석"
+        options: ["손절분석", "점수분석", "매도분석", "통합", "파동하모닉", "이평선지지", "프랙탈", "횡보돌파", "바닥반등"]
+        default: "손절분석"
       years:
         description: "기간 (년)"
         default: "5"
