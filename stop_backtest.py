@@ -227,6 +227,8 @@ def stock_sigs(s, start, kp, mk):
             rec = dict(code=s["code"], name=s["name"], market=s["market"], date=d1.index[ei], old_a=old_a, ppo_div=ppo_div,
                        strong=bool(RULES and new >= RULES["strong"]), new_score=new, macd_div=macd_div,
                        mkt_rsi=float(t.mrsi[det_i]) if np.isfinite(t.mrsi[det_i]) else np.nan, **f)
+            if EXTRA is not None:
+                rec.update(EXTRA(d1, det_i, snap, wb, ei, entry, l5, t))
             for m in MODES:
                 v, why, xj = path(O, H, L, C, ei, l5, m)
                 rec[m] = dict(dates=d1.index[ei:ei + len(v)], vals=v, reason=why, ret=(v[-1] - 1) * 100)
@@ -303,6 +305,7 @@ def report(sigs, n, t0):
 
 
 RULES = None
+EXTRA = None      # 다른 백테스트가 특징을 더 붙일 때 쓰는 함수
 
 
 def main():
