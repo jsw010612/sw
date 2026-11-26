@@ -39,17 +39,24 @@ def fetch_sectors():
     try:
         import FinanceDataReader as fdr
         d = fdr.StockListing("KRX-DESC")
-        col = "Sector" if "Sector" in d.columns else ("Industry" if "Industry" in d.columns else None)
+        cands = [c for c in ("Industry", "Sector") if c in d.columns]
+        # 너무 굵은 분류(10개 미만)는 섹터 비교에 쓸모없어서, 업종 수가 30~400개인 열을 고름
+        cands = sorted(cands, key=lambda c: -(30 <= d[c].nunique() <= 400))
+        col = cands[0] if cands else None
+        INFO["FDR 열"] = ", ".join(f"{c}:{d[c].nunique()}" for c in ("Sector", "Industry") if c in d.columns)
+        if col and not (30 <= d[col].nunique() <= 400):
+            col = None
         cc = "Code" if "Code" in d.columns else ("Symbol" if "Symbol" in d.columns else None)
         if col and cc:
             for c, sec in zip(d[cc].astype(str).str.zfill(6), d[col]):
                 if isinstance(sec, str) and sec.strip():
                     SECTOR[c] = sec.strip()
-        if len(SECTOR) > 500:
+        if len(SECTOR) > 500 and len(set(SECTOR.values())) >= 30:
             INFO["섹터"] = f"KRX 업종 {len(set(SECTOR.values()))}개 · {len(SECTOR)}종목"
             return
     except Exception as e:
         INFO["섹터 FDR 오류"] = type(e).__name__
+    SECTOR.clear()
     _naver_sectors()
 
 
@@ -129,10 +136,13 @@ def _num(x):
 
 
 def _frgn_page(code, page):
-    r = scan._http(f"https://finance.naver.com/item/frgn.naver?code={code}&page={page}")
+    r = scan._http(f"https://finance.naver.com/item/frgn.naver?code={code}&page={page}",
+                   headers={"Referer": f"https://finance.naver.com/item/main.naver?code={code}"})
     if r is None or r.status_code != 200:
+        INFO.setdefault("frgn 상태", getattr(r, "status_code", "접속실패"))
         return None
     html = r.content.decode("euc-kr", "ignore")
+    INFO.setdefault("frgn 응답 길이", len(html))
     rows = {}
     for tr in re.findall(r"<tr[^>]*>(.*?)</tr>", html, re.S):
         tds = [re.sub(r"<[^>]+>", " ", t) for t in re.findall(r"<td[^>]*>(.*?)</td>", tr, re.S)]
@@ -143,6 +153,31 @@ def _frgn_page(code, page):
             continue
         d = pd.Timestamp(f"{m.group(1)}-{m.group(2)}-{m.group(3)}")
         rows[d] = (_num(tds[1]), _num(tds[5]), _num(tds[6]))      # 종가, 기관 순매매량, 외국인 순매매량
+    return rows
+
+
+def _trend_api(code, det):
+    """네이버 모바일 '투자자별 매매동향': 기준일(bizdate)부터 거꾸로 25거래일"""
+    import requests
+    url = f"https://m.stock.naver.com/api/stock/{code}/trend?pageSize=25&bizdate={pd.Timestamp(det).strftime('%Y%m%d')}"
+    r = requests.get(url, headers={**scan.UA, "Referer": "https://m.stock.naver.com/"}, timeout=15)
+    if r.status_code != 200:
+        INFO.setdefault("모바일API 상태", r.status_code)
+        return None
+    j = r.json()
+    if isinstance(j, dict):
+        j = next((v for v in j.values() if isinstance(v, list)), [])
+    rows = {}
+    for it in j:
+        ks = {k.lower(): k for k in it}
+        dk = next((ks[k] for k in ks if "bizdate" in k or k == "date"), None)
+        fk = next((ks[k] for k in ks if "foreign" in k and "pure" in k), None)
+        ok_ = next((ks[k] for k in ks if "organ" in k and "pure" in k), None)
+        ck = next((ks[k] for k in ks if "closeprice" in k), None)
+        if not (dk and fk and ok_ and ck):
+            INFO.setdefault("모바일API 키", ",".join(list(it)[:12]))
+            return None
+        rows[pd.Timestamp(str(it[dk])[:8])] = (_num(str(it[ck])), _num(str(it[ok_])), _num(str(it[fk])))
     return rows
 
 
@@ -176,8 +211,14 @@ def flow_features(df):
         if time.time() - t0 > FLOW_BUDGET:
             return idx, None
         rows = {}
-        for p in pages:
-            rows.update(get(code, p) or {})
+        try:
+            rows = _trend_api(code, det) or {}
+            ok[0 if rows else 1] += 1
+        except Exception as e:
+            INFO.setdefault("모바일API 오류", type(e).__name__)
+        if not rows:
+            for p in pages:
+                rows.update(get(code, p) or {})
         if not rows:
             return idx, None
         f = pd.DataFrame(rows, index=["close", "ins", "frg"]).T.sort_index()
@@ -197,7 +238,7 @@ def flow_features(df):
         for idx, fe in ex.map(one, jobs):
             if fe:
                 feats[idx] = fe
-    INFO["수급"] = f"네이버 {len(feats)}/{len(jobs)}건 · 페이지 성공 {ok[0]} 실패 {ok[1]}"
+    INFO["수급"] = f"네이버 {len(feats)}/{len(jobs)}건 · 요청 성공 {ok[0]} 실패 {ok[1]}"
     for k in ("frg5", "frg20", "ins5", "ins20"):
         df[k] = [feats.get(i, {}).get(k, np.nan) for i in df.index]
     df["frg_turn"] = np.where(df.frg5.notna(), ((df.frg20 < 0) & (df.frg5 > 0)).astype(float), np.nan)
