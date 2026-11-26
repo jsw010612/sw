@@ -35,3 +35,9 @@ else:
 
 if __name__ == "__main__":
     m.main()
+    # 모드별로도 따로 남겨 둠 (다른 백테스트가 backtest.md 를 덮어써도 결과가 안 사라지게)
+    import shutil
+    from pathlib import Path
+    src = Path(__file__).resolve().parent / "state" / "backtest.md"
+    if src.exists():
+        shutil.copy(src, src.with_name(f"결과_{mode}.md"))
