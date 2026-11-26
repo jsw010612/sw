@@ -6,8 +6,8 @@ on:
       mode:
         description: "전략"
         type: choice
-        options: ["단기스윙", "조합탐색", "혼합매도", "손절분석", "점수분석", "매도분석", "통합", "파동하모닉", "이평선지지", "프랙탈", "횡보돌파", "바닥반등"]
-        default: "단기스윙"
+        options: ["진입검증", "단기스윙", "조합탐색", "혼합매도", "손절분석", "점수분석", "매도분석", "통합", "파동하모닉", "이평선지지", "프랙탈", "횡보돌파", "바닥반등"]
+        default: "진입검증"
       years:
         description: "기간 (년)"
         default: "5"
@@ -31,7 +31,9 @@ jobs:
           cache: pip
 
       - name: 패키지 설치
-        run: pip install -r requirements.txt
+        run: |
+          pip install -r requirements.txt
+          pip install finance-datareader || true
 
       - name: 백테스트
         env:
