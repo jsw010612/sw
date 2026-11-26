@@ -21,6 +21,7 @@
   E3 +10% / -5% / 10일
   E4 2일 RSI 70↑ 또는 종가 > 5일선이면 다음 날 시가 · 손절 -5% · 10일
   E5 +5% 넘으면 최고가 -3% 추적 · 손절 -4% · 10일
+인버스: 코스피·코스닥 지수가 하락 추세일 때만 인버스(1배)·곱버스(2배)를 들고 있는 방식 4가지
 결과는 state/swing_trades.csv.gz 에 특징과 같이 저장 (조합 탐색·계좌 계산은 따로)
 """
 import os
@@ -42,6 +43,7 @@ YEARS = float(os.getenv("BT_YEARS", "5") or 5)
 TOP_N = int(os.getenv("BT_TOP", "3000") or 3000)
 MIN_VALUE = 3e9
 COST = 0.005
+INV = []
 SETUPS = ["T1 추세 눌림", "T2 RSI2 과매도", "T3 거래량 돌파", "T4 볼린저 하단", "T5 3일 하락 반전",
           "T6 기준선 지지", "T7 골든크로스", "T8 단기 다이버전스"]
 EXITS = {"E1 +5/-3/5일": (0.05, 0.03, 5), "E2 +8/-4/10일": (0.08, 0.04, 10), "E3 +10/-5/10일": (0.10, 0.05, 10),
@@ -151,6 +153,39 @@ def stock_trades(s, start, kg, mr20):
     return out
 
 
+INV_RULES = {
+    "I1 120일선 아래": lambda k, m20, m60, m120: k < m120,
+    "I2 역배열(20<60<120)": lambda k, m20, m60, m120: (m20 < m60) & (m60 < m120),
+    "I3 60일선 아래 + 20일선 하락": lambda k, m20, m60, m120: (k < m60) & (m20 < m20.shift(5)),
+    "I4 120일선 아래 + 20일선 아래": lambda k, m20, m60, m120: (k < m120) & (k < m20),
+}
+
+
+def inverse_test(idx, name):
+    """지수 인버스(1배)·곱버스(2배): 조건이 켜진 다음 날부터 들고, 꺼지면 다음 날 정리. 운용보수 연 0.6%, 매매 비용 0.1%"""
+    k = idx.dropna().sort_index()
+    m20, m60, m120 = k.rolling(20).mean(), k.rolling(60).mean(), k.rolling(120).mean()
+    r = k.pct_change().fillna(0)
+    start = k.index[-1] - pd.Timedelta(days=int(365 * YEARS))
+    rows = []
+    for lab, f in INV_RULES.items():
+        on = f(k, m20, m60, m120).astype(float).shift(1).fillna(0)          # 오늘 신호 → 내일 보유
+        trade = on.diff().abs().fillna(0)
+        for lev in (1, 2):
+            dr = on * (-lev * r - 0.006 / 250) - trade * 0.001
+            dr = dr[dr.index >= start]
+            eq = (1 + dr).cumprod() * 100
+            mdd = (eq / eq.cummax() - 1).min() * 100
+            yrs = (eq.index[-1] - eq.index[0]).days / 365
+            ye = eq.groupby(eq.index.year).last()
+            yr = (ye / ye.shift(1).fillna(100) - 1) * 100
+            onr = on[on.index >= start].mean() * 100
+            rows.append((f"{name} {'인버스' if lev == 1 else '곱버스'} · {lab}", eq.iloc[-1],
+                         ((eq.iloc[-1] / 100) ** (1 / yrs) - 1) * 100, mdd, onr, yr.to_dict()))
+    bh = k[k.index >= start]
+    return rows, (bh.iloc[-1] / bh.iloc[0] - 1) * 100
+
+
 def stat(v):
     v = pd.Series(v, dtype=float)
     if not len(v):
@@ -188,6 +223,18 @@ def report(df, n, t0):
         s = stat(df[m]["E3 +10/-5/10일"])
         if s:
             L.append(f"| {lab} | {s['n']} | {s['win']:.0f}% | {s['avg']:+.2f}% | {s['pf']:.2f} |")
+    if INV:
+        L += ["", "## 인버스·곱버스 (지수 하락 추세일 때만 보유)", "",
+              "운용보수 연 0.6% · 매매 비용 0.1% · 보유 비율 = 기간 중 들고 있던 날의 비율", ""]
+        for (rows, bh), nm in INV:
+            ys = sorted({y for r in rows for y in r[5]})
+            L += [f"{nm} 그냥 보유: 5년 {bh:+.0f}%", "",
+                  "| 방식 | 최종 | 연평균 | 최대 낙폭 | 보유 비율 | " + " | ".join(map(str, ys)) + " |",
+                  "|---|---|---|---|---|" + "---|" * len(ys)]
+            for lab, fin, cagr, mdd, onr, yr in rows:
+                L.append(f"| {lab} | **{fin:.1f}** | {cagr:+.1f}% | {mdd:.1f}% | {onr:.0f}% | "
+                         + " | ".join(f"{yr[y]:+.0f}%" if y in yr else "-" for y in ys) + " |")
+            L.append("")
     L += ["", f"_계산 시간 {time.time() - t0:.0f}초_"]
     (scan.STATE / "backtest.md").write_text("\n".join(L), encoding="utf-8")
     df.to_csv(scan.STATE / "swing_trades.csv.gz", index=False, compression="gzip")
@@ -205,6 +252,10 @@ def main():
     mk = {"KS": kp, "KQ": SBT.index_series("KOSDAQ", "^KQ11")}
     mr = {m: ((x / x.shift(20) - 1) * 100 if x is not None else None) for m, x in mk.items()}
     start = pd.Timestamp(datetime.now()) - pd.Timedelta(days=int(365 * YEARS))
+    INV.clear()
+    for m, nm in (("KS", "코스피"), ("KQ", "코스닥")):
+        if mk.get(m) is not None and len(mk[m]) > 400:
+            INV.append((inverse_test(mk[m], nm), nm))
     log(f"시작: {len(uni)}종목")
     rows, done = [], [0]
 
