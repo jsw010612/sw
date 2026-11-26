@@ -6,7 +6,7 @@
   sec_ret20  : 섹터 평균 20일 수익률
   sec_above  : 섹터 종목 중 20일선 위 비율 (%)
   sec_cobot  : 최근 10일 안에 같은 섹터에서 바닥 신호가 나온 다른 종목 수 (섹터 전체 바닥)
-수급 (KRX 투자자별 순매수, pykrx) — 예전 A 신호 종목만
+수급 (네이버 종목별 외국인·기관 순매매량 × 종가) — 예전 A 신호만
   frg5/frg20 : 신호일까지 5일·20일 외국인 순매수 합 ÷ 20일 평균 거래대금
   ins5/ins20 : 같은 방식 기관
   frg_turn   : 20일 합은 순매도인데 최근 5일은 순매수 (외국인 매수 전환)
@@ -36,15 +36,33 @@ FLOW_BUDGET = 30 * 60      # 수급 받는 데 최대 30분
 
 
 def fetch_sectors():
+    try:
+        import FinanceDataReader as fdr
+        d = fdr.StockListing("KRX-DESC")
+        col = "Sector" if "Sector" in d.columns else ("Industry" if "Industry" in d.columns else None)
+        cc = "Code" if "Code" in d.columns else ("Symbol" if "Symbol" in d.columns else None)
+        if col and cc:
+            for c, sec in zip(d[cc].astype(str).str.zfill(6), d[col]):
+                if isinstance(sec, str) and sec.strip():
+                    SECTOR[c] = sec.strip()
+        if len(SECTOR) > 500:
+            INFO["섹터"] = f"KRX 업종 {len(set(SECTOR.values()))}개 · {len(SECTOR)}종목"
+            return
+    except Exception as e:
+        INFO["섹터 FDR 오류"] = type(e).__name__
+    _naver_sectors()
+
+
+def _naver_sectors():
     base = "https://finance.naver.com"
     r = scan._http(f"{base}/sise/sise_group.naver?type=upjong")
     if r is None or r.status_code != 200:
         INFO["섹터"] = "목록 실패"
         return
     html = r.content.decode("euc-kr", "ignore")
-    groups = re.findall(r'href="(/sise/sise_group_detail\.naver\?type=upjong&no=\d+)"[^>]*>([^<]+)</a>', html)
-    for href, name in groups:
-        r2 = scan._http(base + href)
+    groups = re.findall(r'href="/sise/sise_group_detail\.naver\?type=upjong(?:&amp;|&)no=(\d+)"[^>]*>([^<]+)</a>', html)
+    for no, name in groups:
+        r2 = scan._http(f"{base}/sise/sise_group_detail.naver?type=upjong&no={no}")
         if r2 is None or r2.status_code != 200:
             continue
         for code in set(re.findall(r"/item/main\.naver\?code=(\d{6})", r2.content.decode("euc-kr", "ignore"))):
@@ -67,6 +85,8 @@ def stock_sigs(s, start, kp, mk):
 
 
 def sector_features(df):
+    for col in ("sector", "sec_val", "sec_ret20", "sec_above", "sec_n", "sec_cobot"):
+        df[col] = np.nan
     if not SECTOR:
         return df
     codes = [c for c in VAL if c in SECTOR]
@@ -100,48 +120,84 @@ def sector_features(df):
     return df
 
 
-def flow_features(df):
+def _num(x):
+    x = re.sub(r"[^0-9\-+]", "", x)
     try:
-        from pykrx import stock as K
-    except Exception as e:
-        INFO["수급"] = f"pykrx 없음 ({type(e).__name__})"
-        return df
+        return float(x)
+    except ValueError:
+        return np.nan
+
+
+def _frgn_page(code, page):
+    r = scan._http(f"https://finance.naver.com/item/frgn.naver?code={code}&page={page}")
+    if r is None or r.status_code != 200:
+        return None
+    html = r.content.decode("euc-kr", "ignore")
+    rows = {}
+    for tr in re.findall(r"<tr[^>]*>(.*?)</tr>", html, re.S):
+        tds = [re.sub(r"<[^>]+>", " ", t) for t in re.findall(r"<td[^>]*>(.*?)</td>", tr, re.S)]
+        if len(tds) < 7:
+            continue
+        m = re.search(r"(\d{4})\.(\d{2})\.(\d{2})", tds[0])
+        if not m:
+            continue
+        d = pd.Timestamp(f"{m.group(1)}-{m.group(2)}-{m.group(3)}")
+        rows[d] = (_num(tds[1]), _num(tds[5]), _num(tds[6]))      # 종가, 기관 순매매량, 외국인 순매매량
+    return rows
+
+
+def flow_features(df):
+    """네이버 '외국인·기관 순매매' 페이지(20일씩)에서 신호일 직전 20거래일만 받음 — 예전 A 신호만"""
+    from concurrent.futures import ThreadPoolExecutor
     t0 = time.time()
     tgt = df[df.old_a == True]
-    got, fail = 0, 0
-    feats = {}
-    for code, g in tgt.groupby("code"):
+    jobs = []
+    for idx, r in tgt.iterrows():
+        cl = CLOSE.get(r.code)
+        if cl is None:
+            continue
+        off = len(cl.loc[pd.Timestamp(r.det_date):]) - 1 + (len(pd.bdate_range(cl.index[-1], datetime.now())) - 1)
+        jobs.append((idx, r.code, r.det_date, sorted({off // 20 + 1, (off + 25) // 20 + 1})))
+    cache, ok = {}, [0, 0]
+
+    def get(code, p):
+        k = (code, p)
+        if k not in cache:
+            try:
+                cache[k] = _frgn_page(code, p)
+            except Exception:
+                cache[k] = None
+            ok[0 if cache[k] else 1] += 1
+            time.sleep(0.05)
+        return cache[k]
+
+    def one(job):
+        idx, code, det, pages = job
         if time.time() - t0 > FLOW_BUDGET:
-            INFO["수급 시간초과"] = "예"
-            break
-        d0 = (pd.to_datetime(g.det_date).min() - pd.Timedelta(days=45)).strftime("%Y%m%d")
-        d1 = pd.to_datetime(g.det_date).max().strftime("%Y%m%d")
-        try:
-            f = K.get_market_trading_value_by_date(d0, d1, code)
-            if f is None or f.empty:
-                fail += 1; continue
-            f.index = pd.to_datetime(f.index)
-            fc = [c for c in f.columns if "외국인" in c][0]
-            ic = [c for c in f.columns if "기관" in c][0]
-            v = VAL.get(code)
-            for idx, r in g.iterrows():
-                d = pd.Timestamp(r.det_date)
-                ff = f.loc[:d]
-                if len(ff) < 20:
-                    continue
-                base = float(v.loc[:d].tail(20).mean()) if v is not None and len(v.loc[:d]) else np.nan
-                if not base or not np.isfinite(base):
-                    continue
-                feats[idx] = dict(frg5=ff[fc].tail(5).sum() / base, frg20=ff[fc].tail(20).sum() / base,
-                                  ins5=ff[ic].tail(5).sum() / base, ins20=ff[ic].tail(20).sum() / base)
-            got += 1
-        except Exception as e:
-            fail += 1
-            INFO["수급 오류"] = type(e).__name__
-            if fail >= 20 and got == 0:
-                break
-        time.sleep(0.2)
-    INFO["수급"] = f"{got}종목 받음 · 실패 {fail}"
+            return idx, None
+        rows = {}
+        for p in pages:
+            rows.update(get(code, p) or {})
+        if not rows:
+            return idx, None
+        f = pd.DataFrame(rows, index=["close", "ins", "frg"]).T.sort_index()
+        f = f.loc[:pd.Timestamp(det)]
+        v = VAL.get(code)
+        if len(f) < 20 or v is None:
+            return idx, None
+        base = float(v.loc[:pd.Timestamp(det)].tail(20).mean())
+        if not base:
+            return idx, None
+        fv, iv = f.frg * f.close, f.ins * f.close
+        return idx, dict(frg5=fv.tail(5).sum() / base, frg20=fv.tail(20).sum() / base,
+                         ins5=iv.tail(5).sum() / base, ins20=iv.tail(20).sum() / base)
+
+    feats = {}
+    with ThreadPoolExecutor(6) as ex:
+        for idx, fe in ex.map(one, jobs):
+            if fe:
+                feats[idx] = fe
+    INFO["수급"] = f"네이버 {len(feats)}/{len(jobs)}건 · 페이지 성공 {ok[0]} 실패 {ok[1]}"
     for k in ("frg5", "frg20", "ins5", "ins20"):
         df[k] = [feats.get(i, {}).get(k, np.nan) for i in df.index]
     df["frg_turn"] = np.where(df.frg5.notna(), ((df.frg20 < 0) & (df.frg5 > 0)).astype(float), np.nan)
