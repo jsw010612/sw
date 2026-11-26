@@ -3,7 +3,7 @@
 이후 매수·매도·비중 조합 수천 가지는 이 파일로 따로 계산 (Actions 다시 안 돌려도 됨)
 
 저장 대상: 1일/주봉 다이버전스 중 52주 -40% 이상 + 5파 깊이 1.2 이상 (예전 A 를 넉넉히 포함하는 범위)
-저장 내용 (state/paths.npz)
+저장 내용 (state/paths.npz · 가격은 신호일 종가 대비 비율, float16)
   가격: 시가·고가·저가·종가·거래량
   지표: RSI14 · 5/20/60/120일선 · 주60/주120/월60/월120선(완성봉 기준) · MACD/시그널 · 기준선 · 구름 상단
         일봉/주봉 하락 다이버전스 표시
@@ -26,6 +26,7 @@ from ma_backtest import log
 PRE, POST = 60, 260
 COLS = ["open", "high", "low", "close", "volume", "rsi", "ma5", "ma20", "ma60", "ma120",
         "w60", "w120", "m60", "m120", "macd", "sig", "kijun", "ctop", "div_d", "div_w"]
+PX_COLS = ["open", "high", "low", "close", "ma5", "ma20", "ma60", "ma120", "w60", "w120", "m60", "m120", "kijun", "ctop"]
 ARR, META = [], []
 _lock = threading.Lock()
 _t = threading.local()
@@ -66,10 +67,19 @@ def extra(d1, i, snap, wb, ei, entry, l5, t):
     lo = max(0, a)
     hi_ = min(len(d1), b)
     blk[lo - a:hi_ - a] = _t.full[lo:hi_]
+    # 용량 줄이기: 가격류는 신호일 종가 대비 비율, 거래량은 20일 평균 대비 비율로 저장 (float16)
+    base = float(_t.full[i, 3])
+    vb = float(np.nanmean(_t.full[max(0, i - 19):i + 1, 4])) or 1.0
+    for c in PX_COLS:
+        blk[:, COLS.index(c)] /= base
+    blk[:, COLS.index("volume")] /= vb
+    for c in ("macd", "sig"):
+        blk[:, COLS.index(c)] = blk[:, COLS.index(c)] / base * 100
+    blk = blk.astype(np.float16)
     with _lock:
         k = len(ARR)
         ARR.append(blk)
-    out.update(path_id=k, h4=float(snap.get("h4") or np.nan), l3p=float(snap["l3p"]), l5p=float(snap["l5p"]),
+    out.update(path_id=k, base_px=base, base_vol=vb, h4=float(snap.get("h4") or np.nan), l3p=float(snap["l3p"]), l5p=float(snap["l5p"]),
                l3i=int(snap["_l3i"]) - i if not wb and snap.get("_l3i") is not None else np.nan,
                l5i=int(snap["_l5i"]) - i if not wb and snap.get("_l5i") is not None else np.nan,
                last_day=hi_ - 1 - i)
@@ -94,8 +104,8 @@ def report(sigs, n, t0):
         f = pd.DataFrame(rows, index=["close", "ins", "frg"]).T.sort_index().loc[:pd.Timestamp(r.det_date)]
         if len(f) < 20:
             return r.Index, None
-        blk = ARR[r.path_id]
-        base = float(np.nanmean(blk[PRE - 19:PRE + 1, 3] * blk[PRE - 19:PRE + 1, 4]))
+        blk = ARR[r.path_id].astype(np.float32)
+        base = float(np.nanmean(blk[PRE - 19:PRE + 1, 3] * blk[PRE - 19:PRE + 1, 4])) * r.base_px * r.base_vol
         if not base:
             return r.Index, None
         fv, iv = f.frg * f.close, f.ins * f.close
@@ -108,8 +118,9 @@ def report(sigs, n, t0):
                 feats[idx] = fe
     for k in ("frg5", "frg20", "ins5", "ins20"):
         df[k] = [feats.get(i, {}).get(k, np.nan) for i in df.index]
-    arr = np.stack(ARR) if ARR else np.zeros((0, PRE + POST + 1, len(COLS)), np.float32)
-    np.savez_compressed(scan.STATE / "paths.npz", arr=arr, cols=np.array(COLS), pre=PRE)
+    arr = np.stack(ARR) if ARR else np.zeros((0, PRE + POST + 1, len(COLS)), np.float16)
+    np.savez_compressed(scan.STATE / "paths.npz", arr=arr, cols=np.array(COLS), pre=PRE, scaled=1,
+                        px_cols=np.array(PX_COLS))
     df.to_csv(scan.STATE / "paths_meta.csv", index=False)
     L = ["# 경로 저장", "", f"- 실행: {datetime.now().strftime('%Y-%m-%d %H:%M')} · {n}종목 · 저장 {len(df)}건 "
          f"(예전 A {int(df.old_a.sum())} · 상폐 {int(df.delisted.sum())}) · 수급 {len(feats)}건",

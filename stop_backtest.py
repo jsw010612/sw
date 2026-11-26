@@ -50,7 +50,7 @@ _tl = threading.local()
 
 def index_series(sym, yf_sym):
     try:
-        r = requests.get(f"https://fchart.stock.naver.com/sise.nhn?symbol={sym}&timeframe=day&count=2500&requestType=0",
+        r = requests.get(f"https://fchart.stock.naver.com/sise.nhn?symbol={sym}&timeframe=day&count=4000&requestType=0",
                          headers=scan.UA, timeout=20)
         rows = [(pd.Timestamp(it.split("|")[0]), float(it.split("|")[4]))
                 for it in re.findall(r'data="([^"]+)"', r.content.decode("euc-kr", "ignore"))]
@@ -60,7 +60,7 @@ def index_series(sym, yf_sym):
         pass
     try:
         import yfinance as yf
-        d = yf.download(yf_sym, period="10y", interval="1d", progress=False, auto_adjust=False)
+        d = yf.download(yf_sym, period="max", interval="1d", progress=False, auto_adjust=False)
         if isinstance(d.columns, pd.MultiIndex):
             d.columns = d.columns.get_level_values(0)
         s = d["Close"].dropna()
@@ -158,7 +158,7 @@ def neg_hump(h, i, maxi, near=5):
 
 def stock_sigs(s, start, kp, mk):
     try:
-        d1 = EB.cached_daily(s["code"], 2000, s["market"])
+        d1 = EB.cached_daily(s["code"], int(250 * (YEARS + 2.5)), s["market"])
         if len(d1) < 400:
             return []
         d1 = d1[~d1.index.duplicated()].sort_index()

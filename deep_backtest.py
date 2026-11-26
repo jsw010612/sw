@@ -42,7 +42,7 @@ def log(*a):
 
 def kospi():
     try:
-        r = requests.get("https://fchart.stock.naver.com/sise.nhn?symbol=KOSPI&timeframe=day&count=2500&requestType=0",
+        r = requests.get("https://fchart.stock.naver.com/sise.nhn?symbol=KOSPI&timeframe=day&count=4000&requestType=0",
                          headers=scan.UA, timeout=20)
         rows = [(pd.Timestamp(it.split("|")[0]), float(it.split("|")[4]))
                 for it in re.findall(r'data="([^"]+)"', r.content.decode("euc-kr", "ignore"))]
@@ -52,7 +52,7 @@ def kospi():
         pass
     try:
         import yfinance as yf
-        d = yf.download("^KS11", period="10y", interval="1d", progress=False, auto_adjust=False)
+        d = yf.download("^KS11", period="max", interval="1d", progress=False, auto_adjust=False)
         if isinstance(d.columns, pd.MultiIndex):
             d.columns = d.columns.get_level_values(0)
         s = d["Close"].dropna()

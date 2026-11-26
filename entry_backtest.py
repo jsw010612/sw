@@ -121,7 +121,7 @@ _orig = SBT.stock_sigs
 def delisted_daily(code):
     """상폐 종목 일봉: 네이버 → FinanceDataReader(KRX 상장폐지 데이터) 순서"""
     try:
-        d = SBT.EB._orig_daily(code, 3200, "KS")
+        d = SBT.EB._orig_daily(code, max(3200, int(250 * (SBT.YEARS + 3))), "KS")
         if d is not None and len(d) >= 300:
             return d, "네이버"
     except Exception:

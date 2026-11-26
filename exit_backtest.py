@@ -49,7 +49,7 @@ def cached_daily(code, count=1500, market="KS"):
     with _lock:
         d = _cache.get(code)
     if d is None:
-        d = _orig_daily(code, 3200, market)
+        d = _orig_daily(code, max(3200, int(250 * (YEARS + 3))), market)
         with _lock:
             _cache[code] = d
     return d.iloc[-count:] if count and len(d) > count else d
